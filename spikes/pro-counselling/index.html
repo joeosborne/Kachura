@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
+<!--    todo: remove..-->
+<!--    <link href="./css/style.css" rel="stylesheet" />-->
+<!--    <link href="./css/general.css" rel="stylesheet" />-->
+<!--    <link href="./css/queries.css" rel="stylesheet" />-->
 
     <title>The Basic Language of the Web: HTML</title>
   </head>
@@ -10,29 +14,103 @@
   <body>
     <div class="container">
       <header class="main-header clearfix">
-        <img src="img/pro-counselling-logo.png"/>
-      </header>
+          <div class="row">
+              <img src="img/pro-counselling-logo.png"/>
 
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                  <button type="submit">OK</button>
+
+
+
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+
+
+          </div>
+      </header>
+<!--      <header class="header">-->
+<!--        <ul class="main-nav">-->
+<!--          <li><a href="#">Home</a></li>-->
+<!--          <li><a href="#">About</a></li>-->
+<!--          <li><a href="#">Portfolio</a></li>-->
+<!--          <li><a href="#">Contact</a></li>-->
+<!--        </ul>-->
+<!--      </header>-->
       <div>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Blog</a>
-          <a href="#">Portefolio</a>
-          <a href="#">Contact</a>
-          <div class="animation start-home"></div>
-        </nav>
+          <nav class="main-nav">
+              <ul class="main-nav-list">
+                  <li><a class="main-nav-link" href="#">Home</a></li>
+                  <li><a class="main-nav-link" href="#">Counsellors’ Portal</a></li>
+                  <li><a class="main-nav-link" href="#">About Us</a></li>
+                  <li><a class="main-nav-link" href="#">Our services</a></li>
+                  <li><a class="main-nav-link" href="#">Well-being Resources</a></li>
+                  <li><a class="main-nav-link" href="#">Contact Us</a></li>
+              </ul>
+          </nav>
+<!--        <nav>-->
+<!--          <a href="#">Home</a>-->
+<!--          <a href="#">Counsellors Portal</a>-->
+<!--          <a href="#">Blog</a>-->
+<!--          <a href="#">Portefolio</a>-->
+<!--          <a href="#">Contact</a>-->
+<!--          <div class="animation start-home"></div>-->
+<!--        </nav>-->
+<!--        <nav class="navbar navbar-default">-->
+<!--          <ul class="nav navbar-nav">-->
+<!--            <li><a href="#0">Home</a></li>-->
+<!--            <li><a href="#0">About</a></li>-->
+<!--            <li class="dropdown">-->
+<!--              <a href="#0" class="dropdown-toggle" data-toggle="dropdown" data-target="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clients<span class="caret"></span></a>-->
+<!--              <ul class="dropdown-menu" id="dropdon-menu">-->
+<!--                <li><a href="#0">Burger King</a></li>-->
+<!--                <li><a href="#0">Southwest Airlines</a></li>-->
+<!--                <li><a href="#0">Levi Strauss</a></li>-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--            <li class="dropdown">-->
+<!--              <a href="#0" class="dropdown-toggle" data-toggle="dropdown" data-target="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>-->
+<!--              <ul class="dropdown-menu" id="dropdon-menu">-->
+<!--                <li><a href="#0">Print Design</a></li>-->
+<!--                <li><a href="#0">Web Design</a></li>-->
+<!--                <li><a href="#0">Mobile App Development</a></li>-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--            <li><a href="#0">Contact</a></li>-->
+<!--          </ul>-->
+<!--        </nav>-->
       </div>
 
       <div class="row">
-        <img id="home-hero-img" width="1000px" src="img/headband.png"/>
+        <img class="img" width="1000px" src="img/headband.png"/>
       </div>
       <div class="row">
       </div>
 
       <div class="row wrap">
         <div class="column">
-          <div>oneoneoneoneoneoneoneoneoneone</div>
+            <div class="read-more-card">
+
+                <div class="row">
+                    <a href="#">
+                Our Support to your company
+                    </a>
+                </div>
+
+                  <div class="row">
+                      <a href="#">
+              <img
+                      src="img/zen.png"
+                      class="img"
+                      width="200px"
+                      alt="todo:"
+              />
+                      </a>
+              </div>
+              <div class="row">
+                <a href="#" class="btn btn--full"
+                >Read more</a>
+              </div>
+            </div>
           <div>two</div>
           <div>one</div>
           <div>two</div>
@@ -40,14 +118,35 @@
           <div>two</div>
           <div>one</div>
           <div>two</div>
-        </div>
+          </div>
+
         <div class="column">
-          <div>oneoneoneoneoneoneoneoneoneon</div>
+          <div>one</div>
           <div>two</div>
         </div>
 
         <div class="column">
-          <div>oneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneoneone</div>
+            <div class="row">
+                <span>Counsellors Portal</span>
+            </div>
+            <div class="row">
+                <div class="column">
+                <img
+                        src="img/couns-1.jpg"
+                        class="img"
+                        alt="todo:"
+                        width="50px"
+                />
+                <div class="row">Julie C</div>
+                    <div class="row">Code: 0001</div>
+                        <div class="row" style="background-color: green; color: white" > Online</div>
+                        <div class="row" style="background-color: green; color: white"> [call icon]</div>
+                </div>
+                </div>
+            <div>
+<!--              /https://www.pro-counselling.co.uk/sites/default/files/jeconsulteunpsy/vignette_5201.jpg-->
+<!--              -->
+          </div>
         </div>
       </div>
 
@@ -59,3 +158,6 @@
     </div>
   </body>
 </html>
+
+
+<!-- todo: remove the css folder from here-->
