@@ -83,6 +83,7 @@ span {
  .row {
   display: flex;
   align-items: flex-start;
+
   /* todo: apply this gap and margin-bottom away from the row class*/
   /*gap: 75px;*/
   /*margin-bottom: 60px;*/
@@ -467,20 +468,46 @@ img{
 }
 
 .counsellor-master{
-  /*background-color: red;*/
   padding-bottom: 10px;
-  border: thin red solid;
 }
 .counsellor-master-column{
   margin: 5px;
-  /*background-color: coral;*/
 }
 
 .icon-phone{
-  border-radius: 9px;
+  padding:5px;
+  border-radius: 50%;
 }
 
 .online-indicator{
+  border-radius: 9px;
+  padding:5px;
  color: white;
   background-color: green;
+  justify-content: space-between;
+}
+.icon-play{
+
+}
+
+.counsellor-name{
+  text-transform: uppercase;
+}
+.counsellor-code{
+  margin-left: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.counsellors-portal-header{
+  background-color: #37B3EA;
+
+}
+.counsellors-portal-header-text{
+  margin: 5px;
+  color: white;
+}
+
+.hp-centre-col{
+  justify-content: center;
 }
