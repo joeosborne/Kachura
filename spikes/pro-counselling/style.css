@@ -466,4 +466,21 @@ img{
   background-color: #cf711f;
 }
 
+.counsellor-master{
+  /*background-color: red;*/
+  padding-bottom: 10px;
+  border: thin red solid;
+}
+.counsellor-master-column{
+  margin: 5px;
+  /*background-color: coral;*/
+}
 
+.icon-phone{
+  border-radius: 9px;
+}
+
+.online-indicator{
+ color: white;
+  background-color: green;
+}
