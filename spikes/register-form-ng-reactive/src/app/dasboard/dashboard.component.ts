@@ -4,10 +4,10 @@ import {switchMap} from "rxjs";
 
 @Component({
   selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css']
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class LandingComponent implements OnInit {
+export class DashboardComponent implements OnInit {
    email: any;
 
   constructor(private route:ActivatedRoute) { }

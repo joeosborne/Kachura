@@ -4,22 +4,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { LandingComponent } from './landing/landing.component';
+import { DashboardComponent } from './dasboard/dashboard.component';
 import {RouterModule, Routes} from "@angular/router";
 
 const appRoutes: Routes = [
   { path: 'registration', component: RegistrationComponent },
-  { path: '',   redirectTo: '/registration', pathMatch: 'full' },
-  { path: 'landing', component: LandingComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
+//     path: 'servers',
+//     // canActivate: [AuthGuard],
+//     canActivateChild: [AuthGuard],
+//     component: ServersComponent,
+//     children: [
+//     { path: ':id', component: ServerComponent, resolve: {server: ServerResolver} },
+//     { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard] }
+//   ] },
 
-// @ts-ignore
-// @ts-ignore
+
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LandingComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
