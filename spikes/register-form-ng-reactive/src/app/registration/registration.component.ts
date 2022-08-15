@@ -24,7 +24,7 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit() {
     console.log(this.profileForm.value);
-    //his.router.navigate(['/landing']);
-    this.router.navigate(['/landing', { email: this.profileForm.value.email }]);
+    //his.router.navigate(['/dasboard']);
+    this.router.navigate(['/dashboard', { email: this.profileForm.value.email }]);
   }
 }
