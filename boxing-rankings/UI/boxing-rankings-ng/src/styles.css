@@ -1,3 +1,7 @@
+/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 .example-list {
   width: 500px;
   max-width: 100%;
@@ -46,3 +50,67 @@
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*.flex-container {*/
+/*  display: flex;*/
+/*}*/
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid silver;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+.flex-row{
+  flex-direction: row;
+}
+
+.nowrap  {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.wrap    {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.boxer-card {
+  background: tomato;
+  padding: 5px;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.boxer-card-img{
+  border-radius: 15px;
+  height: 150px;
+  width: 150px;
+}
+
+
+/*.flex-container > div {*/
+/*  background-color: #f1f1f1;*/
+/*  margin: 10px;*/
+/*  padding: 20px;*/
+/*  font-size: 30px;*/
+/*}*/

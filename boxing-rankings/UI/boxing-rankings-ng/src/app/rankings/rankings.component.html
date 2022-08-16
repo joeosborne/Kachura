@@ -1,0 +1,27 @@
+<div class="flex-container">
+  <div>
+    <ul>
+      <li *ngFor="let w of weights" (click)="onWeightSelected(w.id)">
+        {{ w.name }}
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul class="flex-container wrap">
+      <li *ngFor="let boxer of boxersAtSelectedWeight">
+        <div class="boxer-card flex-column">
+          <div>
+            <img
+              src="../../assets/img/boxer-{{ boxer.id }}.jpg"
+              class="boxer-card-img"
+            />
+          </div>
+          <div>{{ boxer.name }}</div>
+          <div>Country: {{boxer.nationality}}</div>
+          <div>{{boxer.record}}</div>
+          <div>ranking: {{boxer.ranking}}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

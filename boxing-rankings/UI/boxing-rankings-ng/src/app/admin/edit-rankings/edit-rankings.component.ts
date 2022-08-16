@@ -13,6 +13,8 @@ export class EditRankingsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // todo: replace with repsonse from fake api json
   // tslint:disable:max-line-length
   movies = [
     {

@@ -1,0 +1,17 @@
+sprints
+
+0
+UI only - 2 switchable weights - DDL
+data to be provided via data svc - talking to JSON server
+auth guard for admin
+use LS for login
+hardcoded login creds
+no additional styling
+prettier and linting
+drag and drop changes should log to console
+
+1
+introduce cypress for admin logins
+
+
+2

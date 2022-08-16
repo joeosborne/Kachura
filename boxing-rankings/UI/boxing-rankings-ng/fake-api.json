@@ -1,0 +1,182 @@
+{
+  "weights": [
+    {
+      "id": 1,
+      "name": "Heavyweight"
+    },
+    {
+      "id": 2,
+      "name": "Cruiserweight"
+    }
+  ],
+  "boxers": [
+    {
+      "id": 1,
+      "name": "Oleksandr Usyk",
+      "record": "19-0-0 (13)",
+      "nationality": "UKR",
+      "ranking": "1",
+      "weightId": 1
+    },
+    {
+      "id": 2,
+      "name": "Anthony Joshua",
+      "record": "24-2-0 (22)",
+      "nationality": "ENG",
+      "ranking": "2",
+      "weightId": 1
+    },
+    {
+      "id": 3,
+      "name": "Deontay Wilder",
+      "record": "42-2-1 (41)",
+      "nationality": "USA",
+      "ranking": "3",
+      "weightId": 1
+    },
+    {
+      "id": 4,
+      "name": "Andy Ruiz Jr.",
+      "record": "34-2-0 (22)",
+      "nationality": "USA",
+      "ranking": "4",
+      "weightId": 1
+    },
+    {
+        "id": 5,
+        "name": "Joseph Parker",
+        "record": "30-2-0 (21)",
+        "nationality": "NZ",
+        "ranking": "",
+        "weightId": 1
+    },
+    {
+      "id": 6,
+      "name": "Joe Joyce",
+      "record": "14-0-0 (13)",
+      "nationality": "ENG",
+      "ranking": "6",
+      "weightId": 1
+    },
+    {
+      "id": 7,
+      "name": "Dillian Whyte",
+      "record": "28-2-0 (19)",
+      "nationality": "ENG",
+      "ranking": "7",
+      "weightId": 1
+    },
+    {
+      "id": 8,
+      "name": "Luis Ortiz",
+      "record": "33-2-0 (28)",
+      "nationality": "CUB",
+      "ranking": "8",
+      "weightId": 1
+    },
+    {
+      "id": 9,
+      "name": "Otto Wallin",
+      "record": "24-1-0 (14)",
+      "nationality": "SWE",
+      "ranking": "9",
+      "weightId": 1
+    },
+    {
+      "id": 10,
+      "name": "Michael Hunter",
+      "record": "20-1-2 (14)",
+      "nationality": "USA",
+      "ranking": "10",
+      "weightId": 1
+    },
+    {
+      "id": 0,
+      "name": "Jai Opetaia",
+      "record": "22-0-0 (17)",
+      "nationality": "AUS",
+      "ranking": "--",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Mairis Breidis",
+      "record": "28-2-0 (20)",
+      "nationality": "LVA",
+      "ranking": "1",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Lawrence Okolie",
+      "record": "17-0-0 (14)",
+      "nationality": "ENG",
+      "ranking": "2",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Yuniel Dorticos",
+      "record": "25-2-0 (23)",
+      "nationality": "CUB",
+      "ranking": "3",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Ilunga Makabu",
+      "record": "29-2-0 (25)",
+      "nationality": "COD",
+      "ranking": "4",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Thabiso Mchunu",
+      "record": "23-6-0 (13)",
+      "nationality": "RSA",
+      "ranking": "5",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Aleksei Papin",
+      "record": "14-1-0 (13)",
+      "nationality": "RUS",
+      "ranking": "6",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Richard Riakporhe",
+      "record": "15-0-0 (11)",
+      "nationality": "ENG",
+      "ranking": "7",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Mateusz Masternak",
+      "record": "46-5-0 (31)",
+      "nationality": "POL",
+      "ranking": "8",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Brandon Glanton",
+      "record": "15-0-0 (12)",
+      "nationality": "USA",
+      "ranking": "9",
+      "weightId": 2
+    },
+    {
+      "id": 0,
+      "name": "Chris Billam-Smith",
+      "record": "16-1-0 (11)",
+      "nationality": "ENG",
+      "ranking": "10",
+      "weightId": 2
+    }
+  ]
+}
