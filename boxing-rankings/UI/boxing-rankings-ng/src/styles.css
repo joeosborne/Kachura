@@ -112,3 +112,6 @@
   background-color: lightskyblue;
   border-radius: 15px;
 }
+.readonly-boxers-container{
+  max-width: 1000px;
+}
