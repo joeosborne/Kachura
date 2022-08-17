@@ -1,6 +1,21 @@
-<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <div class="example-box" *ngFor="let movie of movies" cdkDrag>
-    {{movie.title}}
-    <img *cdkDragPreview [src]="movie.poster" [alt]="movie.title">
+<div class="flex-container">
+  <div>
+    <ul>
+      <li *ngFor="let w of weights" (click)="onWeightSelected(w.id)">
+        {{ w.name }}
+      </li>
+    </ul>
+  </div>
+  <div>
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let boxer of boxersAtSelectedWeight" cdkDrag>
+        {{ boxer.name }}
+        <img
+          *cdkDragPreview
+          [src]="getBoxerImage(boxer.id)"
+          [alt]="boxer.name"
+        />
+      </div>
+    </div>
   </div>
 </div>

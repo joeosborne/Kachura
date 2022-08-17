@@ -1,71 +1,74 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { BoxerDataService } from '../../boxer-data.service';
 
 @Component({
   selector: 'app-edit-rankings',
   templateUrl: './edit-rankings.component.html',
-  styleUrls: ['./edit-rankings.component.css']
+  styleUrls: ['./edit-rankings.component.css'],
 })
 export class EditRankingsComponent implements OnInit {
+  // todo: default to P4P
+  private boxers: any[] = [];
+  weights: any[] = [];
+  selectedWeightId: number = 0; // todo: 0 = pound 4 pound
+  boxersAtSelectedWeight: any[] = [];
 
-  constructor() { }
+  constructor(private boxerDataService: BoxerDataService) {}
+
+  // todo: extract p4p entries - tbd
 
   ngOnInit(): void {
+    this.boxerDataService.getBoxers().subscribe((data) => {
+      this.boxers = data;
+    });
+
+    this.boxerDataService.getWeights().subscribe((data) => {
+      this.weights = data;
+    });
   }
 
-  // todo: replace with repsonse from fake api json
-  // tslint:disable:max-line-length
-  movies = [
-    {
-      title: 'Episode I - The Phantom Menace',
-      poster: 'https://upload.wikimedia.org/wikipedia/en/4/40/Star_Wars_Phantom_Menace_poster.jpg',
-    },
-    {
-      title: 'Episode II - Attack of the Clones',
-      poster:
-        'https://upload.wikimedia.org/wikipedia/en/3/32/Star_Wars_-_Episode_II_Attack_of_the_Clones_%28movie_poster%29.jpg',
-    },
-    {
-      title: 'Episode III - Revenge of the Sith',
-      poster:
-        'https://upload.wikimedia.org/wikipedia/en/9/93/Star_Wars_Episode_III_Revenge_of_the_Sith_poster.jpg',
-    },
-    {
-      title: 'Episode IV - A New Hope',
-      poster: 'https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg',
-    },
-    {
-      title: 'Episode V - The Empire Strikes Back',
-      poster: 'https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg',
-    },
-    {
-      title: 'Episode VI - Return of the Jedi',
-      poster: 'https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg',
-    },
-    {
-      title: 'Episode VII - The Force Awakens',
-      poster:
-        'https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg',
-    },
-    {
-      title: 'Episode VIII - The Last Jedi',
-      poster: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg',
-    },
-    {
-      title: 'Episode IX – The Rise of Skywalker',
-      poster:
-        'https://upload.wikimedia.org/wikipedia/en/a/af/Star_Wars_The_Rise_of_Skywalker_poster.jpg',
-    },
-  ];
-  // tslint:enable:max-line-length
+  onWeightSelected(weightId: number) {
+    this.selectedWeightId = this.weights.find((x) => x.id === weightId).id;
+    this.boxersAtSelectedWeight = this.boxers.filter(
+      (x) => x.weightId === this.selectedWeightId
+    );
+  }
 
   // drop(event: CdkDragDrop<{title: string; poster: string}[]>) {
-  //   moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
-  // }
   drop(event: any) {
-       moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    // console.log(event)
+    // console.log(event.previousIndex)
+    // console.log(event.currentIndex)
+    //
+    // const previousRanking = event.previousIndex + 1;
+    //
+    // const selectedBoxer = this.boxersAtSelectedWeight.find(x => x.ranking === previousRanking);
+    // const currentRanking = event.currentIndex + 1;
+    // console.log('selectedBoxer...');
+    // console.log(selectedBoxer);
+    //
+    // console.log('previous Ranking: ' + previousRanking)
+    // console.log('new Ranking: ' + currentRanking)
 
+
+      console.log('before this.boxersAtSelectedWeight...');
+      console.log(this.boxersAtSelectedWeight);
+
+    moveItemInArray(this.boxersAtSelectedWeight, event.previousIndex, event.currentIndex);
+    console.log('after this.boxersAtSelectedWeight...');
+    console.log(this.boxersAtSelectedWeight);
+    // todo: re-assign all rankings accordingly. NOTE: at this stage, the this.boxersAtSelectedWeight are ordered by new rankings
+    // console.log('selectedBoxer...');
+    // console.log(selectedBoxer);
+    // if(!!selectedBoxer) {
+    //   selectedBoxer.ranking = currentRanking
+    //   console.log('updated selectedBoxer...');
+    //   console.log(selectedBoxer);
+    // }
+  }
+
+  getBoxerImage(boxerId: number): string {
+    return `../../assets/img/boxer-${boxerId}.jpg`;
   }
 }
-
