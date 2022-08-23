@@ -1,6 +1,6 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
+import {Component,  OnInit} from '@angular/core';
 
-import {FormGroup, FormControl, UntypedFormControl, ReactiveFormsModule} from '@angular/forms';
+import {FormGroup, FormControl, UntypedFormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-typed-form',
