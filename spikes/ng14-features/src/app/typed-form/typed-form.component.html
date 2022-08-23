@@ -1,0 +1,12 @@
+<form [formGroup]="sampleForm" (ngSubmit)="onSubmit()">
+
+  <label for="surname">Surname: </label>
+  <input id="surname" type="string" formControlName="surname">
+
+  <label for="email">Email: </label>
+  <input id="email" type="email" formControlName="email">
+
+  <label for="age">Age: </label>
+  <input id="age" type="number" formControlName="age">
+  <button type="submit">Submit</button>
+</form>
