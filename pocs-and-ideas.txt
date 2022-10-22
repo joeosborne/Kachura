@@ -1,3 +1,17 @@
+oct weekend..
+minimal APIs
+	simple Get(s) for boxer data
+	test using postman
+
+sketch out a simple but responsive UI
+	define multiple components
+	
+implement UI above using ng with flexbox
+
+basic blazr tutorial	
+	
+
+--
 see list from AH
 basic registation and login - ng
 basic registation and login - react

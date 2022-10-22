@@ -1,0 +1,8 @@
+<p>weight-divisions works!</p>
+
+<div>weightDivisions: {{ weightDivisions.length }}</div>
+<ul class="flex-container wrap">
+  <li *ngFor="let w of weightDivisions" class="flex-item">
+    {{ w.id }}{{ w.name }}
+  </li>
+</ul>
