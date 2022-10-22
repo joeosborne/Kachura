@@ -1,8 +1,23 @@
-<p>weight-divisions works!</p>
-
 <div>weightDivisions: {{ weightDivisions.length }}</div>
 <ul class="flex-container wrap">
-  <li *ngFor="let w of weightDivisions" class="flex-item">
-    {{ w.id }}{{ w.name }}
+  <li
+    *ngFor="let w of weightDivisions"
+  >
+    <div class="division-item row flex-container" (click)="onWeightDivisionSelected(w)">
+      <div class="column" >
+        <img src="\assets\images\usyk-50x50.jpg" alt="division thumbnail" />
+      </div>
+      <div class="column" >
+        <div>{{ w.name }}</div>
+        <div>{{ w.limit }}</div>
+      </div>
+    </div>
   </li>
 </ul>
+<!--<div class="flex-container wrap">-->
+<!--  <div class="el el&#45;&#45;1">HTML</div>-->
+<!--  <div class="el el&#45;&#45;2">and</div>-->
+<!--  <div class="el el&#45;&#45;3">CSS</div>-->
+<!--  <div class="el el&#45;&#45;4">are</div>-->
+<!--  <div class="el el&#45;&#45;5">amazing</div>-->
+<!--</div>-->

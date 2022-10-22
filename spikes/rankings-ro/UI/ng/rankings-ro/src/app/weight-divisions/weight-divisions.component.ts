@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-weight-divisions',
@@ -7,9 +7,17 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class WeightDivisionsComponent implements OnInit {
   @Input() weightDivisions: any[] = [];
+  @Output() weightDivisionSelected = new EventEmitter<number>();
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onWeightDivisionSelected(w: any) {
+    console.log(w)
+    this.weightDivisionSelected.emit(w.id)
+
+  }
 }

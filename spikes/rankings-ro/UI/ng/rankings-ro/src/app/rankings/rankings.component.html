@@ -1,5 +1,10 @@
-<p>rankings works!</p>
 <div *ngIf="!!weightDivisions.length">
-  <app-weight-divisions [weightDivisions]="weightDivisions"></app-weight-divisions>
+  <div>currentWeightDivisionId: {{ currentWeightDivisionId }}</div>
+  <app-weight-divisions
+    [weightDivisions]="weightDivisions"
+    (weightDivisionSelected)="onWeightDivisionSelected($event)"
+  ></app-weight-divisions>
 </div>
-<app-boxers></app-boxers>
+<div *ngIf="!!currentBoxers.length">
+  <app-boxers [boxers]="currentBoxers"></app-boxers>
+</div>

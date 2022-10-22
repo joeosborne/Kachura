@@ -1,5 +1,14 @@
-<p>boxers works!</p>
-<app-boxer></app-boxer>
-<app-boxer></app-boxer>
-<app-boxer></app-boxer>
-<app-boxer></app-boxer>
+<!--<p>boxers works!</p>-->
+<!--<app-boxer></app-boxer>-->
+<!--<app-boxer></app-boxer>-->
+<!--<app-boxer></app-boxer>-->
+<!--<app-boxer></app-boxer>-->
+
+<div>boxers: {{ boxers.length }}</div>
+<ul class="flex-container wrap">
+    <li *ngFor="let b of boxers" class="boxer-item">
+        {{b.isChampion}}-{{ b.ranking }}-{{ b.fullName }}-{{ b.record }}-
+    </li>
+</ul>
+
+<!--internal record Boxer(int Id, string FullName, int WeightDivisionId, int Won, int Lost, int Drawn);-->

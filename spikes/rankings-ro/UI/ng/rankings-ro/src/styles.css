@@ -1,48 +1,79 @@
 .flex-container {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    border: 1px solid silver;
-    -ms-box-orient: horizontal;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /*border: 1px solid silver;*/
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
 }
 
-.nowrap  {
-    -webkit-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
 }
 
-.wrap    {
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.wrap li {
-    background: gold;
+.nowrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.wrap-reverse         {
-    -webkit-flex-wrap: wrap-reverse;
-    flex-wrap: wrap-reverse;
-}
-.wrap-reverse li {
-    background: deepskyblue;
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.flex-item {
-    background: tomato;
-    padding: 5px;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+/* combine division-item and boxer item where possible */
+.division-item {
+  text-transform: uppercase;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 10px;
+  background-color: #fff;
+  color: #000;
+  padding: 5px;
+  width: 100px;
+  min-width: 130px;
+  /*height: 100px;*/
+  margin: 10px;
+  font-size: 0.8em;
+  flex: 1;
 
-    line-height: 100px;
-    color: white;
-    font-weight: bold;
-    font-size: 2em;
-    text-align: center;
+  /*
+    DEFAULTS:
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    */
+
+  /* flex-basis: 200px; */
+  /* flex-shrink: 0; */
+  /* flex: 0 0 200px; */
+
+  /*flex: 1;*/
+
+  /*text-align: center;*/
+}
+
+.division-item:hover {
+  background-color: #db4a4a;
+  color: #fff;
+}
+
+.boxer-item {
+  background: green;
+  padding: 8px;
+  min-width: 200px;
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
 }
