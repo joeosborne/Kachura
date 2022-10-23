@@ -1,0 +1,70 @@
+﻿@using Newtonsoft.Json
+@using Rankings.Ro.Data;
+
+@inject HttpClient Http;
+
+<h3>1705 RankingsComponent</h3>
+
+@for (int i = 0; i < weightDivisions.Count; i++)
+{
+    <div>
+        @weightDivisions[i].Id
+    </div>
+        <div>
+        @weightDivisions[i].Name
+    </div>
+    <div>
+        @weightDivisions[i].Limit
+    </div>
+@*    <div>
+    weightDivisions[i].Name
+    </div>
+    <div>
+        weightDivisions[i].
+    </div>*@
+}
+
+@(weightDivisions.Count > 0 ? 
+    "<div>ep</div>"
+
+: "Nope")
+
+@*<div *ngIf="!!weightDivisions.length">
+    <div>currentWeightDivisionId: {{ currentWeightDivisionId }}</div>
+    <app-weight-divisions [weightDivisions]="weightDivisions"
+                          (weightDivisionSelected)="onWeightDivisionSelected($event)"></app-weight-divisions>
+</div>
+<div *ngIf="!!currentBoxers.length">
+    <app-boxers [boxers]="currentBoxers"></app-boxers>
+</div>*@
+
+@code {
+    private IList<WeightDivision> weightDivisions = new List<WeightDivision>();//todo:
+    // todo: get data from API as per bg client
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            //weightDivisions = await Http.GetFromJsonAsync<IList<WeightDivision>>("http://localhost:5239/weights");
+
+
+            var response = await Http.GetAsync("http://localhost:5239/weights");
+            if (response.IsSuccessStatusCode)
+            {
+                var stringData = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<IList<WeightDivision>>(stringData);
+                //... your code
+            }
+
+        }
+        catch (Exception ex)
+        {
+            
+            //throw;
+        }
+        
+    }
+
+}
+
+
