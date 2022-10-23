@@ -1,23 +1,14 @@
-<div>weightDivisions: {{ weightDivisions.length }}</div>
-<ul class="flex-container wrap">
-  <li
-    *ngFor="let w of weightDivisions"
-  >
-    <div class="division-item row flex-container" (click)="onWeightDivisionSelected(w)">
-      <div class="column" >
-        <img src="\assets\images\usyk-50x50.jpg" alt="division thumbnail" />
-      </div>
-      <div class="column" >
-        <div>{{ w.name }}</div>
-        <div>{{ w.limit }}</div>
+<!-- todo: sort out C:\Users\joe_p\Dropbox\flexbox-todo-->
+  <div class="flex-container flex-wrap division-container">
+    <div *ngFor="let w of weightDivisions" class="division-item">
+      <div class="flex-container" (click)="onWeightDivisionSelected(w)">
+        <div class="flex-column">
+          <img src="\assets\images\usyk-50x50.jpg" alt="division thumbnail" />
+        </div>
+        <div class="flex-column division-text">
+          <div>{{ w.name }}</div>
+          <div>{{ w.limit }}</div>
+        </div>
       </div>
     </div>
-  </li>
-</ul>
-<!--<div class="flex-container wrap">-->
-<!--  <div class="el el&#45;&#45;1">HTML</div>-->
-<!--  <div class="el el&#45;&#45;2">and</div>-->
-<!--  <div class="el el&#45;&#45;3">CSS</div>-->
-<!--  <div class="el el&#45;&#45;4">are</div>-->
-<!--  <div class="el el&#45;&#45;5">amazing</div>-->
-<!--</div>-->
+  </div>

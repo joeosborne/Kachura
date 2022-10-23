@@ -1,64 +1,61 @@
-.flex-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  /*border: 1px solid silver;*/
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
+.app-container {
+
+
+  /*justify-content: center;*/
+
 }
 
-.row {
+/*
+A flex-container should only be used to layout spacing between your items as well as the positing of your
+items inside of the container. The flex box item properties are meant to override the layout & positing properties
+or to apply different flexible sizing to these elements */
+.flex-container {
+  /*height: 1000px;*/
+  display: flex;
+  /*justify-content: flex-start;*/
+  /*align-items: flex-start;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
   flex-direction: row;
 }
-.column {
+.flex-column {
   flex-direction: column;
 }
 
-.nowrap {
+.flex-nowrap {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
-.wrap {
+.flex-wrap {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-/* combine division-item and boxer item where possible */
+.division-container {
+  /*background-color: #db4a4a;*/
+  /*max-width: 1000px;*/
+  /*justify-content: center;*/
+  /*margin-right: 100px;*/
+  /*margin-left: 100px;*/
+}
+
+/*    DEFAULTS: for flex items...*/
+/*    flex-grow: 0;*/
+/*    flex-shrink: 1;*/
+/*    flex-basis: auto;*/
+/*    *!*/
+
 .division-item {
-  text-transform: uppercase;
-  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-  font-size: 10px;
+  margin: 10px;
+  padding: 3px;
+  border: 1px solid silver;
   background-color: #fff;
   color: #000;
-  padding: 5px;
-  width: 100px;
-  min-width: 130px;
-  /*height: 100px;*/
-  margin: 10px;
-  font-size: 0.8em;
-  flex: 1;
 
-  /*
-    DEFAULTS:
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    */
-
-  /* flex-basis: 200px; */
-  /* flex-shrink: 0; */
-  /* flex: 0 0 200px; */
-
-  /*flex: 1;*/
-
-  /*text-align: center;*/
 }
 
 .division-item:hover {
@@ -66,14 +63,79 @@
   color: #fff;
 }
 
-.boxer-item {
-  background: green;
-  padding: 8px;
-  min-width: 200px;
-  width: 200px;
-  height: 100px;
-  margin: 10px;
-  color: white;
-  font-size: 1em;
-  text-align: center;
+.division-text {
+  font-size: 14px;
+
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*background-color: red;*/
+  /*align-items: center;*/
+  margin: 0px 0px 0px 5px;
 }
+
+.flex-item-1 {
+  /*flex-shrink: 0;*/
+}
+/*.flex-item-2 {*/
+/*  min-height: 200px;*/
+/*  flex-grow: 2;*/
+/*  flex-basis: 0;*/
+/*  !*align-self overrides the align-items value from the container *!*/
+/*  !*align-self: center;*!*/
+/*}*/
+/*.flex-item-3 {*/
+/*  min-height: 300px;*/
+/*  flex-grow: 1;*/
+/*}*/
+
+/*.flex-container {*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*  list-style: none;*/
+/*  -ms-box-orient: horizontal;*/
+/*  display: -webkit-box;*/
+/*  display: -moz-box;*/
+/*  display: -ms-flexbox;*/
+/*  display: -moz-flex;*/
+/*  display: -webkit-flex;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+
+
+/*.weight-divisions{*/
+/*  !*margin-left: 180px;*!*/
+/*  !*margin-right: 180px;*!*/
+/*}*/
+
+/*!* combine division-item and boxer item where possible *!*/
+/*.division-item {*/
+/*  background-color: #fff;*/
+/*  color: #000;*/
+
+/*  !*text-transform: uppercase;*!*/
+/*  !*font-family: "lucida grande", tahoma, verdana, arial, sans-serif;*!*/
+/*  !*!*padding: 5px;*!*!*/
+/*  !*width: 100px;*!*/
+/*  !*min-width: 130px;*!*/
+/*  !*!*height: 100px;*!*!*/
+/*  !*margin: 10px;*!*/
+/*  !*font-size: 0.7em;*!*/
+/*  !*flex: 1;*!*/
+/*  !*justify-content: center;*!*/
+/*  !*align-items: center;*!*/
+/*}*/
+
+/*.boxer-item {*/
+/*  !*background: green;*!*/
+/*  !*padding: 8px;*!*/
+/*  !*min-width: 200px;*!*/
+/*  !*width: 200px;*!*/
+/*  !*height: 100px;*!*/
+/*  !*margin: 10px;*!*/
+/*  !*color: white;*!*/
+/*  !*font-size: 1em;*!*/
+/*  !*text-align: center;*!*/
+/*}*/

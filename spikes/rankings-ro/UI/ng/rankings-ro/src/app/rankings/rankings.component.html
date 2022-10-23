@@ -1,5 +1,4 @@
-<div *ngIf="!!weightDivisions.length">
-  <div>currentWeightDivisionId: {{ currentWeightDivisionId }}</div>
+<div *ngIf="!!weightDivisions.length" >
   <app-weight-divisions
     [weightDivisions]="weightDivisions"
     (weightDivisionSelected)="onWeightDivisionSelected($event)"
