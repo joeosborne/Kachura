@@ -1,15 +1,14 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {Boxer} from "../model/boxer";
 
 @Component({
   selector: 'app-boxers',
   templateUrl: './boxers.component.html',
-  styleUrls: ['./boxers.component.css']
+  styleUrls: ['./boxers.component.css'],
 })
 export class BoxersComponent implements OnInit {
-  @Input() boxers: any[] = [];
-  constructor() { }
+  @Input() boxers: Boxer[] = [];
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

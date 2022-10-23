@@ -1,14 +1,26 @@
-<!--<p>boxers works!</p>-->
-<!--<app-boxer></app-boxer>-->
-<!--<app-boxer></app-boxer>-->
-<!--<app-boxer></app-boxer>-->
-<!--<app-boxer></app-boxer>-->
-
-<div>boxers: {{ boxers.length }}</div>
-<ul class="flex-container wrap">
-    <li *ngFor="let b of boxers" class="boxer-item">
-        {{b.isChampion}}-{{ b.ranking }}-{{ b.fullName }}-{{ b.record }}-
-    </li>
-</ul>
-
-<!--internal record Boxer(int Id, string FullName, int WeightDivisionId, int Won, int Lost, int Drawn);-->
+<div class="flex-container flex-wrap division-container">
+  <div *ngFor="let b of boxers" class="division-item">
+    <div class="flex-row">
+      <!--        todo: restore the following when images are in place-->
+            <img
+              src="\assets\images\boxer-{{b.id}}.jpg"
+              style="width: 270px; height: 270px"
+              alt="large boxer image"
+            />
+<!--      <img-->
+<!--        src="\assets\images\boxer-13.jpg"-->
+<!--        style="width: 270px; height: 270px"-->
+<!--        alt="large boxer image"-->
+<!--      />-->
+    </div>
+    <div class="flex-column boxer-detail">
+      <div class="flex-row">
+        {{b.ranking}}-{{ b.fullName }}
+      </div>
+      <div class="flex-row">
+        {{ b.country }}
+      </div>
+      <div class="flex-row">{{ b.record }}</div>
+    </div>
+  </div>
+</div>

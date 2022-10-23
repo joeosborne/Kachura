@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import {WeightDivision} from "./model/weight-division";
+import {Boxer} from "./model/boxer";
 
 @Injectable({
   providedIn: 'root',
@@ -10,14 +12,14 @@ export class RankingsDataService {
 
   constructor(private http: HttpClient) {}
 
-  getWeightDivisions(): Observable<any[]> {
+  getWeightDivisions(): Observable<WeightDivision[]> {
     const url = `${this.baseUrl}weights`;
-    return this.http.get<any[]>(url);
+    return this.http.get<WeightDivision[]>(url);
   }
 
-  getBoxers(): Observable<any[]> {
+  getBoxers(): Observable<Boxer[]> {
     const url = `${this.baseUrl}boxers`;
-    return this.http.get<any[]>(url);
+    return this.http.get<Boxer[]>(url);
   }
 }
 

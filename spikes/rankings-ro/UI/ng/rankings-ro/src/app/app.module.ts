@@ -7,8 +7,7 @@ import { RankingsComponent } from './rankings/rankings.component';
 import { HeaderComponent } from './header/header.component';
 import { WeightDivisionsComponent } from './weight-divisions/weight-divisions.component';
 import { BoxersComponent } from './boxers/boxers.component';
-import {HttpClientModule} from "@angular/common/http";
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,13 +16,10 @@ import {HttpClientModule} from "@angular/common/http";
     RankingsComponent,
     HeaderComponent,
     WeightDivisionsComponent,
-    BoxersComponent
+    BoxersComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

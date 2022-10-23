@@ -1,8 +1,5 @@
 .app-container {
-
-
   /*justify-content: center;*/
-
 }
 
 /*
@@ -37,9 +34,9 @@ or to apply different flexible sizing to these elements */
 
 .division-container {
   /*background-color: #db4a4a;*/
-  /*max-width: 1000px;*/
+  max-width: 1200px;
   /*justify-content: center;*/
-  /*margin-right: 100px;*/
+  margin-right: 100px;
   /*margin-left: 100px;*/
 }
 
@@ -55,7 +52,6 @@ or to apply different flexible sizing to these elements */
   border: 1px solid silver;
   background-color: #fff;
   color: #000;
-
 }
 
 .division-item:hover {
@@ -71,6 +67,11 @@ or to apply different flexible sizing to these elements */
   /*background-color: red;*/
   /*align-items: center;*/
   margin: 0px 0px 0px 5px;
+}
+
+.boxer-detail {
+  display: flex;
+  align-items: center;
 }
 
 .flex-item-1 {
@@ -102,8 +103,6 @@ or to apply different flexible sizing to these elements */
 /*  justify-content: center;*/
 /*  align-items: center;*/
 /*}*/
-
-
 
 /*.weight-divisions{*/
 /*  !*margin-left: 180px;*!*/
