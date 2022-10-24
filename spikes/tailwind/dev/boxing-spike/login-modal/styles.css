@@ -1,0 +1,171 @@
+/* todo: extract this and the flex items with a new html file as an RI for flexbox*/
+
+/*
+A flex-container should only be used to layout spacing between your items as well as the positing of your
+items inside of the container. The flex box item properties are meant to override the layout & positing properties
+or to apply different flexible sizing to these elements */
+.flex-container {
+  /*height: 1000px;*/
+  display: flex;
+  background-color: burlywood;
+  /*flex-wrap: wrap;*/
+  /*flex-direction: column;*/
+
+  /*
+  justify-content is the alignment across the "main axis"
+  for rows - "main axis" is horizontal
+  for columns - "main axis" is vertical
+
+  */
+
+  /* NOTE: flex-start is the default */
+  /*justify-content: flex-start;*/
+  /*justify-content: space-around;*/
+  /*justify-content: space-between;*/
+  justify-content: center;
+
+
+  /*
+  align-items is the alignment across the "cross axis"
+  for rows - "cross axis" is vertical
+  for columns - "cross axis" is horizontal
+  */
+  align-items: center;
+
+  /*
+  align-content: only used for multi-line flexbox containers,
+  value determines how much space to put between the lines.
+  */
+  /*align-content: flex-start;*/
+
+}
+
+.flex-nowrap {
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+
+/*    DEFAULTS: for flex items...*/
+/*    flex-grow: 0;*/
+/*    flex-shrink: 1;*/
+/*    flex-basis: auto;*/
+/*    *!*/
+
+
+
+
+.flex-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid darkblue;
+  background-color: aqua;
+}
+
+.flex-item-1 {
+  min-height: 100px;
+  /*flex-shrink: 0;*/
+}
+.flex-item-2 {
+  min-height: 200px;
+  flex-grow: 2;
+  flex-basis: 0;
+  /*align-self overrides the align-items value from the container */
+  /*align-self: center;*/
+}
+.flex-item-3 {
+  min-height: 300px;
+  flex-grow: 1;
+}
+
+
+/*.flex-container {*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*  list-style: none;*/
+/*  -ms-box-orient: horizontal;*/
+/*  display: -webkit-box;*/
+/*  display: -moz-box;*/
+/*  display: -ms-flexbox;*/
+/*  display: -moz-flex;*/
+/*  display: -webkit-flex;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.flex-row {*/
+/*  flex-direction: row;*/
+/*}*/
+/*.flex-column {*/
+/*  flex-direction: column;*/
+/*}*/
+
+
+/*.weight-divisions{*/
+/*  !*margin-left: 180px;*!*/
+/*  !*margin-right: 180px;*!*/
+/*}*/
+
+/*!* combine division-item and boxer item where possible *!*/
+/*.division-item {*/
+/*  background-color: #fff;*/
+/*  color: #000;*/
+
+/*  !*text-transform: uppercase;*!*/
+/*  !*font-family: "lucida grande", tahoma, verdana, arial, sans-serif;*!*/
+/*  !*!*padding: 5px;*!*!*/
+/*  !*width: 100px;*!*/
+/*  !*min-width: 130px;*!*/
+/*  !*!*height: 100px;*!*!*/
+/*  !*margin: 10px;*!*/
+/*  !*font-size: 0.7em;*!*/
+/*  !*flex: 1;*!*/
+/*  !*justify-content: center;*!*/
+/*  !*align-items: center;*!*/
+/*  !**/
+/*    DEFAULTS:*/
+/*    flex-grow: 0;*/
+/*    flex-shrink: 1;*/
+/*    flex-basis: auto;*/
+/*    *!*/
+
+/*  !* flex-basis: 200px; *!*/
+/*  !* flex-shrink: 0; *!*/
+/*  !* flex: 0 0 200px; *!*/
+
+/*  !*flex: 1;*!*/
+
+/*  !*text-align: center;*!*/
+/*}*/
+
+/*.division-item:hover {*/
+/*  background-color: #db4a4a;*/
+/*  color: #fff;*/
+/*}*/
+/*.division-thumbnail{*/
+/*  !*margin: 2px 8px 2px 2px;*!*/
+/*}*/
+/*.division-text{*/
+/*  !*align-items: center;*!*/
+/*  !*justify-content: center;*!*/
+/*  !*background-color: red;*!*/
+/*  !*align-items: center;*!*/
+/*  !*margin: 5px 5px 5px 0px;*!*/
+/*}*/
+/*.boxer-item {*/
+/*  !*background: green;*!*/
+/*  !*padding: 8px;*!*/
+/*  !*min-width: 200px;*!*/
+/*  !*width: 200px;*!*/
+/*  !*height: 100px;*!*/
+/*  !*margin: 10px;*!*/
+/*  !*color: white;*!*/
+/*  !*font-size: 1em;*!*/
+/*  !*text-align: center;*!*/
+/*}*/
