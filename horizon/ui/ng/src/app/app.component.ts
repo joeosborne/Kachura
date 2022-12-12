@@ -8,3 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng';
 }
+
+
+/*
+// todo:
+add prettier
+add cypress
+fix app-prefix
+
+
+
+
+
+
+ */
