@@ -12,14 +12,14 @@ export class BoxerDataService {
 
   getBoxers(): Observable<any[]> {
     // todo: move url
-    const apiUrl = `http://localhost:3000/boxers`;
+    const apiUrl = `https://localhost:7239/boxers`;
     // todo: rxjs tap into observable and add boxers in local storage
     return this.http.get<any[]>(apiUrl);
   }
 
   getWeights(): Observable<any[]> {
     // todo: move url
-    const apiUrl = `http://localhost:3000/weights`;
+    const apiUrl = `https://localhost:7239/weights`;
     // todo: rxjs tap into observable and add weight in local storage
     return this.http.get<any[]>(apiUrl);
   }

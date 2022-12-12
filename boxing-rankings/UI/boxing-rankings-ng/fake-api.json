@@ -20,7 +20,7 @@
       "record": "19-0-0 (13)",
       "nationality": "UKR",
       "ranking": 1,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "record": "24-2-0 (22)",
       "nationality": "ENG",
       "ranking": 2,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 3,
@@ -36,7 +36,7 @@
       "record": "42-2-1 (41)",
       "nationality": "USA",
       "ranking": 3,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 4,
@@ -44,7 +44,7 @@
       "record": "34-2-0 (22)",
       "nationality": "USA",
       "ranking": 4,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@
       "record": "30-2-0 (21)",
       "nationality": "NZ",
       "ranking": 5,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 6,
@@ -60,7 +60,7 @@
       "record": "14-0-0 (13)",
       "nationality": "ENG",
       "ranking": 6,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "record": "28-2-0 (19)",
       "nationality": "ENG",
       "ranking": 7,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 8,
@@ -76,7 +76,7 @@
       "record": "33-2-0 (28)",
       "nationality": "CUB",
       "ranking": 8,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 9,
@@ -84,7 +84,7 @@
       "record": "24-1-0 (14)",
       "nationality": "SWE",
       "ranking": 9,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 10,
@@ -92,7 +92,7 @@
       "record": "20-1-2 (14)",
       "nationality": "USA",
       "ranking": 10,
-      "weightId": 1
+      "weightDivisionId": 1
     },
     {
       "id": 0,
@@ -100,7 +100,7 @@
       "record": "22-0-0 (17)",
       "nationality": "AUS",
       "ranking": 0,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -108,7 +108,7 @@
       "record": "28-2-0 (20)",
       "nationality": "LVA",
       "ranking": 1,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -116,7 +116,7 @@
       "record": "17-0-0 (14)",
       "nationality": "ENG",
       "ranking": 2,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -124,7 +124,7 @@
       "record": "25-2-0 (23)",
       "nationality": "CUB",
       "ranking": 3,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -132,7 +132,7 @@
       "record": "29-2-0 (25)",
       "nationality": "COD",
       "ranking": 4,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -140,7 +140,7 @@
       "record": "23-6-0 (13)",
       "nationality": "RSA",
       "ranking": 5,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -148,7 +148,7 @@
       "record": "14-1-0 (13)",
       "nationality": "RUS",
       "ranking": 6,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -156,7 +156,7 @@
       "record": "15-0-0 (11)",
       "nationality": "ENG",
       "ranking": 7,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -164,7 +164,7 @@
       "record": "46-5-0 (31)",
       "nationality": "POL",
       "ranking": 8,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -172,7 +172,7 @@
       "record": "15-0-0 (12)",
       "nationality": "USA",
       "ranking": 9,
-      "weightId": 2
+      "weightDivisionId": 2
     },
     {
       "id": 0,
@@ -180,7 +180,7 @@
       "record": "16-1-0 (11)",
       "nationality": "ENG",
       "ranking": 10,
-      "weightId": 2
+      "weightDivisionId": 2
     }
   ]
 }

@@ -28,10 +28,10 @@ export class EditRankingsComponent implements OnInit {
     });
   }
 
-  onWeightSelected(weightId: number) {
-    this.selectedWeightId = this.weights.find((x) => x.id === weightId).id;
+  onWeightSelected(weightDivisionId: number) {
+    this.selectedWeightId = this.weights.find((x) => x.id === weightDivisionId).id;
     this.boxersAtSelectedWeight = this.boxers.filter(
-      (x) => x.weightId === this.selectedWeightId
+      (x) => x.weightDivisionId === this.selectedWeightId
     );
   }
 

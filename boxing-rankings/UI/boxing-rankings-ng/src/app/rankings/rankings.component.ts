@@ -26,8 +26,9 @@ export class RankingsComponent implements OnInit {
     });
   }
 
-  onWeightSelected(weightId: number) {
-    this.selectedWeightId = this.weights.find((x) => x.id === weightId).id;
-    this.boxersAtSelectedWeight = this.boxers.filter(x=>x.weightId === this.selectedWeightId)
+  onWeightSelected(weightDivisionId: number) {
+    debugger;
+    this.selectedWeightId = this.weights.find((x) => x.id === weightDivisionId).id;
+    this.boxersAtSelectedWeight = this.boxers.filter(x=>x.weightDivisionId === this.selectedWeightId)
   }
 }
