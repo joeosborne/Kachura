@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'horizon-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'ng';
-}
 
+}
 
 /*
 // todo:
-add prettier
 add cypress
-fix app-prefix
 
+phase out markup and css from starter example (udemy/shortly)
 
+UX as I go - aria etc
 
 
 
