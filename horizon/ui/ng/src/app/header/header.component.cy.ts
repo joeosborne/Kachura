@@ -8,8 +8,9 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeaderComponent],
-    }).compileComponents();
+      declarations: [ HeaderComponent ]
+    })
+        .compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
@@ -17,6 +18,7 @@ describe('HeaderComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    console.log(component)
+    expect(component).to.be.true;
   });
 });
