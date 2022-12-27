@@ -9,7 +9,9 @@
       <img src="../assets/images/logo.svg" alt="" />
       <!-- Left Menu -->
       <div class="hidden space-x-8 font-bold lg:flex">
-        <a href="#" class="text-grayishViolet hover:text-veryDarkViolet"
+        <a
+          routerLink="/portal"
+          class="text-grayishViolet hover:text-veryDarkViolet"
           >Counsellors’ Portal</a
         >
         <a href="#" class="text-grayishViolet hover:text-veryDarkViolet"
@@ -29,12 +31,12 @@
       class="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex"
     >
       <a
-              href="#"
-              class="px-8 py-3 font-bold text-white bg-darkViolet rounded-full hover:opacity-70"
-      >Business Space Login</a
+        routerLink="/login"
+        class="px-8 py-3 font-bold text-white bg-darkViolet rounded-full hover:opacity-70"
+        >Business Space Login</a
       >
       <a
-        href="#"
+        routerLink="/signup"
         class="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70"
         >Sign Up</a
       >
@@ -67,10 +69,14 @@
       <a href="#" class="w-full text-center">Features</a>
       <a href="#" class="w-full text-center">Pricing</a>
       <a href="#" class="w-full text-center">Resources</a>
-      <a href="#" class="w-full pt-6 border-t border-gray-400 text-center"
+      <a
+        routerLink="/login"
+        class="w-full pt-6 border-t border-gray-400 text-center"
         >Login</a
       >
-      <a href="#" class="w-full py-3 text-center rounded-full bg-cyan"
+      <a
+        routerLink="/signup"
+        class="w-full py-3 text-center rounded-full bg-cyan"
         >Sign Up</a
       >
     </div>
