@@ -1,0 +1,122 @@
+/*html,*/
+/*body {*/
+/*	padding: 0;*/
+/*	margin: 0;*/
+/*	font-family: arial, sans-serif;*/
+/*}*/
+
+/*body {*/
+/*    display: flex;*/
+/*    padding: 1em;*/
+/*}*/
+
+/*.item {*/
+/*    background-color: #A62E5C;*/
+/*	color: #fff;*/
+/*    box-sizing: border-box;*/
+/*	font-size: 1.2em;*/
+/*	padding: 1em;*/
+/*	text-align: center;*/
+/*    flex: 1;*/
+/*}*/
+
+/*.item:nth-child(even) {*/
+/*	background-color: #9BC850;*/
+/*}*/
+
+/*.item strong {*/
+/*	display: block;*/
+/*	font-size: 130%;*/
+/*}*/
+
+/*
+CHEAT SHEET FOR FLEX CONTAINER...
+
+1 gap: (default is 0)
+	"Gutters"
+	To create space between items without using margin
+
+2 justify-content (default is flex-start)
+	To align items along main axis (horizontally by default)
+
+3 align-items: (default is flex-stretch)
+	To align items along cross axis (vertically by default)
+
+4 flex-direction (default is row)
+	To define which is the main axis
+
+5 flex-wrap (default is nowrap)
+
+6 align-content (default is stretch)
+	Only applies when there are multiple lines (flex-wrap: wrap)
+*/
+
+.flex-container{
+	display: flex;
+
+	/*flex-wrap: wrap;*/
+	/*align-content: flex-start;*/
+	/*gap: 2em;*/
+	border: solid 4px red;
+	/*flex-direction: column;*/
+	width: 75%;
+	height: 30em;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/*
+CHEAT SHEET FOR FLEX ITEMS...
+1 align-self (default is auto)
+	To overwrite align-items for individual flex items
+
+2 flex-grow (default is 0)
+	To allow an element to grow.
+	0 = no, 1+ means yes
+
+3 flex-shrink (default is 1)
+	To allow an element to shrink.
+	0 = no, 1+ means yes
+
+4 flex-basis (default is auto)
+	To define an items width (initial size), instead of the width property
+
+5 flex (shorthand, default is '0 1 auto')
+	[flex-grow][flex-shrink][flex-basis]
+
+6 order (default is 0)
+	Controls the order of items. -1 makes item first. 1 makes it last.
+	Because of accessibility, use for visual purposes only and not logical re-ordering.
+
+*/
+
+.item{
+	border: solid 4px cyan;
+	/*min-width: 50px;*/
+	width: 10em;
+	/*flex-grow: 1;*/
+	/*flex: 0 0 20em;*/
+
+}
+
+.item-01{
+	/*flex-grow: 1;*/
+	/*order: 1;*/
+	/*flex-basis: 15em;*/
+	align-self: stretch;
+}
+
+.item-02{
+	/*order: 1;*/
+	/*flex-shrink: 0;*/
+	background-color: darkblue;
+	color: wheat;
+}
+
+.item-03{
+	align-self: flex-end;
+}
+.item-04{}
+
+

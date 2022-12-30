@@ -1,0 +1,58 @@
+body {
+    display: flex;
+	flex-direction: column;
+	background-color: lightcoral;
+	min-height: 100vh;
+}
+main{
+	display: flex;
+
+}
+article{
+flex: 2 2 12em;
+}
+
+nav,
+aside{
+	flex: 1;
+
+}
+
+.page-header{
+	background-color: red;
+	display: flex;
+	justify-content: center;
+}
+
+.content-navigation{
+	background-color: brown;
+	display: flex;
+	justify-content: center;
+}
+.content-article{
+	background-color: blue;
+	display: flex;
+	justify-content: center;
+}
+.content-sidebar{
+	background-color: fuchsia;
+	display: flex;
+	justify-content: center;
+}
+
+.page-footer{
+	background-color: green;
+	/*align-self: flex-end;*/
+	display: flex;
+	justify-content: center;
+	margin-top: auto;
+
+}
+
+
+@media screen and (max-width: 500px){
+	main{
+		flex-direction: column;
+	}
+
+}
