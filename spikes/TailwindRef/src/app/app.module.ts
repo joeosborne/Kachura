@@ -6,6 +6,9 @@ import { AspectRatioComponent } from './aspect-ratio/aspect-ratio.component';
 import { ContainerComponent } from './container/container.component';
 import { DisplayComponent } from './display/display.component';
 import { ObjectFitComponent } from './object-fit/object-fit.component';
+import { SandpitComponent } from './sandpit/sandpit.component';
+import { TopRBLComponent } from './top-rbl/top-rbl.component';
+import { MiscComponent } from './misc/misc.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { ObjectFitComponent } from './object-fit/object-fit.component';
     AspectRatioComponent,
     ContainerComponent,
     DisplayComponent,
-    ObjectFitComponent
+    ObjectFitComponent,
+    SandpitComponent,
+    TopRBLComponent,
+    MiscComponent
   ],
   imports: [
     BrowserModule
