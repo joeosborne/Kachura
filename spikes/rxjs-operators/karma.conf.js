@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/rxjs-operators'),
+      dir: require('path').join(__dirname, './coverage/rxjs-switch-map'),
       subdir: '.',
       reporters: [
         { type: 'html' },

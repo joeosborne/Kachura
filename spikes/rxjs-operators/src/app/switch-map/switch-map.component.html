@@ -1,0 +1,24 @@
+<div>
+  <h3>Open console and click document</h3>
+
+  <p>
+    One of the main problems of using Javascript callbacks or promises is that
+    they cannot cancel any long-running HTTP operations. Consider the case where
+    you selected a Netflix video to watch and just after few seconds, you
+    changed your mind and quickly selected another video. Even though you are
+    not interested in the first video, the API call to fetch the first video
+    will still continue and complete its operation in the background. It would
+    be ideal to have an easy mechanism to cancel these stale events cleanly
+    after some predetermined amount of time. SwitchMap operator provides an easy
+    mechanism to cancel these in-flight network requests. For example, look at
+    the below code using switchMap operator.
+  </p>
+  <p>
+    When subscribed, obs$1 will emit response for every user click on the page
+    and obs$2 will incrementally emit numbers for every 1 sec. Without switch
+    map, when combining these two observables, obs$2 will continue its execution
+    even when the user clicks in the document. But in the case of switch map,
+    obs$2 will cancel its previous execution and starts new execution for every
+    user click in the document.
+  </p>
+</div>
