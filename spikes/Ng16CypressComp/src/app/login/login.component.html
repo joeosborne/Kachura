@@ -1,0 +1,129 @@
+<div class="flex min-h-screen flex-col bg-neutral-600">
+    <div class="flex flex-col m-auto" *ngIf="!isConfigLoaded()">
+        <img src="\assets\images\afinitis_white_transparent.png" width="200" style="image-rendering: crisp-edges;" alt="afinitis logo" />
+        <div class="text-center mt-3">
+            <i class="fa-solid fa-3x fa-gear fa-spin fa-spin-reverse dx-theme-accent-as-text-color" ></i>
+        </div>
+    </div>
+    <div class="flex flex-col w-full min-h-screen sm:w-[350px] sm:min-h-0 sm:m-auto rounded shadow-md bg-white" *ngIf="!!isConfigLoaded() && !!isLoginAllowed()">
+
+        <div class="flex flex-col w-full py-12 px-8 my-auto">
+            <div class="flex flex-col justify-center my-4">
+                <img class="mx-auto" src="\assets\images\afinitis_black_transparent.png" width="200" style="image-rendering: crisp-edges;" alt="afinitis logo" />
+                <h2 *ngIf="!!showLogin" class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">Sign In</h2>
+                <h2 *ngIf="!!showRegistration" class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">Register</h2>
+                <h2 *ngIf="!!showChangePassword" class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">Change Password</h2>
+            </div>
+
+            <form class="space-y-6" (submit)="validateUser()" *ngIf="!!showLogin">
+                <div>
+                    <label for="txtEmailLogin" class="block text-sm font-medium leading-6 text-gray-900">Email Address</label>
+                    <div class="mt-2">
+<!--                        <dx-text-box id="txtEmailLogin" [(value)]="loginVm.Username">-->
+<!--                            <dx-validator>-->
+<!--                                <dxi-validation-rule type="required" message="Email is required"> </dxi-validation-rule>-->
+<!--                                <dxi-validation-rule type="email" message="Email is invalid"> </dxi-validation-rule>-->
+<!--                            </dx-validator>-->
+<!--                        </dx-text-box>-->
+                    </div>
+                </div>
+                <div>
+                    <label for="txtEmail" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                    <div class="mt-2">
+                        <input class="mb-3 px-2 py-1.5
+                                  mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+                                  focus:outline-none
+                                  focus:border-sky-500
+                                  focus:ring-1
+                                  focus:ring-sky-500
+                                  focus:invalid:border-red-500 focus:invalid:ring-red-500" type="text" name="txtEmail" placeholder="email">
+                    <label for="txtPassword" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                    </div>
+                    <div class="mt-2">
+                                        <input class="mb-3 px-2 py-1.5
+                                  mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
+                                  focus:outline-none
+                                  focus:border-sky-500
+                                  focus:ring-1
+                                  focus:ring-sky-500
+                                  focus:invalid:border-red-500 focus:invalid:ring-red-500" type="text" name="txtPassword" placeholder="password">
+                                        <button class="w-full" id="btnSignIn" [disabled]="disableButtons">SIGN IN</button>
+
+<!--                        <dx-text-box id="txtPassword" [(value)]="loginVm.Password" [(mode)]="passwordMode">-->
+<!--                            <dx-validator>-->
+<!--                                <dxi-validation-rule type="required" message="Password is required"> </dxi-validation-rule>-->
+<!--                            </dx-validator>-->
+<!--                            <dxi-button-->
+<!--                                    id="btnShowPassword"-->
+<!--                                    class="dx-theme-accent-as-text-color"-->
+<!--                                    name="showPassword"-->
+<!--                                    location="after"-->
+<!--                                    [options]="passwordButton"-->
+<!--                            ></dxi-button>-->
+<!--                        </dx-text-box>-->
+                    </div>
+                </div>
+                <div class="flex justify-end leading-6">
+                    <a [routerLink]="[]" (click)="showChangePasswordForm()" class="font-semibold dx-theme-accent-as-text-color hover:dx-theme-accent-as-text-color">Forgot password?</a>
+                </div>
+<!--                <dx-validation-summary></dx-validation-summary>-->
+<!--                <dx-button class="w-full" stylingMode="contained" id="btnSignIn" text="SIGN IN" type="default" [useSubmitBehavior]="true" [disabled]="disableButtons">-->
+<!--                </dx-button>-->
+            </form>
+
+            <div *ngIf="!!isRegistrationAllowed() && !!showLogin" class="flex flex-row pt-12 justify-center">
+                <a [routerLink]="[]" (click)="showRegistrationForm()" class="font-semibold dx-theme-accent-as-text-color hover:dx-theme-accent-as-text-color">New customers register here</a>
+            </div>
+
+
+            <div *ngIf="!showLogin" class="flex flex-row pt-12 justify-center">
+                <a id="lnkReturnToLogin" [routerLink]="[]" (click)="showLoginForm()" class="font-semibold dx-theme-accent-as-text-color hover:dx-theme-accent-as-text-color">Return to log In</a>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noSignInAllowed>
+        <div class="m-auto justify-center space-y-6">
+            <img src="\assets\images\afinitis_white_transparent.png" width="180" style="image-rendering: crisp-edges;" alt="afinitis logo" />
+            <div class="text-white titleLogin">The Afinitis portal is currently unavailable</div>
+            <div class="text-white titleLogin">Please try again later</div>
+        </div>
+    </ng-template>
+
+</div>
+
+
+<!--<div class="bg-gradient-to-tr from-fuchsia-300 to-sky-500">-->
+<!--    <section id="login" class="p-4 flex flex-col justify-center min-h-screen max-w-md mx-auto">-->
+<!--        <div class="p-6 bg-sky-100 rounded">-->
+<!--            <div class="flex items-center justify-center font-black m-3 mb-12">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mr-3 text-red-600 animate-pulse" viewBox="0 0 20 20" fill="currentColor">-->
+<!--                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />-->
+<!--                </svg>-->
+<!--                <h1 class="tracking-wide text-3xl text-gray-900">Buy Me a Laptop</h1>-->
+<!--            </div>-->
+<!--            <div id="login_form" class="flex flex-col justify-center">-->
+<!--                <label class="text-sm font-medium">From</label>-->
+<!--                <input class="mb-3 px-2 py-1.5-->
+<!--          mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400-->
+<!--          focus:outline-none-->
+<!--          focus:border-sky-500-->
+<!--          focus:ring-1-->
+<!--          focus:ring-sky-500-->
+<!--          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="text" name="username" placeholder="wahyusa">-->
+<!--                <label class="text-sm font-medium">Messages (optional)</label>-->
+<!--                <textarea class="-->
+<!--          mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400-->
+<!--          focus:outline-none-->
+<!--          focus:border-sky-500-->
+<!--          focus:ring-1-->
+<!--          focus:ring-sky-500-->
+<!--          focus:invalid:border-red-500 focus:invalid:ring-red-500" name="messages" placeholder="Write something"></textarea>-->
+<!--                <button class="px-4 py-1.5 rounded-md shadow-lg bg-gradient-to-r from-pink-600 to-red-600 font-medium text-gray-100 block transition duration-300" type="submit">-->
+<!--                    <span id="login_process_state" class="hidden">Sending :)</span>-->
+<!--                    <span id="login_default_state">Donate<span id="subtotal"></span></span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</div>-->

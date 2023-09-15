@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Responsive Web Design with HTML5 and CSS by Ben Frain</title>
+    <meta
+            name="Description"
+            content="A website for the book, Responsive Web Design with HTML and CSS, by Ben Frain"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://fonts.googleapis.com/css?family=Oswald:500&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="favicon/apple-touch-icon.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon/favicon-32x32.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon/favicon-16x16.png"
+    />
+<!--    <link rel="manifest" href="site.webmanifest" />-->
+    <link
+            rel="mask-icon"
+            href="favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./assets/index.css" />
+</head>
+<body>
+<header class="rwd-MastHead">
+    <a href="/" class="rwd-Logo">
+        <span class="rwd-Logo_Main">RWD</span>
+        <span class="rwd-Logo_Secondary">Education</span>
+    </a>
+    <nav class="rwd-Nav">
+        <a class="rwd-Nav_Link" href="#about">About</a>
+        <a class="rwd-Nav_Link" href="#reviews">Reviews</a>
+        <a class="rwd-Nav_Link" href="#chapters">Chapter List</a>
+        <a class="rwd-Nav_Link" href="#buy">Buy</a>
+        <button
+                type="button"
+                class="rwd-Nav_Link"
+                aria-controls="downloadPanel"
+        >
+            Code
+        </button>
+        <div
+                id="downloadPanelClickMask"
+                class="rwd-DownloadPanel_Mask"
+                data-active="false"
+        ></div>
+        <dialog id="downloadPanel">
+            <form method="dialog" class="rwd-DownloadPanel">
+                <button class="rwd-DownloadPanel_Dismiss" type="reset">
+                    Close
+                </button>
+                <p class="rwd-DownloadPanel_Title">
+                    <svg class="rwd-DownloadPanel_SVG">
+                        <use xlink:href="#code"></use>
+                    </svg>
+
+                    Download Code
+                </p>
+                <div class="rwd-DownloadPanel_Links">
+                    <a
+                            href="https://github.com/PacktPublishing/Responsive-Web-Design-with-HTML5-and-CSS-Third-Edition/archive/master.zip"
+                            class="rwd-DownloadPanel_Link"
+                    >
+                        3rd Edition
+                    </a>
+                    <a
+                            href="https://github.com/benfrain/rwd/archive/master.zip"
+                            class="rwd-DownloadPanel_Link"
+                    >
+                        4th Edition
+                    </a>
+                </div>
+            </form>
+        </dialog>
+    </nav>
+</header>
+<main>
+    <section class="rwd-Hero">
+                <picture class="rwd-Hero_Cover">
+                    <img src="img/counselling.png" alt="">
+                </picture>
+<!--        <picture class="rwd-Hero_Cover">-->
+<!--            <source-->
+<!--                    type="image/avif"-->
+<!--                    srcset="-->
+<!--                            ./assets/ResponsiveWebDesign_BenFrain_Cover500.avif 350w,-->
+<!--                            ./assets/ResponsiveWebDesign_BenFrain_Cover700.avif 500w-->
+<!--                        "-->
+<!--                    sizes="(min-width: 320px) 50vw, (min-width: 800px) 40vw"-->
+<!--            />-->
+
+<!--            <source-->
+<!--                    type="image/webp"-->
+<!--                    srcset="-->
+<!--                            ./assets/ResponsiveWebDesign_BenFrain_Cover500.webp 350w,-->
+<!--                            ./assets/ResponsiveWebDesign_BenFrain_Cover700.webp 500w-->
+<!--                        "-->
+<!--                    sizes="(min-width: 320px) 50vw, (min-width: 800px) 40vw"-->
+<!--            />-->
+<!--            <img-->
+<!--                    alt="Book cover of Responsive Web Design with HTML5 and CSS by Ben Frain"-->
+<!--                    src="./assets/ResponsiveWebDesign_BenFrain_Cover500.jpg"-->
+<!--            />-->
+<!--        </picture>-->
+        <div class="rwd-Hero_TitleAndIntro">
+            <h1 class="rwd-Hero_Title">
+                Responsive Web Design
+                <span class="rwd-Hero_TextGroup">
+                            <i>with</i>
+                            HTML5
+                        </span>
+                <span class="rwd-Hero_TextGroup">
+                            <i>and</i>
+                            CSS
+                        </span>
+                <span class="rwd-Hero_Edition">4th Edition</span>
+            </h1>
+            <p class="rwd-Hero_Description">
+                Since 2012, ’
+                <strong>
+                    Responsive Web Design with HTML5 and CSS
+                </strong>
+                ’ by
+                <a href="https://benfrain.com">Ben Frain</a>
+                has been Packt Publishing’s best-selling book on
+                Responsive Web Design. Now there's a completely updated
+                4th Edition for 2022 and beyond!
+            </p>
+            <span class="rwd-Hero_JumpLinks">
+                        <a href="#new" class="rwd-Hero_JumpLink">
+                            What's new in the 4th Edition?
+                        </a>
+                        <a href="https://3rd.rwd.education" class="rwd-3rd">
+                            Looking for the 3rd Edition?
+                        </a>
+                    </span>
+        </div>
+    </section>
+
+    <section id="about" class="rwd-About">
+        <div class="rwd-About_Minor">
+            <svg class="rwd-About_SVG-pages">
+                <use xlink:href="#pages"></use>
+            </svg>
+            <h5 class="rwd-About_MinorTitle">400+ Info Packed Pages</h5>
+            <p>
+                CSS Layers, Color Functions, Media Queries, SVG,
+                animations, transforms, accessibility, Flexbox, Grid,
+                Scroll Snap and much, much more.
+            </p>
+        </div>
+        <div class="rwd-About_Minor">
+            <svg class="rwd-About_SVG-code">
+                <use xlink:href="#code"></use>
+            </svg>
+            <h5 class="rwd-About_MinorTitle">Sample Code</h5>
+            <p>
+                Each chapter has associated code examples to follow
+                along with. You also get the source code for this site
+                which utilises many of the techniques you'll master
+                throughout.
+            </p>
+        </div>
+        <div class="rwd-About_Minor">
+            <svg class="rwd-About_SVG-4th">
+                <use xlink:href="#4th"></use>
+            </svg>
+
+            <h5 class="rwd-About_MinorTitle">Latest Edition</h5>
+            <p>
+                The 4th Edition of Packt’s best-selling Responsive Web
+                Design title since 2012. Updated in 2022 to include all
+                the new and essential CSS and HTML features.
+            </p>
+        </div>
+        <div class="rwd-About_Major">
+            <h5 class="rwd-About_MajorTitle">Is it for you?</h5>
+            <p>
+                Are you a full-stack developer who needs to boost their
+                front-end skills? Perhaps you work on the front-end and
+                you need a definitive overview of all modern HTML and
+                CSS has to offer?
+            </p>
+
+            <p>
+                Maybe you have done a little website building but you
+                need a deep understanding of how responsive web designs
+                work and how to achieve them? This is a book for you!
+            </p>
+        </div>
+        <div class="rwd-About_Major">
+            <h5 class="rwd-About_MajorTitle">What will you learn?</h5>
+            <p>
+                Understand the most fundamental parts of building a
+                modern web site or application that will work across all
+                devices. You'll learn the best approaches for having a
+                fast and accessible website that works just as well on
+                the latest iPhone or Android as a desktop computer.
+            </p>
+            <p>
+                The book covers everything from choosing the right tag
+                to mark up content, to understanding the benefits of
+                modern image formats like AVIF and WebP &mdash; and
+                everything essential in-between. It also covers all the
+                latest features of CSS: Custom Properties, variable
+                fonts, CSS Grid and much, much more.
+            </p>
+        </div>
+    </section>
+<!--    <div id="buy" class="rwd-Buy">-->
+<!--        <a-->
+<!--                href="https://www.packtpub.com/product/responsive-web-design-with-html5-and-css-fourth-edition/9781803242712"-->
+<!--                class="rwd-Buy_Link rwd-Buy_Link-packt"-->
+<!--        >-->
+<!--            Buy from Packt-->
+<!--        </a>-->
+<!--        <a-->
+<!--                href="https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/180324271X/"-->
+<!--                class="rwd-Buy_Link rwd-Buy_Link-packt"-->
+<!--        >-->
+<!--            Buy from Amazon-->
+<!--        </a>-->
+<!--        <a href="#" class="rwd-TopBtn">-->
+<!--            <svg-->
+<!--                    version="1.1"-->
+<!--                    xmlns="http://www.w3.org/2000/svg"-->
+<!--                    width="32"-->
+<!--                    height="32"-->
+<!--                    viewBox="0 0 32 32"-->
+<!--            >-->
+<!--                <title>circle-up</title>-->
+<!--                <path-->
+<!--                        d="M0 16c0 8.837 7.163 16 16 16s16-7.163 16-16-7.163-16-16-16-16 7.163-16 16zM29 16c0 7.18-5.82 13-13 13s-13-5.82-13-13 5.82-13 13-13 13 5.82 13 13z"-->
+<!--                ></path>-->
+<!--                <path-->
+<!--                        d="M22.086 20.914l2.829-2.829-8.914-8.914-8.914 8.914 2.828 2.828 6.086-6.086z"-->
+<!--                ></path>-->
+<!--            </svg>-->
+<!--        </a>-->
+<!--    </div>-->
+    <footer class="rwd-Footer">
+        <section class="rwd-Footer_Block">
+            <h4 class="rwd-Footer_SectionTitle">About</h4>
+            <p class="rwd-Footer_Text">
+                This site supports the book, Responsive Web Design with
+                HTML5 and CSS, 4th Edition
+            </p>
+
+            <p class="rwd-Footer_Text">ISBN 978-1-83921-156-0</p>
+            <p class="rwd-Footer_Text">
+                Fourth Edition published by Packt Publishing 2020.
+            </p>
+
+            <a
+                    class="rwd-Footer_Link"
+                    href="https://github.com/benfrain/rwd4/tree/master/rwd.education"
+            >
+                Website source code
+            </a>
+            <small class="rwd-Copyright">
+                &copy; copyright 2022 Ben Frain. All rights reserved.
+            </small>
+        </section>
+        <section class="rwd-Footer_Block rwd-Footer_Block-contact">
+            <h4 class="rwd-Footer_SectionTitle">Contact</h4>
+            <a
+                    href="https://twitter.com/benfrain"
+                    class="rwd-Footer_Link"
+            >
+                @benfrain on Twitter
+            </a>
+            <a
+                    href="https://github.com/benfrain"
+                    class="rwd-Footer_Link"
+            >
+                @benfrain on GitHub
+            </a>
+            <p class="rwd-Footer_Text">
+                Email: contact (at) benfrain dot com
+            </p>
+        </section>
+    </footer>
+</main>
+<script src="./index.js"></script>
+</body>
+</html>
