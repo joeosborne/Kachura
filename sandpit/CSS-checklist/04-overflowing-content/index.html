@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>[title]</title>
+  </head>
+  <body>
+<!-- overflow -->
+  <div class="overflow-container">
+
+    <div class="overflow-item">
+      <h2>overflow set to scroll</h2>
+
+      <div class="box overflow-scroll">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+      <p>This content is outside of the box.</p>
+    </div>
+    <div class="overflow-item">
+    <h2>overflow set to hidden</h2>
+
+    <div class="box overflow-hidden">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+    <p>This content is outside of the box.</p>
+  </div>
+    <div class="overflow-item">
+      <h2>No overflow set</h2>
+
+      <div class="box">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+      <p>This content is outside of the box.</p>
+    </div>
+
+    <div class="overflow-item">
+      <h2>overflow set to auto</h2>
+
+      <div class="box overflow-auto">This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.</div>
+
+      <p>This content is outside of the box.</p>
+    </div>
+
+  </div>
+<!--  word-break -->
+  <div>
+    <p>1. <code>word-break: normal</code></p>
+    <p class="normal narrow">
+      This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+      Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+      グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+    </p>
+
+    <p>2. <code>word-break: break-all</code></p>
+    <p class="breakAll narrow">
+      This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+      Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+      グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+    </p>
+
+    <p>3. <code>word-break: keep-all</code></p>
+    <p class="keepAll narrow">
+      This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+      Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+      グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+    </p>
+
+    <p>4. <code>word-break: break-word</code></p>
+    <p class="breakWord narrow">
+      This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+      Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+      グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+    </p>
+
+  </div>
+
+<!--  /* Overflow wrap*/ -->
+  <div>
+    <p>
+      They say the fishing is excellent at Lake
+      <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+      I've never been there myself. (<code>normal</code>)
+    </p>
+    <p>
+      They say the fishing is excellent at Lake
+      <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+      though I've never been there myself. (<code>overflow-wrap: anywhere</code>)
+    </p>
+    <p>
+      They say the fishing is excellent at Lake
+      <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+      though I've never been there myself. (<code>overflow-wrap: break-word</code>)
+    </p>
+    <p>
+      They say the fishing is excellent at Lake
+      <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+      though I've never been there myself. (<code>word-break</code>)
+    </p>
+    <p>
+      They say the fishing is excellent at Lake
+      <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+      I've never been there myself. (<code>hyphens</code>, without
+      <code>lang</code> attribute)
+    </p>
+    <p lang="en">
+      They say the fishing is excellent at Lake
+      <em class="hyphens">Chargoggagoggmanchaugg-agoggchaubunagungamaugg</em>, though
+      I've never been there myself. (<code>hyphens</code>, English rules)
+    </p>
+    <p class="hyphens" lang="de">
+      They say the fishing is excellent at Lake
+      <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+      I've never been there myself. (<code>hyphens</code>, German rules)
+    </p>
+
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>

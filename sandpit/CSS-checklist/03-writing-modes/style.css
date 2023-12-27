@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+*{
+    
+}
+body {
+    /*font-family: 'Muli', sans-serif;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    /*margin: 0;*/
+  }
+.text-block{
+  margin:10px;
+  padding:10px;
+  border: tomato 2px solid;
+}
+.one {
+  writing-mode: horizontal-tb;
+}
+.two {
+  writing-mode: vertical-rl;
+}
+.three {
+  writing-mode: vertical-lr;
+}
+
+.box {
+  inline-size: 200px;
+  writing-mode: horizontal-tb;
+}
+
+.logical {
+  margin-block-start: 20px;
+  padding-inline-end: 2em;
+  padding-block-start: 2px;
+  border-block-start: 5px solid pink;
+  border-inline-end: 10px dotted rebeccapurple;
+  border-block-end: 1em double orange;
+  border-inline-start: 1px solid black;
+}
+
+.physical {
+  margin-top: 20px;
+  padding-right: 2em;
+  padding-top: 2px;
+  border-top: 5px solid pink;
+  border-right: 10px dotted rebeccapurple;
+  border-bottom: 1em double orange;
+  border-left: 1px solid black;
+}
+
+h2 {
+  border-bottom: 5px solid black;
+}
+
+/*.box {*/
+/*  inline-size: 200px;*/
+/*  writing-mode: horizontal-tb;*/
+/*}*/
+
+img{
+  float: inline-start;
+  margin-inline-end: 10px;
+  margin-block-end: 10px;
+}

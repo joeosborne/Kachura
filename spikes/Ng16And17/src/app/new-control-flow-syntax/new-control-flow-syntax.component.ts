@@ -11,5 +11,23 @@ import {NgIf} from "@angular/common";
   ]
 })
 export class NewControlFlowSyntaxComponent {
-  loggedIn = true;
+  loggedIn = false;
+  products: any[] = [];
+
+  constructor(){
+    this.products = [{
+      title: 'title 1',
+      description: 'description 2',
+      price: 10
+    },
+    {
+      title: 'title 1',
+      description: 'description 2',
+      price: 10
+    }
+    ]
+
+  }
+
+
 }

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+*{
+    
+}
+body {
+    /*font-family: 'Muli', sans-serif;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    /*margin: 0;*/
+  font-size: 30px;
+  }
+
+/*overflow*/
+.overflow-container{
+  display: flex;
+  /*flex-wrap: wrap;*/
+  border: aqua 2px solid;
+}
+
+.overflow-item{
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  border: rebeccapurple 2px solid;
+}
+
+.box {
+  border: 1px solid #333333;
+  width: 350px;
+  height: 100px;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+.overflow-scroll{
+  /*overflow: scroll;*/
+  overflow-y: scroll;
+}
+.overflow-auto{
+  overflow: auto;
+}
+
+/*word-break*/
+
+.narrow {
+  padding: 10px;
+  border: 1px solid;
+  width: 500px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.normal {
+  word-break: normal;
+}
+
+.breakAll {
+  word-break: break-all;
+}
+
+.keepAll {
+  word-break: keep-all;
+}
+
+.breakWord {
+  word-break: break-word;
+}
+
+
+/* Overflow wrap*/
+p {
+  width: 13em;
+  margin: 2px;
+  background: gold;
+}
+
+.ow-anywhere {
+  overflow-wrap: anywhere;
+}
+
+.ow-break-word {
+  overflow-wrap: break-word;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+.hyphens {
+  hyphens: auto;
+}

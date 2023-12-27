@@ -1,28 +1,41 @@
+<div>NewControlFlowSyntaxComponent</div>
 
-<!-- IF - old way..-->
-<!--<div *ngIf="loggedIn; else anonymousUser">-->
-<!--  The user is logged in-->
-<!--</div>-->
-<!--<ng-template #anonymousUser>-->
-<!--  The user is not logged in-->
-<!--</ng-template>-->
+<h1>IF</h1>
+<p>If - old way</p>
+<div *ngIf="loggedIn; else anonymousUser">
+The user is logged in
+</div>
+<ng-template #anonymousUser>
+The user is not logged in
+</ng-template>
 
-<!-- IF - new way..-->
-<!--@if (loggedIn) {-->
-<!--The user is logged in-->
-<!--} @else {-->
-<!--The user is not logged in-->
-<!--}-->
+<hr/>
 
-<!-- x - old way..-->
-<!-- x - new way..-->
+<p>If - new way</p>
+@if (loggedIn) {
+The user is logged in
+} @else {
+The user is not logged in
+}
 
+<hr/>
+<h1>Iterations/For Looping</h1>
+<p> - old way</p>
+<p> - new way</p>
 
-<!-- x - old way..-->
-<!-- x - new way..-->
-
-<!-- x - old way..-->
-<!-- x - new way..-->
-
-<!-- x - old way..-->
-<!-- x - new way..-->
+@for (product of products; track product.title) {
+    <table>
+        <tr>
+            <td>title </td>
+            <td>description </td>
+            <td>price</td>
+          </tr>
+    <tr>
+      <td>{{ product.title }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}</td>
+    </tr>
+</table>
+  } @empty {
+    <p>No product results yet!</p>
+  }

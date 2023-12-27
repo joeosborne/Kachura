@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+*{
+    
+}
+body {
+    /*font-family: 'Muli', sans-serif;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    /*margin: 0;*/
+  }
+
+.box {
+    margin:20px;
+    padding: 5px;
+    border: tomato solid 5px;
+    width: 400px;
+    height: 400px;
+    background-image: url('../images/star.png');
+}
+
+
+.box-1{
+    background-repeat: no-repeat;
+}
+
+.box-2{
+    background-repeat: repeat-y;
+}
+.box-3{
+    background-repeat: repeat-x;
+}
+
+.box-4{
+    background-repeat: repeat;
+}
+
+.balloon-box {
+    border: black solid;
+    margin:20px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/balloons.jpg');
+}
+.balloon-box-1 {
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.balloon-box-2 {
+    background-size: 50%;
+    background-repeat: repeat;
+}
+.balloon-box-4 {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.balloon-box-3 {
+     background-size: cover;
+ }
+
+.star-box {
+    border: black solid;
+    margin:20px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/star.png');
+}
+.star-box-1 {
+    background-repeat: no-repeat;
+    background-position: 20px 10%;
+
+}
+.star-box-2 {
+    background-repeat: no-repeat;
+    background-position: top 20px right 10px;
+
+}
+
+.rounded-box {
+   width: 100px;
+    height: 100px;
+    padding:10px;
+    border: 10px solid rebeccapurple;
+    border-radius: 1em;
+    /*border-top-right-radius: 10% 30%;*/
+}
