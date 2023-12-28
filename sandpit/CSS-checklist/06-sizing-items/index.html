@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>[title]</title>
+  </head>
+  <body>
+  <img src="../images/star.png" alt="star">
+  <div class="wrapper">
+    <div class="box"></div>
+    <div class="box">These boxes both have a height set, this box has content in it which will need more space than the assigned height, and so we get overflow. </div>
+  </div>
+  <div class="percent-box">
+    I have margin and padding set to 5% on all sides.
+  </div>
+
+  <div class="wrapper">
+    <div class="min-box"></div>
+    <div class="min-box">These boxes both have a min-height set, this box has content in it which will need more space than the assigned height, and so it grows from the minimum.</div>
+  </div>
+
+  <!--  Viewport units-->
+  <div class="viewport-height-box">
+    A
+  </div>
+
+<!--  image widths -->
+  <div class="img-widths-container" >
+    <div class="img-widths-box"><img src="../images/star.png" alt="star" class="img-widths-width"></div>
+    <div class="img-widths-box"><img src="../images/star.png" alt="star" class="img-widths-max"></div>
+    <div class="img-widths-minibox"><img src="../images/star.png" alt="star" class="img-widths-max"></div>
+  </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

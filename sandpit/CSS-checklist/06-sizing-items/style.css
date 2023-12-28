@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+*{
+    
+}
+body {
+    /*font-family: 'Muli', sans-serif;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    /*margin: 0;*/
+  }
+
+img {
+  border: 5px solid darkblue;
+}
+
+/*.box {*/
+/*  border: 5px solid darkblue;*/
+/*}*/
+
+.wrapper{
+  /*display: flex;*/
+}
+
+.box {
+  margin: 5px;
+  padding: 5px;
+  border: 5px solid darkblue;
+  height: 50px;
+  width: 200px;
+}
+
+.percent-box {
+  border: 5px solid darkblue;
+  width: 150px;
+  margin: 5%;
+  padding: 5%;
+}
+
+.min-box {
+  border: 5px solid darkblue;
+  min-height: 100px;
+  width: 200px;
+}
+
+/*image widths*/
+.img-widths-container {
+  /*width: 500px;*/
+  /*height: 500px;*/
+  background-color: darkolivegreen;
+
+}
+.img-widths-box {
+  width: 400px;
+}
+.img-widths-minibox {
+  width: 50px;
+}
+.img-widths-width {
+  width: 100%;
+}
+.img-widths-max {
+  max-width: 100%;
+}
+
+.viewport-height-box {
+  margin: 5px;
+  padding: 5px;
+  border: 5px solid darkblue;
+  width: 20vw;
+  height: 20vh;
+  font-size: 10vh;
+}

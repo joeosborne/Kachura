@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+*{
+    
+}
+body {
+    /*font-family: 'Muli', sans-serif;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    /*margin: 0;*/
+  }
+.wrapper {
+  font-size: 1em;
+}
+
+.px {
+  width: 200px;
+  background-color: red;
+}
+
+.vw {
+  width: 10vw;
+  background-color: blue;
+}
+
+.em {
+  width: 10em;
+  background-color: aquamarine;
+}
+
+/*em/rem text*/
+html {
+  font-size: 16px;
+}
+
+.ems li {
+  font-size: 1.3em;
+}
+
+.rems li {
+  font-size: 1.3rem;
+}
+
+/*line height*/
+p {
+  margin: 0;
+  background-image: repeating-linear-gradient(
+          to top,
+          lightskyblue 0 2px,
+          transparent 2px 1lh
+  );
+}
+
+/* percentages */
+.p-wrapper {
+  width: 400px;
+  border: 5px solid rebeccapurple;
+}
+
+.p-px {
+  width: 200px;
+  border: 1px solid red;
+}
+
+.p-percent {
+  width: 40%;
+  border: 1px solid blue;
+}
+
+/*postions*/
+.pos-box {
+    border: blue 1px solid;
+    height: 300px;
+    width: 400px;
+    background-image: url('../images/star.png');
+    background-repeat: no-repeat;
+    background-position: right 40px;
+}
+
+/*strings*/
+.string-box {
+    width:400px;
+    padding: 1em;
+    border-radius: .5em;
+    border: 5px solid rebeccapurple;
+    background-color: lightblue;
+}
+
+.string-box::after {
+    content: "This is a string. I know because it is quoted in the CSS."
+}
+
+/*functions*/
+.func-wrapper {
+    border: 2px solid darkolivegreen;
+    width: 400px;
+}
+
+.func-box {
+    border: 2px solid rebeccapurple;
+    width: calc(20% + 100px);
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+*{
+    
+}
+body {
+    /*font-family: 'Muli', sans-serif;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    /*margin: 0;*/
+  }
+
+.box {
+  border: red 5px solid;
+  margin: 2px;
+  padding: 2px;
+  width: 200px;
+}
+
+img {
+  /*max-width: 100%;*/
+
+}
+
+.box-2 {
+  border: red 5px solid;
+  margin: 2px;
+  padding: 2px;
+  width: 200px;
+  height: 200px;
+}
+
+.img-2 {
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+/* grid example */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: 20px;
+}
+
+.grid-wrapper > div {
+  background-color: rebeccapurple;
+  border-radius: .5em;
+}
+
+/* forms */
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #000;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  border: 3px solid #333;
+  background-color: #999;
+  border-radius: 5px;
+  padding: 10px 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #333;
+}
