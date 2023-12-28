@@ -1,11 +1,6 @@
-import { Component } from '@angular/core';
-
-export interface Category {
-  id: number;
-  title: string;
-  description: string;
-
-}
+import { Component, OnInit } from '@angular/core';
+import { MovieDataService } from '../movie-data.service';
+import { Category } from '../models/category.model';
 
 @Component({
   selector: 'mp-category-selector',
@@ -14,23 +9,21 @@ export interface Category {
   templateUrl: './category-selector.component.html',
   styleUrl: './category-selector.component.css',
 })
-export class CategorySelectorComponent {
-  categories: Category[] = [
-    {
-      id: 1,
-      title: '100 Rewatchables',
-      description: '[description for 100 Rewatchables]'
-    },
-    {
-      id: 2,
-      title: '1970s',
-      description: '[description for 1970s]'
-    },
-    {
-      id: 3,
-      title: '1990s',
-      description: '[description for 1990s]'
-    },
+export class CategorySelectorComponent implements OnInit {
+  categories: Category[] = [];
 
-  ];
+  constructor(private movieDataService: MovieDataService) {}
+  ngOnInit() {
+    this.categories = this.movieDataService.movieData.categories;
+    console.log(this.categories);
+  }
+
+  onCategorySelected(category: Category)
+  {
+    console.log(category)
+    const movies = this.movieDataService.movieData.movies.filter(x=>x.categories.some(c=>c === category.id))
+    console.log('todo: show the following movies...')
+    console.log(movies)
+
+  }
 }

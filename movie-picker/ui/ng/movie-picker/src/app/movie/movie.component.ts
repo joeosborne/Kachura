@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './movie.component.html',
-  styleUrl: './movie.component.css'
+  styleUrl: './movie.component.css',
 })
-export class MovieComponent {
-
-}
+export class MovieComponent {}
