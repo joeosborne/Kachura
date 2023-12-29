@@ -1,14 +1,14 @@
 <div class="category-container">
   @for (c of categories; track c.id) {
-    <div class="movie-card" (click)="onCategorySelected(c)">
-      <div class="movie-card-header animated-bg" id="header">
+    <div class="card" (click)="onCategorySelected(c)">
+      <div class="card-header animated-bg" id="header">
         <img src="../assets/images/2.jpg" alt="" />
       </div>
-      <div class="movie-card-content">
-        <h3 id="title" class="film-card-title animated-bg animated-bg-text">
+      <div class="card-content">
+        <h3 id="title" class="movie-card-title animated-bg animated-bg-text">
           {{ c.title }}
         </h3>
-        <p class="film-card-excerpt" id="excerpt">
+        <p class="movie-card-excerpt" id="excerpt">
           {{ c.description }}
         </p>
         <!--      <div class="author">-->

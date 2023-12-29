@@ -37,8 +37,8 @@ export class MovieDataService {
       },
       {
         id: 4,
-        title: 'test 100 Rewatchables',
-        description: '[description for 100 Rewatchables]',
+        title: 'DVDs/BluRays that I own',
+        description: '[description for DVDs/BluRays that I own]',
       },
       {
         id: 5,
