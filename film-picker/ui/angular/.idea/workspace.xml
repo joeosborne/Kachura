@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73287cb1-fdba-460d-9584-0870c7107bfb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/category-selector/category-selector.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/category-selector/category-selector.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/category-selector/category-selector.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/category/category.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/category/category.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/category/category.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/category/category.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/models/category.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/models/movie.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/movie-data.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/movie-data.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/movie/movie.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/movie/movie.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/movie/movie.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/navigation/navigation.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/navigation/navigation.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/navigation/navigation.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/app/navigation/navigation.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/assets/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/assets/images/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/assets/images/portrait.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/assets/images/team2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../movie-picker/ui/ng/movie-picker/tsconfig.spec.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2lrqlXDVdolDOfL10WKHcapdMXH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73287cb1-fdba-460d-9584-0870c7107bfb" name="Changes" comment="" />
+      <created>1725948696640</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725948696640</updated>
+      <workItem from="1725948696986" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
