@@ -17,6 +17,21 @@ bootstrapApplication(AppComponent, appConfig)
 
 /* todo:
 
+film-film page..
+add typed fake data set to be returned from a UI data svc.
+stablise search and display correct trailer on selection
+maybe add a link to RT review
+
+--
+wheel
+look into npm package
+modify film film comp. to take in..
+ - string of film titles
+ - trailer url (optional)
+
+
+
+
 Add a registration/login process (post sept)
 replace default "app-" prefix
 

@@ -426,7 +426,8 @@ strong {
 
 
 .logo {
-  height: 2.2rem;
+  height: 8rem;
+  margin: 0 2rem 0 0;
 }
 
 /**************************/
@@ -584,3 +585,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /*$gradient-top-left: linear-gradient(225deg, #96adc8ff, #d7ffabff, #fcff6cff, #d89d6aff, #6d454cff);*/
 /*$gradient-bottom-left: linear-gradient(315deg, #96adc8ff, #d7ffabff, #fcff6cff, #d89d6aff, #6d454cff);*/
 /*$gradient-radial: radial-gradient(#96adc8ff, #d7ffabff, #fcff6cff, #d89d6aff, #6d454cff);*/
+
+
