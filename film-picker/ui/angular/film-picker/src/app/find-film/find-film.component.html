@@ -1,3 +1,5 @@
+<div class="find-film-container">
+<app-search></app-search>
 <!--<div class="search-container">-->
 <!--  <input type="text" placeholder="Search..." class="search-input" />-->
 <!--  <button class="search-button">-->
@@ -5,52 +7,52 @@
 <!--  </button>-->
 <!--</div>-->
 
-<app-search></app-search>
-<div class="container-temp">
-  <div class="column-temp">
-    <div class="card">
-      <img
-        src="../assets/images/fight-club.jpg"
-        alt="Avatar"
-        class="card-img"
-      />
-      <div class="container">
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-      </div>
-    </div>
-    <div class="card">
-      <img
-        src="../assets/images/sixth.jpg"
-        alt="Avatar"
-        class="card-img"
-      />
-      <div class="container">
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-      </div>
-    </div>
-  </div>
-  <div class="column-temp">
-    <div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/qtRKdVHc-cE"
-        title="Fight Club Trailer"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
-    </div>
-  </div>
-</div>
+
+
+<!-- film-list.component.html -->
+<!--<div *ngIf="films.length > 0; else noFilms">-->
+<!--  <div *ngFor="let film of films">-->
+<!--    <h2>{{ film.title }}</h2>-->
+<!--    <p><strong>Director:</strong> {{ film.director }}</p>-->
+<!--    <p><strong>Release Year:</strong> {{ film.releaseYear }}</p>-->
+<!--    <p><strong>Genres:</strong> {{ film.genre.join(', ') }}</p>-->
+<!--    <p *ngIf="film.duration"><strong>Duration:</strong> {{ film.duration }} minutes</p>-->
+<!--    <p *ngIf="film.rating"><strong>Rating:</strong> {{ film.rating }}</p>-->
+<!--    <p *ngIf="film.synopsis"><strong>Synopsis:</strong> {{ film.synopsis }}</p>-->
+<!--    <div *ngIf="film.cast.length > 0">-->
+<!--      <h3>Cast:</h3>-->
+<!--      <ul>-->
+<!--        <li *ngFor="let member of film.cast">-->
+<!--          {{ member.actor }} as {{ member.role }}-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<ng-template #noFilms>-->
+<!--  <p>No films available.</p>-->
+<!--</ng-template>-->
+
 
 <!--<div class="container-temp">-->
 <!--  <div class="column-temp">-->
 <!--    <div class="card">-->
-<!--      <img src="../assets/images/sixth.jpg" alt="Avatar" class="card-img" />-->
+<!--      <img-->
+<!--        src="../assets/images/fight-club.jpg"-->
+<!--        alt="Avatar"-->
+<!--        class="card-img"-->
+<!--      />-->
+<!--      <div class="container">-->
+<!--        <h4><b>John Doe</b></h4>-->
+<!--        <p>Architect & Engineer</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--      <img-->
+<!--        src="../assets/images/sixth.jpg"-->
+<!--        alt="Avatar"-->
+<!--        class="card-img"-->
+<!--      />-->
 <!--      <div class="container">-->
 <!--        <h4><b>John Doe</b></h4>-->
 <!--        <p>Architect & Engineer</p>-->
@@ -62,7 +64,7 @@
 <!--      <iframe-->
 <!--        width="560"-->
 <!--        height="315"-->
-<!--        src="https://www.youtube.com/embed/lXO0he1WjYw"-->
+<!--        src="https://www.youtube.com/embed/qtRKdVHc-cE"-->
 <!--        title="Fight Club Trailer"-->
 <!--        frameborder="0"-->
 <!--        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
@@ -73,6 +75,55 @@
 <!--  </div>-->
 <!--</div>-->
 
+<div class="container-temp">
+  <div class="column-temp">
+        <div class="card">
+          <img
+            src="../assets/images/fight-club.jpg"
+            alt="Avatar"
+            class="card-img"
+          />
+          <div class="container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+          </div>
+        </div>
+
+    <div class="card">
+      <img src="../assets/images/sixth.jpg" alt="Avatar" class="card-img" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+  </div>
+  <div class="column-temp">
+    <div>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet harum hic illo.inventore laboriosam omnis perspiciatis possimus quasi quos ratione saepe suscipit, ut vel. Ad aperiam ducimus facere ipsa odit!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet harum hic illo.inventore laboriosam omnis perspiciatis possimus quasi quos ratione saepe suscipit, ut vel. Ad aperiam ducimus facere ipsa odit!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet harum hic illo.inventore laboriosam omnis perspiciatis possimus quasi quos ratione saepe suscipit, ut vel. Ad aperiam ducimus facere ipsa odit!
+      </p>
+    </div>
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/lXO0he1WjYw"
+        title="Fight Club Trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </div>
+</div>
+
 <!--<div class="card">-->
 <!--  <img src="../assets/images/sixth.jpg" alt="Avatar" class="card-img">-->
 <!--  <div class="container">-->
@@ -80,3 +131,5 @@
 <!--    <p>Architect & Engineer</p>-->
 <!--  </div>-->
 <!--</div>-->
+
+</div>
