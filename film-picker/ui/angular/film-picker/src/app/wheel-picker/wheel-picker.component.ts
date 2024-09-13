@@ -1,75 +1,169 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+// import {
+//   Component,
+//   OnInit,
+//   ViewChild,
+//   ElementRef
+// } from '@angular/core';
+import {WheelPicker2Component} from "../wheel-picker2/wheel-picker2.component";
+import {RouletteWheelComponent} from "../roulette-wheel/roulette-wheel.component";
 
 @Component({
   selector: 'app-wheel-picker',
   standalone: true,
-  imports: [],
+  imports: [WheelPicker2Component, RouletteWheelComponent],
   templateUrl: './wheel-picker.component.html',
-  styleUrl: './wheel-picker.component.css'
+  styleUrl: './wheel-picker.component.css',
 })
-export class WheelPickerComponent implements OnInit{
-  ctx:any;
-  startAngle:any;
-  spinTimeout:any;
-  arc:any;
-  movies = ['Inception', 'Titanic', 'Avatar', 'The Matrix', 'Interstellar', 'Gladiator', 'The Dark Knight', 'Forrest Gump'];
-  colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#A133FF', '#33FFF5', '#FF8C33', '#FF3333'];
+export class WheelPickerComponent implements OnInit, AfterViewInit {
+  //@ViewChild('canvas', { static: false }) canvas: ElementRef<HTMLCanvasElement>;
+  //@ViewChild('canvas', {static: false, read: ElementRef}) canvas: ElementRef;
 
-  ngOnInit(): void {
-    const canvas:any  = document.getElementById('wheel');
-    this.ctx = canvas.getContext('2d');
-    const spinButton = document.getElementById('spin');
-    if (!!spinButton){
+  canvas: any;//ElementRef<HTMLCanvasElement>;
 
+  // @ViewChild('canvas')
+  // canvas: ElementRef<HTMLCanvasElement>;
+  options: string[] = ["$100", "$10", "$25", "$250", "$30", "$1000", "$1", "$200", "$45", "$500", "$5", "$20", "Lose", "$1000000", "Lose", "$350", "$5", "$99"];
+  startAngle = 0;
+  arc = Math.PI / (this.options.length / 2);
+  spinTimeout: any = null;
+  spinArcStart = 10;
+  spinTime = 0;
+  spinTimeTotal = 0;
+  ctx: any;//CanvasRenderingContext2D =
+  //private canvas: any;
 
-
-    this.startAngle = 0;
-    this.arc = Math.PI / (this.movies.length / 2);
-    this.spinTimeout = null;
-
-
-
-    spinButton.addEventListener('click', () => {
-      this.rotateWheel();
-      setTimeout(this.stopRotateWheel, 3000);
-    });
-
-    this.drawWheel();
-    }
-
+  ngAfterViewInit() {
+    console.log('in afterv viw')
+    debugger;
+    this.canvas = document.getElementById('canvas');
+    console.log('this.canvas..')
+    console.log(this.canvas)
+    this.drawRouletteWheel();
   }
 
-  drawWheel() {
-    for (let i = 0; i < this.movies.length; i++) {
-      const angle = this.startAngle + i * this.arc;
-      this.ctx.fillStyle = this.colors[i];
+  byte2Hex(n: number): string {
+    const nybHexString = "0123456789ABCDEF";
+    return String(nybHexString.substr((n >> 4) & 0x0F, 1)) + nybHexString.substr(n & 0x0F, 1);
+  }
+
+  RGB2Color(r: number, g: number, b: number): string {
+    return '#' + this.byte2Hex(r) + this.byte2Hex(g) + this.byte2Hex(b);
+  }
+
+  getColor(item: number, maxitem: number): string {
+    const phase = 0;
+    const center = 128;
+    const width = 127;
+    const frequency = Math.PI * 2 / maxitem;
+
+    const red = Math.sin(frequency * item + 2 + phase) * width + center;
+    const green = Math.sin(frequency * item + 0 + phase) * width + center;
+    const blue = Math.sin(frequency * item + 4 + phase) * width + center;
+
+    return this.RGB2Color(red, green, blue);
+  }
+
+  drawRouletteWheel() {
+    const canvas = this.canvas;//.nativeElement;
+    if (canvas.getContext) {
+      const outsideRadius = 200;
+      const textRadius = 160;
+      const insideRadius = 125;
+
+      this.ctx = canvas.getContext("2d");
+      this.ctx.clearRect(0, 0, 500, 500);
+
+      this.ctx.strokeStyle = "black";
+      this.ctx.lineWidth = 2;
+
+      this.ctx.font = 'bold 12px Helvetica, Arial';
+
+      for (let i = 0; i < this.options.length; i++) {
+        const angle = this.startAngle + i * this.arc;
+        this.ctx.fillStyle = this.getColor(i, this.options.length);
+
+        this.ctx.beginPath();
+        this.ctx.arc(250, 250, outsideRadius, angle, angle + this.arc, false);
+        this.ctx.arc(250, 250, insideRadius, angle + this.arc, angle, true);
+        this.ctx.stroke();
+        this.ctx.fill();
+
+        this.ctx.save();
+        this.ctx.shadowOffsetX = -1;
+        this.ctx.shadowOffsetY = -1;
+        this.ctx.shadowBlur = 0;
+        this.ctx.shadowColor = "rgb(220,220,220)";
+        this.ctx.fillStyle = "black";
+        this.ctx.translate(250 + Math.cos(angle + this.arc / 2) * textRadius,
+          250 + Math.sin(angle + this.arc / 2) * textRadius);
+        this.ctx.rotate(angle + this.arc / 2 + Math.PI / 2);
+        const text = this.options[i];
+        this.ctx.fillText(text, -this.ctx.measureText(text).width / 2, 0);
+        this.ctx.restore();
+      }
+
+      // Arrow
+      this.ctx.fillStyle = "black";
       this.ctx.beginPath();
-      this.ctx.arc(250, 250, 250, angle, angle + this.arc, false);
-      this.ctx.arc(250, 250, 0, angle + this.arc, angle, true);
+      this.ctx.moveTo(250 - 4, 250 - (outsideRadius + 5));
+      this.ctx.lineTo(250 + 4, 250 - (outsideRadius + 5));
+      this.ctx.lineTo(250 + 4, 250 - (outsideRadius - 5));
+      this.ctx.lineTo(250 + 9, 250 - (outsideRadius - 5));
+      this.ctx.lineTo(250 + 0, 250 - (outsideRadius - 13));
+      this.ctx.lineTo(250 - 9, 250 - (outsideRadius - 5));
+      this.ctx.lineTo(250 - 4, 250 - (outsideRadius - 5));
+      this.ctx.lineTo(250 - 4, 250 - (outsideRadius + 5));
       this.ctx.fill();
-      this.ctx.save();
-      this.ctx.fillStyle = '#000';
-      this.ctx.translate(250 + Math.cos(angle + this.arc / 2) * 150, 250 + Math.sin(angle + this.arc / 2) * 150);
-      this.ctx.rotate(angle + this.arc / 2 + Math.PI / 2);
-      this.ctx.fillText(this.movies[i], -this.ctx.measureText(this.movies[i]).width / 2, 0);
-      this.ctx.restore();
     }
+  }
+
+  spin() {
+    this.spinArcStart = Math.random() * 10 + 10;
+    this.spinTime = 0;
+    this.spinTimeTotal = Math.random() * 3 + 4 * 1000;
+    this.rotateWheel();
   }
 
   rotateWheel() {
-    if (!!this) {
-      this.startAngle += Math.PI / 30;
-      this.drawWheel();
-      this.spinTimeout = requestAnimationFrame(this.rotateWheel);
-      console.log('this.spinTimeout...')
-      console.log(this.spinTimeout)
+    this.spinTime += 30;
+    if (this.spinTime >= this.spinTimeTotal) {
+      this.stopRotateWheel();
+      return;
     }
+    const spinAngle = this.spinArcStart - this.easeOut(this.spinTime, 0, this.spinArcStart, this.spinTimeTotal);
+    this.startAngle += (spinAngle * Math.PI / 180);
+    this.drawRouletteWheel();
+    this.spinTimeout = setTimeout(() => this.rotateWheel(), 30);
   }
 
   stopRotateWheel() {
-    // cancelAnimationFrame(this.spinTimeout);
-    // const selectedMovie = this.movies[Math.floor(Math.random() * this.movies.length)];
-    // alert(`You should watch: ${selectedMovie}`);
+    clearTimeout(this.spinTimeout);
+    const degrees = this.startAngle * 180 / Math.PI + 90;
+    const arcd = this.arc * 180 / Math.PI;
+    const index = Math.floor((360 - degrees % 360) / arcd);
+    this.ctx.save();
+    this.ctx.font = 'bold 30px Helvetica, Arial';
+    const text = this.options[index];
+    this.ctx.fillText(text, 250 - this.ctx.measureText(text).width / 2, 250 + 10);
+    this.ctx.restore();
   }
 
+  easeOut(t: number, b: number, c: number, d: number): number {
+    const ts = (t /= d) * t;
+    const tc = ts * t;
+    return b + c * (tc + -3 * ts + 3 * t);
+  }
+
+  ngOnInit(): void {
+  }
+
+  clickBtn($event: MouseEvent) {
+    console.log($event)
+    this.spin();
+
+  }
 }
+
+
+// tood: https://codepen.io/barney-parker/pen/OPyYqy

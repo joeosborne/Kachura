@@ -1,7 +1,16 @@
-<div class="wheel-container">
-  <canvas id="wheel" width="500" height="500"></canvas>
-  <button id="spin">Spin</button>
-</div>
+<!--<div class="wheel-container">-->
+<!--  <canvas id="wheel" width="500" height="500"></canvas>-->
+<!--  <button id="spin">Spin</button>-->
+<!--</div>-->
+
+
+<!--<div class="app-container-yada">-->
+<!--<app-roulette-wheel [options]="options" (selectionChange)="onSelectionChange($event)"></app-roulette-wheel>-->
+<!--</div>-->
+
+
+<input type="button" (click)="clickBtn($event)" value="spin" style="float:left;" id='spin' />
+<canvas id="canvas" width="500" height="500"></canvas>
 
 
 <!-- todo: look into https://www.npmjs.com/package/spin-wheel-->

@@ -1,0 +1,68 @@
+.roulette-wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.roulette-wheel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 10px solid #333;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wheel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: rotate(0deg);
+  transition: transform 2s ease-out;
+}
+
+.wheel div {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform-origin: 100% 100%;
+}
+
+.wheel div:nth-child(1) { transform: rotate(0deg) translate(50%, 50%); }
+.wheel div:nth-child(2) { transform: rotate(45deg) translate(50%, 50%); }
+.wheel div:nth-child(3) { transform: rotate(90deg) translate(50%, 50%); }
+.wheel div:nth-child(4) { transform: rotate(135deg) translate(50%, 50%); }
+.wheel div:nth-child(5) { transform: rotate(180deg) translate(50%, 50%); }
+.wheel div:nth-child(6) { transform: rotate(225deg) translate(50%, 50%); }
+.wheel div:nth-child(7) { transform: rotate(270deg) translate(50%, 50%); }
+.wheel div:nth-child(8) { transform: rotate(315deg) translate(50%, 50%); }
+
+.selected {
+  background-color: #ffeb3b;
+  border-radius: 50%;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

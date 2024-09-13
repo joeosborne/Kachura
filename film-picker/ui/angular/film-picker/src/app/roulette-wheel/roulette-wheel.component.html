@@ -1,0 +1,11 @@
+<div class="roulette-wheel-container">
+  <div class="roulette-wheel">
+    <div class="wheel">
+      <div *ngFor="let option of options; let i = index"
+           [class.selected]="i === selectedIndex">
+        {{ option }}
+      </div>
+    </div>
+  </div>
+  <button (click)="spinWheel()">Spin</button>
+</div>
