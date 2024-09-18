@@ -10,7 +10,10 @@
 
 
 <input type="button" (click)="clickBtn($event)" value="spin" style="float:left;" id='spin' />
-<canvas id="canvas" width="500" height="500"></canvas>
+
+<canvas *ngIf="!!options && options.length > 0" id="canvas" width="500" height="500"></canvas>
+
+<div>options: {{options | json}}</div>
 
 
 <!-- todo: look into https://www.npmjs.com/package/spin-wheel-->

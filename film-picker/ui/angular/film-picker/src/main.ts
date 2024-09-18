@@ -36,6 +36,8 @@ Add a registration/login process (post sept)
 replace default "app-" prefix
 
 
+look into a D3 wheel - eg https://codepen.io/TheNature/pen/vYOJxvL
+
 
  */
 
