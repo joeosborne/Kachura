@@ -478,6 +478,8 @@ strong {
 .logo {
   height: 8rem;
   margin: 0 2rem 0 0;
+  /*width: 100%;*/
+  /*height: auto;*/
 }
 
 /**************************/
@@ -511,7 +513,7 @@ strong {
   }
 
   @media all and (max-width: 600px) {
-    .navigation {
+   .navigation {
       flex-flow: column wrap;
       padding: 0;
     }
@@ -527,6 +529,13 @@ strong {
       border-bottom: none;
     }
   }
+    /*.logo {*/
+    /*  height: 8rem;*/
+    /*  margin: 0 2rem 0 0;*/
+    /*  !*width: 100%;*!*/
+    /*  !*height: auto;*!*/
+    /*}*/
+
 /*.main-nav-list {*/
 /*  list-style: none;*/
 /*  display: flex;*/

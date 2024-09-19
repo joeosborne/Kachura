@@ -50,7 +50,6 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log('in afterv viw');
-    debugger;
     this.canvas = document.getElementById('canvas');
     console.log('this.canvas..');
     console.log(this.canvas);
@@ -96,7 +95,6 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
       this.ctx.lineWidth = 2;
 
       this.ctx.font = 'bold 12px Helvetica, Arial';
-      debugger;
       for (let i = 0; i < this.options.length; i++) {
         const angle = this.startAngle + i * this.arc;
         this.ctx.fillStyle = this.getColor(i, this.options.length);
