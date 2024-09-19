@@ -1,21 +1,47 @@
 <div class="wheel-picker-container">
   <div class="wheel-component">
-<!--    <p>Spinner here. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>-->
-    <canvas *ngIf="!!options && options.length > 0" id="canvas" width="500" height="500"></canvas>
+    <!--    <p>Spinner here. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>-->
+    <canvas
+      *ngIf="!!options && options.length > 0"
+      id="canvas"
+      width="500"
+      height="500"
+    ></canvas>
   </div>
-  <div class="aside aside-1">Spin/Spin Again btn</div>
-  <div class="aside aside-2">YT link</div>
-  <div class="aside aside-3">RT link</div>
+  <div class="aside">
+    <input type="button" (click)="clickBtn($event)" value="spin" style="float:left;" id='spin' />
+  </div>
+  <div class="aside">
+    <div class="card">
+      <img src="../assets/images/sixth.jpg" alt="Avatar" class="card-img" />
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+  </div>
+  <div class="aside">
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/lXO0he1WjYw"
+        title="Fight Club Trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </div>
+  <div class="aside">RT link</div>
 </div>
 
-
-
-<!--<input type="button" (click)="clickBtn($event)" value="spin" style="float:left;" id='spin' />-->
+<!---->
 
 <!--<canvas *ngIf="!!options && options.length > 0" id="canvas" width="500" height="500"></canvas>-->
 
 <!--<div>options: {{options | json}}</div>-->
-
 
 <!-- todo: look into https://www.npmjs.com/package/spin-wheel-->
 <!--?https://ngx-wheel.web.app/-->
