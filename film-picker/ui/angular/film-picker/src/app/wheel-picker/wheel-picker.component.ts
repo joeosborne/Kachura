@@ -5,7 +5,6 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { WheelPicker2Component } from '../wheel-picker2/wheel-picker2.component';
 import { RouletteWheelComponent } from '../roulette-wheel/roulette-wheel.component';
 import { Film, FilmDataService } from '../film-data.service';
 import {JsonPipe, NgIf} from "@angular/common";
@@ -13,12 +12,14 @@ import {JsonPipe, NgIf} from "@angular/common";
 @Component({
   selector: 'app-wheel-picker',
   standalone: true,
-  imports: [WheelPicker2Component, RouletteWheelComponent, JsonPipe, NgIf],
+  imports: [ RouletteWheelComponent, JsonPipe, NgIf],
   templateUrl: './wheel-picker.component.html',
   styleUrl: './wheel-picker.component.css',
 })
 export class WheelPickerComponent implements OnInit, AfterViewInit {
   films: Film[] = [];
+
+  selectedFilm : string;//todo: type
 
   constructor(private filmService: FilmDataService) {
     this.loadFilms();
@@ -165,6 +166,9 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
     this.ctx.save();
     this.ctx.font = 'bold 30px Helvetica, Arial';
     const text = this.options[index];
+    console.log(text)
+    this.selectedFilm = text;
+
     this.ctx.fillText(
       text,
       250 - this.ctx.measureText(text).width / 2,

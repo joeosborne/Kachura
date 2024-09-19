@@ -8,11 +8,11 @@
       height="500"
     ></canvas>
     <div class="">
-      <input type="button" (click)="clickBtn($event)" value="spin" style="float:left;" id='spin' />
+      <button class="btn" (click)="clickBtn($event)">Spin</button>
     </div>
-
   </div>
-  <div class="aside">
+  @if (!!this.selectedFilm){
+  <div class="film-data">
     <div class="card">
       <img src="../assets/images/sixth.jpg" alt="Avatar" class="card-img" />
       <div class="container">
@@ -21,7 +21,7 @@
       </div>
     </div>
   </div>
-  <div class="aside">
+  <div class="film-data">
     <div>
       <iframe
         width="560"
@@ -35,7 +35,8 @@
       </iframe>
     </div>
   </div>
-  <div class="aside">RT link</div>
+  <div class="film-data">RT link</div>
+  }
 </div>
 
 <!---->

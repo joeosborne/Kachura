@@ -4,8 +4,9 @@ import {LandingComponent} from "./landing/landing.component";
 import {FindFilmComponent} from "./find-film/find-film.component";
 
 export const routes: Routes = [
-  { path: '', component: LandingComponent },
+  { path: '', component: WheelPickerComponent },
   { path: 'landing', component: LandingComponent },
   { path: 'wheel-picker', component: WheelPickerComponent },
   { path: 'find-film', component: FindFilmComponent },
 ];
+// todo: change default back to landing

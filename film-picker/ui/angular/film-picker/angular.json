@@ -29,8 +29,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.css",
-              "src/media-queries.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -89,8 +88,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.css",
-              "src/media-queries.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
