@@ -1,11 +1,11 @@
-<div class="wrapper">
-  <header class="header">Header</header>
-  <article class="main">
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-  </article>
-  <aside class="aside aside-1">Aside 1</aside>
-  <aside class="aside aside-2">Aside 2</aside>
-  <footer class="footer">Footer</footer>
+<div class="wheel-picker-container">
+  <div class="wheel-component">
+<!--    <p>Spinner here. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>-->
+    <canvas *ngIf="!!options && options.length > 0" id="canvas" width="500" height="500"></canvas>
+  </div>
+  <div class="aside aside-1">Spin/Spin Again btn</div>
+  <div class="aside aside-2">YT link</div>
+  <div class="aside aside-3">RT link</div>
 </div>
 
 
