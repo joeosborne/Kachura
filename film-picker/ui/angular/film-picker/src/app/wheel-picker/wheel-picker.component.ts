@@ -8,18 +8,20 @@ import {
 import { RouletteWheelComponent } from '../roulette-wheel/roulette-wheel.component';
 import { Film, FilmDataService } from '../film-data.service';
 import {JsonPipe, NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-wheel-picker',
   standalone: true,
-  imports: [ RouletteWheelComponent, JsonPipe, NgIf],
+  imports: [RouletteWheelComponent, JsonPipe, NgIf, RouterLink],
   templateUrl: './wheel-picker.component.html',
   styleUrl: './wheel-picker.component.css',
 })
 export class WheelPickerComponent implements OnInit, AfterViewInit {
   films: Film[] = [];
 
-  selectedFilm : string;//todo: type
+  selectedFilm: Film | undefined; //todo: type
+  selectedFilmTrailerId = 'https://www.youtube.com/embed/lXO0he1WjYw'
 
   constructor(private filmService: FilmDataService) {
     this.loadFilms();
@@ -42,7 +44,7 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
   //options: string[] = ["$100", "$10", "$25", "$250", "$30", "$1000", "$1", "$200", "$45", "$500"];
   options: string[] = [];
   startAngle = 0;
-  private arc : number;
+  private arc: number;
   spinTimeout: any = null;
   spinArcStart = 10;
   spinTime = 0;
@@ -51,6 +53,10 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log('in afterv viw');
+    this.afterViewInit();
+  }
+
+  private afterViewInit() {
     this.canvas = document.getElementById('canvas');
     console.log('this.canvas..');
     console.log(this.canvas);
@@ -166,9 +172,12 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
     this.ctx.save();
     this.ctx.font = 'bold 30px Helvetica, Arial';
     const text = this.options[index];
-    console.log(text)
-    this.selectedFilm = text;
+    console.log(text);
 
+    this.selectedFilm = this.films.find(x => x.title === text);
+    if (!!this.selectedFilm) {
+      //this.selectedFilm.trailerId = 'lXO0he1WjYw';
+    }
     this.ctx.fillText(
       text,
       250 - this.ctx.measureText(text).width / 2,
@@ -188,6 +197,11 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
   clickBtn($event: MouseEvent) {
     console.log($event);
     this.spin();
+  }
+
+  backToSpinner($event: MouseEvent) {
+    this.selectedFilm = undefined;
+    this.afterViewInit();
   }
 }
 

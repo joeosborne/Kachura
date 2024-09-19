@@ -10,6 +10,7 @@ export interface Film {
   duration?: number;
   rating?: number;
   synopsis?: string;
+  trailerId?: string;
   cast: {
     actor: string;
     role: string;
