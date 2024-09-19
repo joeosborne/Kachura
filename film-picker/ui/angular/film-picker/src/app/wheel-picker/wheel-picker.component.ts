@@ -1,3 +1,4 @@
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {
   AfterViewInit,
   Component,
@@ -21,9 +22,12 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
   films: Film[] = [];
 
   selectedFilm: Film | undefined; //todo: type
-  selectedFilmTrailerId = 'https://www.youtube.com/embed/lXO0he1WjYw'
+  selectedFilmTrailerId : any;
+  selectedFilmImdbUrl : any;
+  selectedRottenTomatoesUrl : any
 
-  constructor(private filmService: FilmDataService) {
+
+  constructor(private filmService: FilmDataService, public sanitizer:DomSanitizer) {
     this.loadFilms();
   }
 
@@ -175,7 +179,15 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
     console.log(text);
 
     this.selectedFilm = this.films.find(x => x.title === text);
-    if (!!this.selectedFilm) {
+
+    if (!!this.selectedFilm && !!this.selectedFilm.trailerId) {
+      this.selectedFilmTrailerId = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.selectedFilm.trailerId}`)
+      this.selectedFilmImdbUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.selectedFilm.imdbUrl}`)
+      this.selectedRottenTomatoesUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.selectedFilm.rottenTomatoesUrl}`)
+
+
+
+      this.selectedFilm.trailerId
       //this.selectedFilm.trailerId = 'lXO0he1WjYw';
     }
     this.ctx.fillText(

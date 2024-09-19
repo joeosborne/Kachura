@@ -26,7 +26,13 @@
       </div>
     }
   </div>
-  <div [hidden]="!this.selectedFilm" class="film-data">RT link</div>
+  <div [hidden]="!this.selectedFilm" class="film-data">
+    <a href="{{selectedRottenTomatoesUrl}}">selectedRottenTomatoesUrl</a>
+  </div>
+  <div [hidden]="!this.selectedFilm" class="film-data">
+    <a href="{{selectedFilmImdbUrl}}">selectedFilmImdbUrl</a>
+  </div>
+
   <div [hidden]="!this.selectedFilm" class="">
     <button class="btn" (click)="backToSpinner($event)"></button>
   </div>
