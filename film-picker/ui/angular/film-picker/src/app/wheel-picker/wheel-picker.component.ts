@@ -9,7 +9,7 @@ import {
 import { RouletteWheelComponent } from '../roulette-wheel/roulette-wheel.component';
 import { Film, FilmDataService } from '../film-data.service';
 import {JsonPipe, NgIf} from "@angular/common";
-import {RouterLink} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-wheel-picker',
@@ -27,7 +27,7 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
   selectedRottenTomatoesUrl : any
 
 
-  constructor(private filmService: FilmDataService, public sanitizer:DomSanitizer) {
+  constructor(private filmService: FilmDataService, public sanitizer:DomSanitizer, private route: ActivatedRoute) {
     this.loadFilms();
   }
 
@@ -204,7 +204,14 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
     return b + c * (tc + -3 * ts + 3 * t);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const listId=this.route.snapshot.paramMap.get('listId');
+    if(!!listId) {
+      console.log("listId: " + listId);
+    }
+
+
+  }
 
   clickBtn($event: MouseEvent) {
     console.log($event);
@@ -218,3 +225,6 @@ export class WheelPickerComponent implements OnInit, AfterViewInit {
 }
 
 // tood: https://codepen.io/barney-parker/pen/OPyYqy
+
+
+// todo: in the short term, create something similar to https://randommer.io/random-movies
