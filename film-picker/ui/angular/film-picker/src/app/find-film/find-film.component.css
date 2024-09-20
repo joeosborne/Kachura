@@ -1,19 +1,4 @@
-.flex-container{
-  display: flex;
-}
 
-.flex-column {
-
-  flex-direction: column;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.m-auto {
-  margin: auto;
-}
 
 
 /*!*body {*!*/

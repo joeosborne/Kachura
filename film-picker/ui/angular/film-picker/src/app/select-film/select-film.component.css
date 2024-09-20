@@ -1,0 +1,19 @@
+.select-film-container {
+  display: flex;
+  gap: 10px
+}
+
+@media (max-width: 768px) {
+  .select-film-container {
+    flex-direction: column;
+  }
+
+  /*.column-temp {*/
+  /*  border-right: none;*/
+  /*  border-bottom: 1px solid #ccc;*/
+  /*}*/
+
+  /*.column-temp:last-child {*/
+  /*  border-bottom: none;*/
+  /*}*/
+}

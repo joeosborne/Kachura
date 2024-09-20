@@ -1,26 +1,28 @@
-<div>this.expandHamburger: {{this.expandHamburger}}</div>
+<div>this.expandHamburger: {{ this.expandHamburger }}</div>
 
 <header class="header">
-<nav class="navbar">
-
+  <nav class="navbar">
     <div class="logo">
-          <img class="logo-img" alt="logo" src="../assets/images/logo.png" />
+      <img class="logo-img" alt="logo" src="../assets/images/logo.png" />
     </div>
-<!--  <ul class="nav-links" [ngStyle]="{'display': expandHamburger ? 'none' : 'flex'}">-->
-  <ul #navLinks id="navLinks" class="nav-links" [ngClass]="{'open': expandHamburger}">
-
-
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <div #hamburger class="hamburger" (click)="toggleHamburger()">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-</nav>
+    <!--  <ul class="nav-links" [ngStyle]="{'display': expandHamburger ? 'none' : 'flex'}">-->
+    <ul
+      #navLinks
+      id="navLinks"
+      class="nav-links"
+      [ngClass]="{ open: expandHamburger }"
+    >
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div #hamburger class="hamburger" (click)="toggleHamburger()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
 </header>
 
 <!--<header class="header">-->

@@ -76,104 +76,104 @@ export class FilmDataService {
           { actor: 'Annette Bening', role: 'Carolyn Burnham' },
         ],
       },
-      // {
-      //   id: 4,
-      //   title: 'The Green Mile',
-      //   director: 'Frank Darabont',
-      //   releaseYear: 1999,
-      //   genre: ['Crime', 'Drama', 'Fantasy'],
-      //   duration: 189,
-      //   rating: 8.6,
-      //   synopsis: 'A tale set on death row, where gentle giant John Coffey possesses the mysterious power to heal people\'s ailments.',
-      //   cast: [
-      //     {actor: 'Tom Hanks', role: 'Paul Edgecomb'},
-      //     {actor: 'Michael Clarke Duncan', role: 'John Coffey'}
-      //   ]
-      // },
-      // {
-      //   id: 5,
-      //   title: 'Eyes Wide Shut',
-      //   director: 'Stanley Kubrick',
-      //   releaseYear: 1999,
-      //   genre: ['Drama', 'Mystery', 'Thriller'],
-      //   duration: 159,
-      //   rating: 7.5,
-      //   synopsis: 'A Manhattan doctor embarks on a bizarre, night-long odyssey after his wife\'s admission of unfulfilled longing.',
-      //   cast: [
-      //     {actor: 'Tom Cruise', role: 'Dr. Bill Harford'},
-      //     {actor: 'Nicole Kidman', role: 'Alice Harford'}
-      //   ]
-      // },
-      // {
-      //   id: 6,
-      //   title: 'Toy Story 2',
-      //   director: 'John Lasseter, Ash Brannon, Lee Unkrich',
-      //   releaseYear: 1999,
-      //   genre: ['Animation', 'Adventure', 'Comedy'],
-      //   duration: 92,
-      //   rating: 7.9,
-      //   synopsis: 'When Woody is stolen by a toy collector, Buzz and his friends set out on a rescue mission to save him.',
-      //   cast: [
-      //     {actor: 'Tom Hanks', role: 'Woody'},
-      //     {actor: 'Tim Allen', role: 'Buzz Lightyear'}
-      //   ]
-      // },
-      // {
-      //   id: 7,
-      //   title: 'The Sixth Sense',
-      //   director: 'M. Night Shyamalan',
-      //   releaseYear: 1999,
-      //   genre: ['Drama', 'Mystery', 'Thriller'],
-      //   duration: 107,
-      //   rating: 8.2,
-      //   synopsis: 'A boy who communicates with spirits seeks the help of a disheartened child psychologist.',
-      //   cast: [
-      //     {actor: 'Bruce Willis', role: 'Malcolm Crowe'},
-      //     {actor: 'Haley Joel Osment', role: 'Cole Sear'}
-      //   ]
-      // },
-      // {
-      //   id: 8,
-      //   title: 'Election',
-      //   director: 'Alexander Payne',
-      //   releaseYear: 1999,
-      //   genre: ['Comedy', 'Drama'],
-      //   duration: 103,
-      //   rating: 7.2,
-      //   synopsis: 'A high school teacher meets his match in an over-achieving student politician.',
-      //   cast: [
-      //     {actor: 'Matthew Broderick', role: 'Jim McAllister'},
-      //     {actor: 'Reese Witherspoon', role: 'Tracy Flick'}
-      //   ]
-      // },
-      // {
-      //   id: 9,
-      //   title: 'Being John Malkovich',
-      //   director: 'Spike Jonze',
-      //   releaseYear: 1999,
-      //   genre: ['Comedy', 'Drama', 'Fantasy'],
-      //   duration: 113,
-      //   rating: 7.7,
-      //   synopsis: 'A puppeteer discovers a portal that leads literally into the head of movie star John Malkovich.',
-      //   cast: [
-      //     {actor: 'John Cusack', role: 'Craig Schwartz'},
-      //     {actor: 'Cameron Diaz', role: 'Lotte Schwartz'}
-      //   ]
-      // },
-      // {
-      //   id: 10,
-      //   title: 'The Talented Mr. Ripley',
-      //   director: 'Anthony Minghella',
-      //   releaseYear: 1999,
-      //   genre: ['Crime', 'Drama', 'Thriller'],
-      //   duration: 139,
-      //   rating: 7.4,
-      //   synopsis: 'In late 1950s New York, a young underachiever is sent to Italy to retrieve a rich and spoiled millionaire playboy.',
-      //   cast: [
-      //     {actor: 'Matt Damon', role: 'Tom Ripley'},
-      //     {actor: 'Gwyneth Paltrow', role: 'Marge Sherwood'}
-      //   ]
-      // },
+      {
+        id: 4,
+        title: 'The Green Mile',
+        director: 'Frank Darabont',
+        releaseYear: 1999,
+        genre: ['Crime', 'Drama', 'Fantasy'],
+        duration: 189,
+        rating: 8.6,
+        synopsis: 'A tale set on death row, where gentle giant John Coffey possesses the mysterious power to heal people\'s ailments.',
+        cast: [
+          {actor: 'Tom Hanks', role: 'Paul Edgecomb'},
+          {actor: 'Michael Clarke Duncan', role: 'John Coffey'}
+        ]
+      },
+      {
+        id: 5,
+        title: 'Eyes Wide Shut',
+        director: 'Stanley Kubrick',
+        releaseYear: 1999,
+        genre: ['Drama', 'Mystery', 'Thriller'],
+        duration: 159,
+        rating: 7.5,
+        synopsis: 'A Manhattan doctor embarks on a bizarre, night-long odyssey after his wife\'s admission of unfulfilled longing.',
+        cast: [
+          {actor: 'Tom Cruise', role: 'Dr. Bill Harford'},
+          {actor: 'Nicole Kidman', role: 'Alice Harford'}
+        ]
+      },
+      {
+        id: 6,
+        title: 'Toy Story 2',
+        director: 'John Lasseter, Ash Brannon, Lee Unkrich',
+        releaseYear: 1999,
+        genre: ['Animation', 'Adventure', 'Comedy'],
+        duration: 92,
+        rating: 7.9,
+        synopsis: 'When Woody is stolen by a toy collector, Buzz and his friends set out on a rescue mission to save him.',
+        cast: [
+          {actor: 'Tom Hanks', role: 'Woody'},
+          {actor: 'Tim Allen', role: 'Buzz Lightyear'}
+        ]
+      },
+      {
+        id: 7,
+        title: 'The Sixth Sense',
+        director: 'M. Night Shyamalan',
+        releaseYear: 1999,
+        genre: ['Drama', 'Mystery', 'Thriller'],
+        duration: 107,
+        rating: 8.2,
+        synopsis: 'A boy who communicates with spirits seeks the help of a disheartened child psychologist.',
+        cast: [
+          {actor: 'Bruce Willis', role: 'Malcolm Crowe'},
+          {actor: 'Haley Joel Osment', role: 'Cole Sear'}
+        ]
+      },
+      {
+        id: 8,
+        title: 'Election',
+        director: 'Alexander Payne',
+        releaseYear: 1999,
+        genre: ['Comedy', 'Drama'],
+        duration: 103,
+        rating: 7.2,
+        synopsis: 'A high school teacher meets his match in an over-achieving student politician.',
+        cast: [
+          {actor: 'Matthew Broderick', role: 'Jim McAllister'},
+          {actor: 'Reese Witherspoon', role: 'Tracy Flick'}
+        ]
+      },
+      {
+        id: 9,
+        title: 'Being John Malkovich',
+        director: 'Spike Jonze',
+        releaseYear: 1999,
+        genre: ['Comedy', 'Drama', 'Fantasy'],
+        duration: 113,
+        rating: 7.7,
+        synopsis: 'A puppeteer discovers a portal that leads literally into the head of movie star John Malkovich.',
+        cast: [
+          {actor: 'John Cusack', role: 'Craig Schwartz'},
+          {actor: 'Cameron Diaz', role: 'Lotte Schwartz'}
+        ]
+      },
+      {
+        id: 10,
+        title: 'The Talented Mr. Ripley',
+        director: 'Anthony Minghella',
+        releaseYear: 1999,
+        genre: ['Crime', 'Drama', 'Thriller'],
+        duration: 139,
+        rating: 7.4,
+        synopsis: 'In late 1950s New York, a young underachiever is sent to Italy to retrieve a rich and spoiled millionaire playboy.',
+        cast: [
+          {actor: 'Matt Damon', role: 'Tom Ripley'},
+          {actor: 'Gwyneth Paltrow', role: 'Marge Sherwood'}
+        ]
+      },
       // {
       //   id: 11,
       //   title: 'The Iron Giant',
