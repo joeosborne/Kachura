@@ -1,18 +1,19 @@
 <header class="header">
-  <nav class="navbar">
+  <nav class="main-nav">
     <div class="logo">
       <img class="logo-img" alt="logo" src="../assets/images/logo.png" />
     </div>
     <ul
       #navLinks
       id="navLinks"
-      class="nav-links"
+      class="main-nav-list"
       [ngClass]="{ open: expandHamburger }"
     >
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a class="main-nav-link" href="#">How it works</a></li>
+      <li><a class="main-nav-link" href="#">Meals</a></li>
+      <li><a class="main-nav-link" href="#">Testimonials</a></li>
+      <li><a class="main-nav-link" href="#">Pricing</a></li>
+      <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
     </ul>
     <div #hamburger class="hamburger" (click)="toggleHamburger()">
       <div class="line"></div>

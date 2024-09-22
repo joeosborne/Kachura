@@ -1,52 +1,112 @@
-<div xmlns="http://www.w3.org/1999/html">Select a film by...</div>
+<!--todo: rename classes-->
+<section class="section-hero">
+  <div class="hero">
+    <div class="hero-text-box">
+      <h1 class="heading-primary">Kachura Film Picker</h1>
+      <p class="hero-description">
+        Not sure which film to watch next? Select one from random by clicking
+        any of the following categories..
+      </p>
 
-<div class="clickable-card-container">
-  <!--  <button class="list-btn"><a [routerLink]="['/wheel-picker', 1]">1999</a></button>-->
-  <!--  <button class="list-btn"><a [routerLink]="['/wheel-picker', 2]">PTA</a></button>-->
+    </div>
 
-  <a routerLink="select-film/1">
-    <div class="card">
-      <img src="../assets/images/hero.jpg" alt="Avatar" class="card-img" />
-      <div >
-        <h4><b>List</b></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div class="clickable-card-container">
+      <div class="meal">
+        <img
+          src="../assets/images/movies-1.png"
+          class="meal-img"
+          alt="Japanese Gyozas"
+        />
+        <div class="meal-content">
+<!--          <div class="meal-tags">-->
+<!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
+<!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
+<!--          </div>-->
+          <p class="meal-title">Japanese Gyozas</p>
+        </div>
       </div>
-    </div>
-  </a>
-  <a routerLink="select-film/2">
-    <div class="card">
-      <img src="../assets/images/movies-1.png" alt="Avatar" class="card-img" />
-      <div >
-        <h4><b>Genre</b></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div class="meal">
+        <img
+          src="../assets/images/movies-1.png"
+          class="meal-img"
+          alt="Japanese Gyozas"
+        />
+        <div class="meal-content">
+          <!--          <div class="meal-tags">-->
+          <!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
+          <!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
+          <!--          </div>-->
+          <p class="meal-title">Japanese Gyozas</p>
+        </div>
       </div>
-    </div>
-  </a>
-  <a routerLink="select-film/3">
-    <div class="card">
-      <img src="../assets/images/movies-3.png" alt="Avatar" class="card-img" />
-      <div >
-        <h4><b>Director</b></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div class="meal">
+        <img
+          src="../assets/images/movies-1.png"
+          class="meal-img"
+          alt="Japanese Gyozas"
+        />
+        <div class="meal-content">
+          <!--          <div class="meal-tags">-->
+          <!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
+          <!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
+          <!--          </div>-->
+          <p class="meal-title">Japanese Gyozas</p>
+        </div>
       </div>
-    </div>
-  </a>
-  <a routerLink="select-film/4">
-    <div class="card">
-      <img src="../assets/images/movies-4.avif" alt="Avatar" class="card-img" />
-      <div >
-        <h4><b>Actor</b></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </div>
-  </a>
-  <a routerLink="select-film/5">
-  <div class="card">
-    <img src="../assets/images/movies-2.png" alt="Avatar" class="card-img" />
-    <div >
-      <h4><b>Decade</b></h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    </div>
-  </div>
-  </a>
-</div>
+
+<!--    <div class="clickable-card-container">-->
+<!--      &lt;!&ndash;  <button class="list-btn"><a [routerLink]="['/wheel-picker', 1]">1999</a></button>&ndash;&gt;-->
+<!--      &lt;!&ndash;  <button class="list-btn"><a [routerLink]="['/wheel-picker', 2]">PTA</a></button>&ndash;&gt;-->
+
+<!--      <a routerLink="select-film/1">-->
+<!--        <div class="card">-->
+<!--          <img src="../assets/images/hero.jpg" alt="Avatar" class="card-img" />-->
+<!--          <div >-->
+<!--            <h4><b>List</b></h4>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--      <a routerLink="select-film/2">-->
+<!--        <div class="card">-->
+<!--          <img src="../assets/images/movies-1.png" alt="Avatar" class="card-img" />-->
+<!--          <div >-->
+<!--            <h4><b>Genre</b></h4>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--      <a routerLink="select-film/3">-->
+<!--        <div class="card">-->
+<!--          <img src="../assets/images/movies-3.png" alt="Avatar" class="card-img" />-->
+<!--          <div >-->
+<!--            <h4><b>Director</b></h4>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--      <a routerLink="select-film/4">-->
+<!--        <div class="card">-->
+<!--          <img src="../assets/images/movies-4.avif" alt="Avatar" class="card-img" />-->
+<!--          <div >-->
+<!--            <h4><b>Actor</b></h4>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--      <a routerLink="select-film/5">-->
+<!--      <div class="card">-->
+<!--        <img src="../assets/images/movies-2.png" alt="Avatar" class="card-img" />-->
+<!--        <div >-->
+<!--          <h4><b>Decade</b></h4>-->
+<!--          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      </a>-->
+<!--    </div>-->
+
+<!--  </div>-->
+    </div></div>
+</section>
+<!--<div xmlns="http://www.w3.org/1999/html">Select a film by...</div>-->
+
