@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {SelectionCategory} from "../model/SelectionCategory";
+import {SelectionCategory} from "../model/selection.category";
 
 @Component({
   selector: 'app-select-category',

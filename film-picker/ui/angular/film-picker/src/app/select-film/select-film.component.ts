@@ -1,38 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-import { Film, FilmDataService } from '../film-data.service';
+import { FilmDataService } from '../film-data.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
+import { JsonPipe } from '@angular/common';
+import {Film} from "../model/film.model";
+import {List} from "../model/film-list.model";
 
 @Component({
   selector: 'app-select-film',
   standalone: true,
-  imports: [SearchComponent, RouterLink],
+  imports: [SearchComponent, RouterLink, JsonPipe],
   templateUrl: './select-film.component.html',
   styleUrl: './select-film.component.css',
 })
 export class SelectFilmComponent implements OnInit {
   films: Film[] = [];
 
-  selectedFilm: Film | undefined; //todo: type
+  selectedFilm: Film | null; //todo: type
   selectedFilmTrailerId: any;
   selectedFilmImdbUrl: any;
   selectedRottenTomatoesUrl: any;
   categoryId: string | null;
   //filteredFilms: Film[] = [];
+  lists: List[] = [];
 
   constructor(
     private filmService: FilmDataService,
     public sanitizer: DomSanitizer,
     private route: ActivatedRoute,
   ) {
-    this.loadFilms();
+    this.loadFilmData();
   }
 
-  loadFilms(): void {
+  loadFilmData(): void {
     this.filmService.getFilms().subscribe((data: Film[]) => {
       this.films = data;
-      console.log('this.films..');
+    });
+
+    this.filmService.getLists().subscribe((data: List[]) => {
+      this.lists = data;
     });
   }
 
@@ -48,13 +55,14 @@ export class SelectFilmComponent implements OnInit {
       // todo: List
       // todo: add a list svc which has film ids and use this below..
 
-      const rand = Math.floor(Math.random() * 11);
-      console.log(rand)
-      //console.log(this.films)
-      this.selectedFilm = this.films.find(x=>x.id === rand+1)
-    }
-    else{
-      this.selectedFilm = undefined;
+      const randomFilm = this.films.find(
+        (x) => x.id === Math.floor(Math.random() * 11) + 1,
+      );
+      if (!!randomFilm) {
+        this.selectedFilm = randomFilm;
+      }
+    } else {
+      this.selectedFilm = null;
     }
   }
 }

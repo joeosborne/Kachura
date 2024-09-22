@@ -1,38 +1,96 @@
-<p>select-film works!</p>
 <div>categoryId: {{ categoryId }}</div>
-<!--<div>filteredFilms: |{{this.filteredFilms?.length}}|</div>-->
-<div>selectedFilm: |{{ selectedFilm }}|</div>
+<div>selectedFilm: {{selectedFilm?.id}} | {{selectedFilm?.title}}</div>
 <!--todo: 1= list-->
-@if (!!categoryId && categoryId === '1') {
+@if (!!categoryId && categoryId === "1") {
   <div>Pick a random film from the one of these lists...</div>
   <div class="list-btn-container">
-    <button (click)="selectAList(1)" class="list-btn">1999 book</button>
-    <button (click)="selectAList(2)" class="list-btn">PTA</button>
-    <button (click)="selectAList(3)" class="list-btn">Netflix</button>
+    @for (list of lists; track list) {
+      <div></div>
+          <button (click)="selectAList(list.id)">
+              <div class="card">
+                <img
+                  src="../assets/images/{{list.imageName}}"
+                  alt="Avatar"
+                  class="card-img"
+                />
+                <div class="container">
+                  <h4><b>{{list.title}}</b></h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+            </button>
+    }
+
+
+<!--    <button (click)="selectAList(1)">-->
+<!--      <div class="card">-->
+<!--        <img-->
+<!--          src="../assets/images/movies-1.png"-->
+<!--          alt="Avatar"-->
+<!--          class="card-img"-->
+<!--        />-->
+<!--        <div class="container">-->
+<!--          <h4><b>1999 book</b></h4>-->
+<!--          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </button>-->
+<!--    <button (click)="selectAList(2)">-->
+<!--      <div class="card">-->
+<!--        <img-->
+<!--          src="../assets/images/movies-2.png"-->
+<!--          alt="Avatar"-->
+<!--          class="card-img"-->
+<!--        />-->
+<!--        <div class="container">-->
+<!--          <h4><b>PTA</b></h4>-->
+<!--          <p>Dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </button>-->
+<!--    <button (click)="selectAList(3)">-->
+<!--      <div class="card">-->
+<!--        <img-->
+<!--          src="../assets/images/movies-3.png"-->
+<!--          alt="Avatar"-->
+<!--          class="card-img"-->
+<!--        />-->
+<!--        <div class="container">-->
+<!--          <h4><b>Netflix</b></h4>-->
+<!--          <p>Consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </button>-->
   </div>
 }
-@if (!!selectedFilm){
-<div class="select-film-container">
-  <div class="card">
-    <img src="../assets/images/fight-club.jpg" alt="Avatar" class="card-img" />
-    <div class="container">
-      <h4><b>{{selectedFilm?.title}}</b></h4>
-      <p>Architect & Engineer</p>
+@if (!!selectedFilm) {
+  <div class="select-film-container">
+    <div class="card">
+      <img
+        src="../assets/images/fight-club.jpg"
+        alt="Avatar"
+        class="card-img"
+      />
+      <div class="container">
+        <h4>
+          <b>{{ selectedFilm?.title }}</b>
+        </h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/lXO0he1WjYw"
+        title="Fight Club Trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
     </div>
   </div>
-  <div>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/lXO0he1WjYw"
-      title="Fight Club Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    >
-    </iframe>
-  </div>
-</div>
 } @else {
   <h3>No films found for this selection</h3>
 }

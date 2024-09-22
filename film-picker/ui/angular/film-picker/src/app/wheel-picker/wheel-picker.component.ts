@@ -7,9 +7,10 @@ import {
   ViewChild,
 } from '@angular/core';
 import { RouletteWheelComponent } from '../roulette-wheel/roulette-wheel.component';
-import { Film, FilmDataService } from '../film-data.service';
+import { FilmDataService } from '../film-data.service';
 import {JsonPipe, NgIf} from "@angular/common";
 import {ActivatedRoute, RouterLink} from "@angular/router";
+import {Film} from "../model/film.model";
 
 @Component({
   selector: 'app-wheel-picker',

@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { SearchComponent } from '../search/search.component';
-import {Film, FilmDataService} from "../film-data.service";
+import {FilmDataService} from "../film-data.service";
 import {NgForOf, NgIf} from "@angular/common";
+import {Film} from "../model/film.model";
 
 @Component({
   selector: 'app-find-film',

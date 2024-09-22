@@ -81,7 +81,8 @@
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: #333;
+    background-color: #be0015;
+    color: white;
   }
 
   .nav-links.open {
