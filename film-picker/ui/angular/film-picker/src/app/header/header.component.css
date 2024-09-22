@@ -4,8 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #be0015;
-    color: white;
+    /*background-color: #be0015;*/
+    /*color: white;*/
     position: -webkit-sticky; /* For Safari */
     position: sticky;
     top: 0;
@@ -25,34 +25,15 @@
 }
 
 .nav-links a {
-  color: white;
+  /*color: white;*/
   text-decoration: none;
 
 }
 
 .nav-links a:hover {
-  color: #be0015;
-  background-color: white;
+  /*color: #be0015;*/
+  /*background-color: white;*/
 }
-
-
-
-/*.nav ul {*/
-/*  list-style: none;*/
-/*  display: flex;*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*}*/
-
-/*.nav li {*/
-/*  margin-left: 20px;*/
-/*}*/
-
-
-
-
-
-
 
 .hamburger {
   display: none;
@@ -63,7 +44,7 @@
 .hamburger .line {
   width: 25px;
   height: 3px;
-  background-color: white;
+  /*background-color: white;*/
   margin: 4px 0;
 }
 

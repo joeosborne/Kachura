@@ -55,12 +55,17 @@ export class SelectFilmComponent implements OnInit {
       // todo: List
       // todo: add a list svc which has film ids and use this below..
 
+//      console.log(Math.floor(Math.random() * 19 + 1))
+      const rId = Math.random() * 19 + 1;
+      console.log('rId: ' + rId)
       const randomFilm = this.films.find(
-        (x) => x.id === Math.floor(Math.random() * 11) + 1,
+        (x) => x.id === Math.floor(rId),
       );
+      console.log(randomFilm)
       if (!!randomFilm) {
         this.selectedFilm = randomFilm;
-      }
+        console.log('this.selectedFilm: ' + this.selectedFilm.id)
+       }
     } else {
       this.selectedFilm = null;
     }

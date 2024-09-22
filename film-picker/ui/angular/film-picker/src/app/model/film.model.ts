@@ -10,6 +10,7 @@ export interface Film {
   trailerId?: string;
   imdbUrl?: string;
   rottenTomatoesUrl?: string;
+  posterImageName?: string;
   cast: {
     actor: string;
     role: string;

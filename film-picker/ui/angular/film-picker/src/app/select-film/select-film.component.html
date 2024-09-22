@@ -1,66 +1,66 @@
 <div>categoryId: {{ categoryId }}</div>
-<div>selectedFilm: {{selectedFilm?.id}} | {{selectedFilm?.title}}</div>
+<div>selectedFilm: {{ selectedFilm?.id }} | {{ selectedFilm?.title }}</div>
 <!--todo: 1= list-->
 @if (!!categoryId && categoryId === "1") {
   <div>Pick a random film from the one of these lists...</div>
-  <div class="list-btn-container">
+  <div class="clickable-card-container">
     @for (list of lists; track list) {
-      <div></div>
-          <button (click)="selectAList(list.id)">
-              <div class="card">
-                <img
-                  src="../assets/images/{{list.imageName}}"
-                  alt="Avatar"
-                  class="card-img"
-                />
-                <div class="container">
-                  <h4><b>{{list.title}}</b></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div>
-            </button>
+      <button class="card-btn" (click)="selectAList(list.id)">
+        <div class="card">
+          <img
+            src="../assets/images/{{ list.imageName }}"
+            alt="Avatar"
+            class="card-img"
+          />
+          <div>
+            <h4>
+              <b>{{ list.title }}</b>
+            </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </button>
     }
 
-
-<!--    <button (click)="selectAList(1)">-->
-<!--      <div class="card">-->
-<!--        <img-->
-<!--          src="../assets/images/movies-1.png"-->
-<!--          alt="Avatar"-->
-<!--          class="card-img"-->
-<!--        />-->
-<!--        <div class="container">-->
-<!--          <h4><b>1999 book</b></h4>-->
-<!--          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </button>-->
-<!--    <button (click)="selectAList(2)">-->
-<!--      <div class="card">-->
-<!--        <img-->
-<!--          src="../assets/images/movies-2.png"-->
-<!--          alt="Avatar"-->
-<!--          class="card-img"-->
-<!--        />-->
-<!--        <div class="container">-->
-<!--          <h4><b>PTA</b></h4>-->
-<!--          <p>Dolor sit amet, consectetur adipisicing elit.</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </button>-->
-<!--    <button (click)="selectAList(3)">-->
-<!--      <div class="card">-->
-<!--        <img-->
-<!--          src="../assets/images/movies-3.png"-->
-<!--          alt="Avatar"-->
-<!--          class="card-img"-->
-<!--        />-->
-<!--        <div class="container">-->
-<!--          <h4><b>Netflix</b></h4>-->
-<!--          <p>Consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </button>-->
+    <!--    <button (click)="selectAList(1)">-->
+    <!--      <div class="card">-->
+    <!--        <img-->
+    <!--          src="../assets/images/movies-1.png"-->
+    <!--          alt="Avatar"-->
+    <!--          class="card-img"-->
+    <!--        />-->
+    <!--        <div >-->
+    <!--          <h4><b>1999 book</b></h4>-->
+    <!--          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </button>-->
+    <!--    <button (click)="selectAList(2)">-->
+    <!--      <div class="card">-->
+    <!--        <img-->
+    <!--          src="../assets/images/movies-2.png"-->
+    <!--          alt="Avatar"-->
+    <!--          class="card-img"-->
+    <!--        />-->
+    <!--        <div >-->
+    <!--          <h4><b>PTA</b></h4>-->
+    <!--          <p>Dolor sit amet, consectetur adipisicing elit.</p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </button>-->
+    <!--    <button (click)="selectAList(3)">-->
+    <!--      <div class="card">-->
+    <!--        <img-->
+    <!--          src="../assets/images/movies-3.png"-->
+    <!--          alt="Avatar"-->
+    <!--          class="card-img"-->
+    <!--        />-->
+    <!--        <div >-->
+    <!--          <h4><b>Netflix</b></h4>-->
+    <!--          <p>Consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </button>-->
   </div>
 }
 @if (!!selectedFilm) {
@@ -71,7 +71,7 @@
         alt="Avatar"
         class="card-img"
       />
-      <div class="container">
+      <div>
         <h4>
           <b>{{ selectedFilm?.title }}</b>
         </h4>
@@ -105,7 +105,7 @@
 <!--            alt="Avatar"-->
 <!--            class="card-img"-->
 <!--          />-->
-<!--          <div class="container">-->
+<!--          <div >-->
 <!--            <h4><b>John Doe</b></h4>-->
 <!--            <p>Architect & Engineer</p>-->
 <!--          </div>-->
@@ -113,7 +113,7 @@
 
 <!--    <div class="card">-->
 <!--      <img src="../assets/images/sixth.jpg" alt="Avatar" class="card-img" />-->
-<!--      <div class="container">-->
+<!--      <div >-->
 <!--        <h4><b>John Doe</b></h4>-->
 <!--        <p>Architect & Engineer</p>-->
 <!--      </div>-->

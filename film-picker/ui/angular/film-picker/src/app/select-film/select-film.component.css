@@ -7,13 +7,4 @@
   .select-film-container {
     flex-direction: column;
   }
-
-  /*.column-temp {*/
-  /*  border-right: none;*/
-  /*  border-bottom: 1px solid #ccc;*/
-  /*}*/
-
-  /*.column-temp:last-child {*/
-  /*  border-bottom: none;*/
-  /*}*/
 }
