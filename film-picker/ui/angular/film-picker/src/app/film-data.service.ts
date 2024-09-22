@@ -324,7 +324,7 @@ export class FilmDataService {
       {
         id: 1,
         title: '1999 book',
-        imageName:'movies-1.png',
+        imageName:'1999.jpg',
         films: [
           { id: 1 },
           { id: 2 },
@@ -350,20 +350,20 @@ export class FilmDataService {
       },
       {
         id: 2,
-        title: 'PTA',
-        imageName:'movies-2.png',
+        title: 'Netflix',
+        imageName:'netflix.jpg',
         films: []
       },
       {
         id: 3,
-        title: 'Netflix',
-        imageName:'movies-3.png',
+        title: 'PTA',
+        imageName:'pta.jpg',
         films: []
       },
       {
         id: 4,
         title: 'Disney +',
-        imageName:'movies-4.avif',
+        imageName:'disney-plus.jpg',
         films: []
       },
     ];

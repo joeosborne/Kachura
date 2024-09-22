@@ -50,6 +50,10 @@ export class SelectFilmComponent implements OnInit {
     }
   }
 
+  // selectCategory(number: number) {
+  //   this.router.navigate([`select-film/${number}`])
+  // }
+
   selectAList(number: number) {
     if (number === 1) {
       // todo: List

@@ -5,21 +5,35 @@
   <div>Pick a random film from the one of these lists...</div>
   <div class="clickable-card-container">
     @for (list of lists; track list) {
-      <button class="card-btn" (click)="selectAList(list.id)">
-        <div class="card">
-          <img
-            src="../assets/images/{{ list.imageName }}"
-            alt="Avatar"
-            class="card-img"
-          />
-          <div>
-            <h4>
-              <b>{{ list.title }}</b>
-            </h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
+      <div class="meal"  (click)="selectAList(list.id)">
+        <img
+          src="../assets/images/{{ list.imageName }}"
+          class="meal-img"
+          alt="Japanese Gyozas"
+        />
+        <div class="meal-content">
+          <!--          <div class="meal-tags">-->
+          <!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
+          <!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
+          <!--          </div>-->
+          <p class="meal-title">{{ list.title }}</p>
         </div>
-      </button>
+      </div>
+<!--      <button class="card-btn" (click)="selectAList(list.id)">-->
+<!--        <div class="card">-->
+<!--          <img-->
+<!--            src="../assets/images/{{ list.imageName }}"-->
+<!--            alt="Avatar"-->
+<!--            class="card-img"-->
+<!--          />-->
+<!--          <div>-->
+<!--            <h4>-->
+<!--              <b></b>-->
+<!--            </h4>-->
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </button>-->
     }
 
     <!--    <button (click)="selectAList(1)">-->
