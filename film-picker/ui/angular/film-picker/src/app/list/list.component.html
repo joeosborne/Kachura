@@ -1,0 +1,39 @@
+<h3>listId: |{{ listId }}|</h3>
+
+<button (click)="pickRandomFilm()">Go</button>
+
+@for (film of films; track film) {
+  <div>{{ film.id }} - {{ film.title }}</div>
+}
+
+@if (!!selectedFilm) {
+  <div class="select-film-container">
+    <div class="card">
+      <img
+        src="../assets/images/fight-club.jpg"
+        alt="Avatar"
+        class="card-img"
+      />
+      <div>
+        <h4>
+          <b>{{ selectedFilm?.title }}</b>
+        </h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/lXO0he1WjYw"
+        title="Fight Club Trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  </div>
+} @else {
+  <h3>No films found for this selection</h3>
+}

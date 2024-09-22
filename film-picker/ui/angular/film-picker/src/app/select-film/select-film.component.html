@@ -5,35 +5,38 @@
   <div>Pick a random film from the one of these lists...</div>
   <div class="clickable-card-container">
     @for (list of lists; track list) {
-      <div class="meal"  (click)="selectAList(list.id)">
-        <img
-          src="../assets/images/{{ list.imageName }}"
-          class="meal-img"
-          alt="Japanese Gyozas"
-        />
-        <div class="meal-content">
-          <!--          <div class="meal-tags">-->
-          <!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
-          <!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
-          <!--          </div>-->
-          <p class="meal-title">{{ list.title }}</p>
+      <a routerLink="/list/{{ list.id }}">
+        <!--      <div class="meal"  (click)="selectAList(list.id)">-->
+        <div class="meal">
+          <img
+            src="../assets/images/{{ list.imageName }}"
+            class="meal-img"
+            alt="Japanese Gyozas"
+          />
+          <div class="meal-content">
+            <!--          <div class="meal-tags">-->
+            <!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
+            <!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
+            <!--          </div>-->
+            <p class="meal-title">{{ list.title }}</p>
+          </div>
         </div>
-      </div>
-<!--      <button class="card-btn" (click)="selectAList(list.id)">-->
-<!--        <div class="card">-->
-<!--          <img-->
-<!--            src="../assets/images/{{ list.imageName }}"-->
-<!--            alt="Avatar"-->
-<!--            class="card-img"-->
-<!--          />-->
-<!--          <div>-->
-<!--            <h4>-->
-<!--              <b></b>-->
-<!--            </h4>-->
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </button>-->
+      </a>
+      <!--      <button class="card-btn" (click)="selectAList(list.id)">-->
+      <!--        <div class="card">-->
+      <!--          <img-->
+      <!--            src="../assets/images/{{ list.imageName }}"-->
+      <!--            alt="Avatar"-->
+      <!--            class="card-img"-->
+      <!--          />-->
+      <!--          <div>-->
+      <!--            <h4>-->
+      <!--              <b></b>-->
+      <!--            </h4>-->
+      <!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </button>-->
     }
 
     <!--    <button (click)="selectAList(1)">-->
@@ -77,37 +80,37 @@
     <!--    </button>-->
   </div>
 }
-@if (!!selectedFilm) {
-  <div class="select-film-container">
-    <div class="card">
-      <img
-        src="../assets/images/fight-club.jpg"
-        alt="Avatar"
-        class="card-img"
-      />
-      <div>
-        <h4>
-          <b>{{ selectedFilm?.title }}</b>
-        </h4>
-        <p>Architect & Engineer</p>
-      </div>
-    </div>
-    <div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/lXO0he1WjYw"
-        title="Fight Club Trailer"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
-    </div>
-  </div>
-} @else {
-  <h3>No films found for this selection</h3>
-}
+<!--@if (!!selectedFilm) {-->
+<!--  <div class="select-film-container">-->
+<!--    <div class="card">-->
+<!--      <img-->
+<!--        src="../assets/images/fight-club.jpg"-->
+<!--        alt="Avatar"-->
+<!--        class="card-img"-->
+<!--      />-->
+<!--      <div>-->
+<!--        <h4>-->
+<!--          <b>{{ selectedFilm?.title }}</b>-->
+<!--        </h4>-->
+<!--        <p>Architect & Engineer</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      <iframe-->
+<!--        width="560"-->
+<!--        height="315"-->
+<!--        src="https://www.youtube.com/embed/lXO0he1WjYw"-->
+<!--        title="Fight Club Trailer"-->
+<!--        frameborder="0"-->
+<!--        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+<!--        allowfullscreen-->
+<!--      >-->
+<!--      </iframe>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--} @else {-->
+<!--  <h3>No films found for this selection</h3>-->
+<!--}-->
 
 <!--<div class="find-film-container">-->
 

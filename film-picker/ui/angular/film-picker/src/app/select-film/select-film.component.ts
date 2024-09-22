@@ -54,6 +54,8 @@ export class SelectFilmComponent implements OnInit {
   //   this.router.navigate([`select-film/${number}`])
   // }
 
+
+
   selectAList(number: number) {
     if (number === 1) {
       // todo: List
