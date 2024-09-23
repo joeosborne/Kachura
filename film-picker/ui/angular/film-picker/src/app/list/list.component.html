@@ -20,7 +20,7 @@
   <div class="select-film-container">
     <div class="meal">
       <img
-        src="../assets/images/posters/fight-club.jpg"
+        src="../assets/images/posters/{{selectedFilm.posterImageName}}"
         class="meal-img"
         alt="Japanese Gyozas"
       />
@@ -67,108 +67,19 @@
 }
 <div class="yada">
   <div class="gallery">
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-1.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-2.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-3.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-1.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-2.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-3.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
+    @for (film of films; track film) {
 
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-1.png"
-        alt="Photo of beautifully
+      <figure class="gallery-item">
+        <div>{{ film.id }} - {{ film.title }}</div>
+        <img
+          class="yada-img"
+          src="../assets/images/posters/{{film.posterImageName}}"
+          alt="Photo of beautifully
             arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-2.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-3.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-1.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-2.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
-    <figure class="gallery-item">
-      <img
-        class="yada-img"
-        src="../assets/images/movies-3.png"
-        alt="Photo of beautifully
-            arranged food"
-      />
-    </figure>
+        />
+      </figure>
+    }
   </div>
 </div>
 
-<!-- todo: use the following for the galler-->
-<!--@for (film of films; track film) {-->
-<!--  <div>{{ film.id }} - {{ film.title }}</div>-->
-<!--}-->
+
