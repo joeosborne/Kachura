@@ -1,8 +1,11 @@
-<div>categoryId: {{ categoryId }}</div>
-<div>selectedFilm: {{ selectedFilm?.id }} | {{ selectedFilm?.title }}</div>
+<!--todo: remove debug-->
+<!--<div>categoryId: {{ categoryId }}</div>-->
+<!--<div>selectedFilm: {{ selectedFilm?.id }} | {{ selectedFilm?.title }}</div>-->
 <!--todo: 1= list-->
 @if (!!categoryId && categoryId === "1") {
-  <div>Pick a random film from the one of these lists...</div>
+  <p class="hero-description">
+    Select a list from below...
+  </p>
   <div class="clickable-card-container">
     @for (list of lists; track list) {
       <a routerLink="/list/{{ list.id }}">

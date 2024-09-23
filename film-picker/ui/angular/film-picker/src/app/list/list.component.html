@@ -1,30 +1,58 @@
-<h3>listId: |{{ listId }}|</h3>
-
-<button (click)="pickRandomFilm()">Go</button>
-
-@for (film of films; track film) {
-  <div>{{ film.id }} - {{ film.title }}</div>
-}
-
+<!--<h3>listId: |{{ listId }}|</h3>-->
+<div class="random-film-btn-container">
+  <div>
+    <img
+      src="../assets/images/1999.jpg"
+      class="todoA"
+      alt="Japanese Gyozas"
+    />
+  </div>
+  <div style="margin: 2rem;">
+    <p class="hero-description">
+      Here are all of the films within the [category-name] category
+    </p>
+    <button class="btn btn--full" (click)="pickRandomFilm()">
+      Pick random film
+    </button>
+  </div>
+</div>
 @if (!!selectedFilm) {
   <div class="select-film-container">
-    <div class="card">
+    <div class="meal">
       <img
-        src="../assets/images/fight-club.jpg"
-        alt="Avatar"
-        class="card-img"
+        src="../assets/images/posters/fight-club.jpg"
+        class="meal-img"
+        alt="Japanese Gyozas"
       />
-      <div>
-        <h4>
-          <b>{{ selectedFilm?.title }}</b>
-        </h4>
-        <p>Architect & Engineer</p>
+      <div class="meal-content">
+        <div class="meal-tags">
+          <span class="tag tag--vegan">[genre 1]</span>
+          <span class="tag tag--paleo">[genre 2]</span>
+        </div>
+        <!--          <div class="meal-tags">-->
+        <!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
+        <!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
+        <!--          </div>-->
+        <p class="meal-title">{{ selectedFilm?.title }}</p>
       </div>
     </div>
-    <div>
+
+    <!--    <div class="card">-->
+    <!--      <img-->
+    <!--        src=""-->
+    <!--        alt="Avatar"-->
+    <!--        class="card-img"-->
+    <!--      />-->
+    <!--      <div>-->
+    <!--        <h4>-->
+    <!--          <b>{{  }}</b>-->
+    <!--        </h4>-->
+    <!--        <p>Architect & Engineer</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <div class="trailer-container">
       <iframe
-        width="560"
-        height="315"
+        class="trailer-iframe"
         src="https://www.youtube.com/embed/lXO0he1WjYw"
         title="Fight Club Trailer"
         frameborder="0"
@@ -35,5 +63,112 @@
     </div>
   </div>
 } @else {
-  <h3>No films found for this selection</h3>
+  <!--  <h3>No films found for this selection</h3>-->
 }
+<div class="yada">
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-1.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-2.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-3.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-1.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-2.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-3.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-1.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-2.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-3.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-1.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-2.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+    <figure class="gallery-item">
+      <img
+        class="yada-img"
+        src="../assets/images/movies-3.png"
+        alt="Photo of beautifully
+            arranged food"
+      />
+    </figure>
+  </div>
+</div>
+
+<!-- todo: use the following for the galler-->
+<!--@for (film of films; track film) {-->
+<!--  <div>{{ film.id }} - {{ film.title }}</div>-->
+<!--}-->
