@@ -1,0 +1,12 @@
+.container {
+  background-color: lightcoral;
+}
+
+
+/* registration.component.css */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    background-color: lightblue;
+  }
+}
