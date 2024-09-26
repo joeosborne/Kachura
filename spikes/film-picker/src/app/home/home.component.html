@@ -1,0 +1,19 @@
+<div class="home-container">
+  <h1>Find a Random Movie</h1>
+
+  <div class="filters">
+    <label for="genre">Genre:</label>
+    <select [(ngModel)]="selectedGenre" id="genre">
+      <option [value]="null">Any</option>
+      <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+    </select>
+
+    <label for="decade">Decade:</label>
+    <select [(ngModel)]="selectedDecade" id="decade">
+      <option [value]="null">Any</option>
+      <option *ngFor="let decade of decades" [value]="decade">{{ decade }}s</option>
+    </select>
+
+    <button (click)="randomizeMovie()">Randomize</button>
+  </div>
+</div>
