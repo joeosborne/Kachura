@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\Kachura\\spikes\\dotNetFeatures\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BA084279-CB86-4A1F-82BD-CEE11E317EB7}|MinimalAPI\\MinimalAPI.csproj|c:\\dev\\kachura\\spikes\\dotnetfeatures\\minimalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA084279-CB86-4A1F-82BD-CEE11E317EB7}|MinimalAPI\\MinimalAPI.csproj|solutionrelative:minimalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F2B8B57-ED65-4FC5-95A6-10056B58E2EC}|CSharpLanguage\\CSharpLanguage.csproj|c:\\dev\\kachura\\spikes\\dotnetfeatures\\csharplanguage\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F2B8B57-ED65-4FC5-95A6-10056B58E2EC}|CSharpLanguage\\CSharpLanguage.csproj|solutionrelative:csharplanguage\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\dotNetFeatures\\MinimalAPI\\Program.cs",
+              "RelativeDocumentMoniker": "MinimalAPI\\Program.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\dotNetFeatures\\MinimalAPI\\Program.cs",
+              "RelativeToolTip": "MinimalAPI\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T11:24:38.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Records.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\dotNetFeatures\\CSharpLanguage\\Records.cs",
+              "RelativeDocumentMoniker": "CSharpLanguage\\Records.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\dotNetFeatures\\CSharpLanguage\\Records.cs",
+              "RelativeToolTip": "CSharpLanguage\\Records.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAASwB8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T09:36:16.348Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

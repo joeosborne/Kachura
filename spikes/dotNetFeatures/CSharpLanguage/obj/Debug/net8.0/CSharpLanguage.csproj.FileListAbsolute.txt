@@ -1,0 +1,12 @@
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\bin\Debug\net8.0\CSharpLanguage.deps.json
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\bin\Debug\net8.0\CSharpLanguage.dll
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\bin\Debug\net8.0\CSharpLanguage.pdb
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\CSharpLanguage.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\CSharpLanguage.AssemblyInfoInputs.cache
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\CSharpLanguage.AssemblyInfo.cs
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\CSharpLanguage.csproj.CoreCompileInputs.cache
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\CSharpLanguage.sourcelink.json
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\CSharpLanguage.dll
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\refint\CSharpLanguage.dll
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\CSharpLanguage.pdb
+C:\dev\Kachura\spikes\dotNetFeatures\CSharpLanguage\obj\Debug\net8.0\ref\CSharpLanguage.dll

@@ -8,63 +8,63 @@
     />
   </div>
   <div style="margin: 2rem;">
-    <p class="hero-description">
-      Here are all of the films within the [category-name] category
-    </p>
     <button class="btn btn--full" (click)="pickRandomFilm()">
       Pick random film
     </button>
   </div>
 </div>
-@if (!!selectedFilm) {
-  <div class="select-film-container">
-    <div class="meal">
-      <img
-        src="../assets/images/posters/{{selectedFilm.posterImageName}}"
-        class="meal-img"
-        alt="Japanese Gyozas"
-      />
-      <div class="meal-content">
-        <div class="meal-tags">
-          <span class="tag tag--vegan">[genre 1]</span>
-          <span class="tag tag--paleo">[genre 2]</span>
-        </div>
-        <!--          <div class="meal-tags">-->
-        <!--&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;-->
-        <!--            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>-->
-        <!--          </div>-->
-        <p class="meal-title">{{ selectedFilm?.title }}</p>
-      </div>
-    </div>
+<!--@if (!!selectedFilm) {-->
+<!--  <div class="select-film-container">-->
+<!--    <div class="meal">-->
+<!--      <img-->
+<!--        src="../assets/images/posters/{{selectedFilm.posterImageName}}"-->
+<!--        class="meal-img"-->
+<!--        alt="Japanese Gyozas"-->
+<!--      />-->
+<!--      <div class="meal-content">-->
+<!--        <div class="meal-tags">-->
+<!--          <span class="tag tag&#45;&#45;vegan">[genre 1]</span>-->
+<!--          <span class="tag tag&#45;&#45;paleo">[genre 2]</span>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;          <div class="meal-tags">&ndash;&gt;-->
+<!--        &lt;!&ndash;&lt;!&ndash;            todo: use these tags for genres (when a film is selected) &ndash;&gt;&ndash;&gt;-->
+<!--        &lt;!&ndash;            <span class="tag tag&#45;&#45;vegetarian">Vegetarian</span>&ndash;&gt;-->
+<!--        &lt;!&ndash;          </div>&ndash;&gt;-->
+<!--        <p class="meal-title">{{ selectedFilm?.title }}</p>-->
+<!--        <p class="meal-title">some text</p>-->
+<!--        <p class="meal-title">some more text</p>-->
+<!--        <p class="meal-title">Even more text</p>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <!--    <div class="card">-->
-    <!--      <img-->
-    <!--        src=""-->
-    <!--        alt="Avatar"-->
-    <!--        class="card-img"-->
-    <!--      />-->
-    <!--      <div>-->
-    <!--        <h4>-->
-    <!--          <b>{{  }}</b>-->
-    <!--        </h4>-->
-    <!--        <p>Architect & Engineer</p>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <div class="trailer-container">
-      <iframe
-        class="trailer-iframe"
-        src="https://www.youtube.com/embed/lXO0he1WjYw"
-        title="Fight Club Trailer"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
-    </div>
-  </div>
-} @else {
-  <!--  <h3>No films found for this selection</h3>-->
-}
+<!--    &lt;!&ndash;    <div class="card">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <img&ndash;&gt;-->
+<!--    &lt;!&ndash;        src=""&ndash;&gt;-->
+<!--    &lt;!&ndash;        alt="Avatar"&ndash;&gt;-->
+<!--    &lt;!&ndash;        class="card-img"&ndash;&gt;-->
+<!--    &lt;!&ndash;      />&ndash;&gt;-->
+<!--    &lt;!&ndash;      <div>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <h4>&ndash;&gt;-->
+<!--    &lt;!&ndash;          <b>{{  }}</b>&ndash;&gt;-->
+<!--    &lt;!&ndash;        </h4>&ndash;&gt;-->
+<!--    &lt;!&ndash;        <p>Architect & Engineer</p>&ndash;&gt;-->
+<!--    &lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    <div class="trailer-container">-->
+<!--      <iframe-->
+<!--        class="trailer-iframe"-->
+<!--        src="https://www.youtube.com/embed/lXO0he1WjYw"-->
+<!--        title="Fight Club Trailer"-->
+<!--        frameborder="0"-->
+<!--        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+<!--        allowfullscreen-->
+<!--      >-->
+<!--      </iframe>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--} @else {-->
+<!--  &lt;!&ndash;  <h3>No films found for this selection</h3>&ndash;&gt;-->
+<!--}-->
 <div class="yada">
   <div class="gallery">
     @for (film of films; track film) {

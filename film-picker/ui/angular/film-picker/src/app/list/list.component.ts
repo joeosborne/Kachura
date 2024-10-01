@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import { FilmDataService } from '../film-data.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Film } from '../model/film.model';
@@ -20,9 +20,11 @@ export class ListComponent implements OnInit {
   constructor(
     private filmService: FilmDataService,
     private route: ActivatedRoute,
+    private router: Router
   ) {
-    this.loadFilmData();
+    //this.loadFilmData();
   }
+
 
   loadFilmData(): void {
     this.filmService.getFilms().subscribe((data: Film[]) => {
@@ -42,13 +44,14 @@ export class ListComponent implements OnInit {
     // todo: add a list svc which has film ids and use this below..
 
     //      console.log(Math.floor(Math.random() * 19 + 1))
-    const rId = Math.random() * 19 + 1;
+    const rId = Math.floor(Math.random() * 19 + 1);
     console.log('rId: ' + rId);
-    const randomFilm = this.films.find((x) => x.id === Math.floor(rId));
-    console.log(randomFilm);
-    if (!!randomFilm) {
-      this.selectedFilm = randomFilm;
-      console.log('this.selectedFilm: ' + this.selectedFilm.id);
-    }
+    this.router.navigate([`film/${rId}`])
+    // const randomFilm = this.films.find((x) => x.id === Math.floor(rId));
+    // console.log(randomFilm);
+    // if (!!randomFilm) {
+    //   this.selectedFilm = randomFilm;
+    //   console.log('this.selectedFilm: ' + this.selectedFilm.id);
+    // }
   }
 }
