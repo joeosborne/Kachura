@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class CodingTasksService {
 
-  constructor() { }
+  constructor() {
+  }
 
   // numberToRoman(input: number){
   //   console.log('initial input: ' + input)
@@ -129,10 +130,6 @@ export class CodingTasksService {
   // }
 
 
-
-
-
-
 // Function toRoman(number):
 // // Step 1: Define a mapping of Roman numerals to corresponding integer values
 // romanNumerals = [
@@ -174,41 +171,39 @@ export class CodingTasksService {
 //   Return: Finally, the result string will contain the Roman numeral representation of the input number.
 
 
-
-  numberToRoman(input: number):string
-  {
-    if(input > 3999){
+  numberToRoman(input: number): string {
+    if (input > 3999) {
       throw new Error('3999 is the max')
     }
-    if(input < 0){
+    if (input < 0) {
       throw new Error('input must be 0 or higher')
     }
 // // Step 1: Define a mapping of Roman numerals to corresponding integer values
-      const romanMap: { [key: number]: string } = {
-        1000: 'M',
-        900: 'CM',
-        500: 'D',
-        400: 'CD',
-        100: 'C',
-        90: 'XC',
-        50: 'L',
-        40: 'XL',
-        10: 'X',
-        9: 'IX',
-        5: 'V',
-        4: 'IV',
-        1: 'I',
-      };
+    const romanMap: { [key: number]: string } = {
+      1000: 'M',
+      900: 'CM',
+      500: 'D',
+      400: 'CD',
+      100: 'C',
+      90: 'XC',
+      50: 'L',
+      40: 'XL',
+      10: 'X',
+      9: 'IX',
+      5: 'V',
+      4: 'IV',
+      1: 'I',
+    };
 // // Step 2: Initialize an empty string to store the result
     let result = '';
 // // Step 3: Iterate over each numeral in the romanNumerals list
 
-    for (const value of Object.keys(romanMap).reverse().map(Number)){
+    for (const value of Object.keys(romanMap).reverse().map(Number)) {
       console.log('value')
       console.log(value)
       // // Step 4: While the current number is greater than or equal to the value
       debugger;
-      while(input >= value){
+      while (input >= value) {
         // Step 5: Append the numeral to the result
         result += romanMap[value];
 
@@ -242,57 +237,53 @@ export class CodingTasksService {
   // Single-character numeral: If the two-character numeral is not valid, it processes a single character at a time.
   // Adding the values: The value of each numeral (either two-character or single-character) is added to the result.
   // Return: Finally, the result contains the numeric value of the Roman numeral string.
-  romanToNumber(input: string):number
-  {
+  romanToNumber(input: string): number {
     // Step 1: Define a mapping of Roman numerals to corresponding integer values
-      const romanMap: { [key: string]: number } = {
-        'M': 1000,
-        'CM': 900,
-        'D': 500,
-        'CD': 400,
-        'C': 100,
-        'XC': 90,
-        'L': 50,
-        'XL': 40,
-        'X': 10,
-        'IX': 9,
-        'V': 5,
-        'IV': 4,
-        'I': 1,
-      };
-      // Step 2: Initialize a variable to store the result
-      let result = 0;
+    const romanMap: { [key: string]: number } = {
+      'M': 1000,
+      'CM': 900,
+      'D': 500,
+      'CD': 400,
+      'C': 100,
+      'XC': 90,
+      'L': 50,
+      'XL': 40,
+      'X': 10,
+      'IX': 9,
+      'V': 5,
+      'IV': 4,
+      'I': 1,
+    };
+    // Step 2: Initialize a variable to store the result
+    let result = 0;
 
-      // Step 3: Initialize a variable to keep track of the current index in the string
-      let i = 0;
+    // Step 3: Initialize a variable to keep track of the current index in the string
+    let i = 0;
 
-      // Step 4: Loop through the roman numeral string
-      while (i < input.length){
+    // Step 4: Loop through the roman numeral string
+    while (i < input.length) {
       // Step 5: Check if the current character and the next character form a valid two-character numeral
-        const numberFromTwoDigitNumeral = romanMap[input[i] + input[i+1]];
-        if (!!numberFromTwoDigitNumeral) {
-          // Step 6: Add the value of the two-character numeral to the result
-          result+= numberFromTwoDigitNumeral;
-          // Step 7: Move the index forward by 2 (since we processed two characters)
-          i += 2;
-        } else{
-          // Step 8: Add the value of the single-character numeral to the result
-          const numberFromOneDigitNumeral = romanMap[input[i]];
-          if (!!numberFromOneDigitNumeral) {
-            result+= numberFromOneDigitNumeral;
-            // Step 9: Move the index forward by 1
-            i += 1;
-          }
+      const numberFromTwoDigitNumeral = romanMap[input[i] + input[i + 1]];
+      if (!!numberFromTwoDigitNumeral) {
+        // Step 6: Add the value of the two-character numeral to the result
+        result += numberFromTwoDigitNumeral;
+        // Step 7: Move the index forward by 2 (since we processed two characters)
+        i += 2;
+      } else {
+        // Step 8: Add the value of the single-character numeral to the result
+        const numberFromOneDigitNumeral = romanMap[input[i]];
+        if (!!numberFromOneDigitNumeral) {
+          result += numberFromOneDigitNumeral;
+          // Step 9: Move the index forward by 1
+          i += 1;
         }
       }
+    }
 
     // Step 10: Return the final result
     return result;
-  }
-}
 
-
-// Function toRoman(number):
+    // Function toRoman(number):
 // // Step 1: Define a mapping of Roman numerals to corresponding integer values
 // romanNumerals = [
 //   (1000, 'M'),
@@ -334,4 +325,34 @@ export class CodingTasksService {
 //
 //
 // --
+
+
+
+
+  }
+
+
+  //FizzBuzz Algorithm (fizzBuzz.js):
+  // The fizzBuzz function takes a number n and returns an array with numbers from 1 to n,
+  // replacing multiples of 3 with "Fizz", multiples of 5 with "Buzz", and multiples of both with "FizzBuzz".
+  fizzBuzz(input: number): any[]{
+    let result: string[] = [];
+
+       for (let i = 1; i <= input; i++) {
+         if (i % 3 === 0 && i % 5 === 0) {
+           result.push('FizzBuzz')
+         } else if (i % 3 === 0) {
+           result.push('Fizz')
+         } else if (i % 5 === 0) {
+           result.push('Buzz')
+         } else {
+           result.push(i.toString())
+         }
+       }
+
+
+    return result;
+  }
+}
+
 
