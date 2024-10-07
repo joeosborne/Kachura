@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {JsonPipe} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -36,14 +37,15 @@ export class LandingComponent implements OnInit, AfterViewInit{
 
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     // Initialize the form group with a search term control
     this.searchForm = this.fb.group({
       searchTerm: ['']
     });
   }
 
-  ngOnInit(): void {
+
+    ngOnInit(): void {
     // Listen for Enter key press
     // this.searchForm.get('searchTerm')?.valueChanges.subscribe(value => {
     //   if (value && value.trim() !== '') {
@@ -126,6 +128,8 @@ export class LandingComponent implements OnInit, AfterViewInit{
   addToWatchlist(film:any) {
     console.log('add the following to addToWatchlist...')
     console.log(film.title)
+
+      this.router.navigate([`watchlist`]).then(r => {})
 
   }
 }
