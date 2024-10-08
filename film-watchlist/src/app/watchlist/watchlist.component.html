@@ -8,11 +8,40 @@
       <div class="col-md-2 fw-bold text-end">Extended Price</div>
     </div>
 
-    <!-- Display the cart items -->
-    <div *ngFor="let item of listItems()">
-      <div>{{ item | json }}</div>
-      <!--      <sw-cart-item [item]='item' />-->
+    <!--  todo: re-use-->
+    <div class="landing-container">
+      @for (film of listItems(); track film) {
+        <div class="movie">
+          <img
+            src="{{ this.IMG_PATH }}{{ film.poster_path }}"
+            alt="{{ film.title }}"
+          />
+          <div class="movie-info">
+            <h3>{{ film.title }}</h3>
+          </div>
+          <div class="overview">
+            <h3>Overview</h3>
+            {{ film.overview }}
+          </div>
+
+<!--          <div-->
+<!--            (click)="addToWatchlist(film)"-->
+<!--            class="favorite-icon"-->
+<!--            alt="add to watchlist icon"-->
+<!--          >-->
+<!--            &#10084;-->
+<!--          </div>-->
+          <!-- Heart icon -->
+        </div>
+
+      }
     </div>
+
+    <!-- Display the cart items -->
+<!--    <div *ngFor="let item of listItems()">-->
+<!--      <div>{{ item | json }}</div>-->
+<!--      &lt;!&ndash;      <sw-cart-item [item]='item' />&ndash;&gt;-->
+<!--    </div>-->
   </div>
 </div>
 

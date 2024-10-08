@@ -107,6 +107,7 @@ header {
   transition: transform 0.3s ease-in;
 }
 
+/*todo use this to test purging css*/
 .add-to-wl{
   display: none;
   position: absolute;

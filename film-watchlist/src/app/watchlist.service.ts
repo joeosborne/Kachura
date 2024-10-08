@@ -1,11 +1,12 @@
 import { Injectable, computed, signal } from '@angular/core';
+import {Film} from './model/film.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WatchlistService {
   // Manage state with signals
-  listItems = signal<any[]>([]);
+  listItems = signal<Film[]>([]);
 
   // // Total up the extended price for each item
   // subTotal = computed(() => this.cartItems().reduce((a, b) =>
@@ -22,7 +23,7 @@ export class WatchlistService {
 
   // Add the vehicle to the cart
   // If the item is already in the cart, increase the quantity
-  addToList(film: any): void {
+  addToList(film: Film): void {
     console.log('addToList...');
     console.log(film);
     const index = this.listItems().findIndex(
@@ -30,14 +31,14 @@ export class WatchlistService {
     );
     if (index === -1) {
       // Not already in the cart, so add with default quantity of 1
-      this.listItems.update((items) => [...items, { film, quantity: 1 }]);
+      this.listItems.update((items) => [...items,  film]);
     } else {
-      // Already in the cart, so increase the quantity by 1
-      this.listItems.update((items) => [
-        ...items.slice(0, index),
-        { ...items[index], quantity: items[index].quantity + 1 },
-        ...items.slice(index + 1),
-      ]);
+      // // Already in the cart, so increase the quantity by 1
+      // this.listItems.update((items) => [
+      //   ...items.slice(0, index),
+      //   { ...items[index], quantity: items[index].quantity + 1 },
+      //   ...items.slice(index + 1),
+      // ]);
     }
 
     console.log('this.listItems...');

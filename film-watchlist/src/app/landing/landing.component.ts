@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { WatchlistService } from '../watchlist.service';
+import {Film} from '../model/film.model';
 
 @Component({
   selector: 'app-landing',
@@ -127,7 +128,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     this.films = data.results;
   }
 
-  addToWatchlist(film: any) {
+  addToWatchlist(film: Film) {
     console.log('add the following to addToWatchlist...');
     console.log(film.title);
 
