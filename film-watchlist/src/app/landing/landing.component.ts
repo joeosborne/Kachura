@@ -1,33 +1,35 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {JsonPipe} from '@angular/common';
-import {Router} from '@angular/router';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { JsonPipe } from '@angular/common';
+import { Router } from '@angular/router';
+import { WatchlistService } from '../watchlist.service';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    JsonPipe
-  ],
+  imports: [ReactiveFormsModule, JsonPipe],
   templateUrl: './landing.component.html',
-  styleUrl: './landing.component.css'
+  styleUrl: './landing.component.css',
 })
-export class LandingComponent implements OnInit, AfterViewInit{
+export class LandingComponent implements OnInit, AfterViewInit {
   //@ViewChild('main') main: ElementRef;
   //@ViewChild('someButton') someButton: ElementRef;
 
-//  main = document.getElementById('main')
+  //  main = document.getElementById('main')
 
   searchForm: FormGroup;
-    API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1'
-  IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
-  SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
-  films: any[] = []
-
-
-
-
+  API_URL =
+    'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1';
+  IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+  SEARCH_API =
+    'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
+  films: any[] = [];
 
   ngAfterViewInit() {
     // const div = this.someDiv.nativeElement.querySelector(".insert");
@@ -35,17 +37,18 @@ export class LandingComponent implements OnInit, AfterViewInit{
     // div.appendChild(button);
   }
 
-
-
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private watchlistService: WatchlistService
+  ) {
     // Initialize the form group with a search term control
     this.searchForm = this.fb.group({
-      searchTerm: ['']
+      searchTerm: [''],
     });
   }
 
-
-    ngOnInit(): void {
+  ngOnInit(): void {
     // Listen for Enter key press
     // this.searchForm.get('searchTerm')?.valueChanges.subscribe(value => {
     //   if (value && value.trim() !== '') {
@@ -59,28 +62,27 @@ export class LandingComponent implements OnInit, AfterViewInit{
 
   onSearch(): void {
     const searchTerm = this.searchForm.get('searchTerm')?.value;
-    console.log('searchTerm...')
-    console.log(searchTerm)
-    if(searchTerm && searchTerm !== '') {
-      this.getMovies(this.SEARCH_API + searchTerm)
+    console.log('searchTerm...');
+    console.log(searchTerm);
+    if (searchTerm && searchTerm !== '') {
+      this.getMovies(this.SEARCH_API + searchTerm);
 
       //this.searchForm.get('searchTerm')?.value = ''
     } else {
       //window.location.reload()
     }
-    }
+  }
 
-  showMovies(movies:any[]) {
+  showMovies(movies: any[]) {
     //main.innerHTML = ''
 
-    console.log('showMovies|movies..')
-    console.log(movies)
+    console.log('showMovies|movies..');
+    console.log(movies);
     movies.forEach((movie) => {
-
-      const { title, poster_path, vote_average, overview } = movie
+      const { title, poster_path, vote_average, overview } = movie;
       debugger;
-      const movieEl = document.createElement('div')
-      movieEl.classList.add('movie')
+      const movieEl = document.createElement('div');
+      movieEl.classList.add('movie');
 
       movieEl.innerHTML = `
             <img src="${this.IMG_PATH + poster_path}" alt="${title}">
@@ -92,7 +94,7 @@ export class LandingComponent implements OnInit, AfterViewInit{
           <h3>Overview</h3>
           ${overview}
         </div>
-        `
+        `;
       // if(!!this.main) {
       //   console.log(this.main)
       //   this.main.nativeElement.appendChild(movieEl)
@@ -104,7 +106,7 @@ export class LandingComponent implements OnInit, AfterViewInit{
       // }else{
       //   console.log('no main');
       // }
-    })
+    });
   }
 
   onKeydown(event: KeyboardEvent): void {
@@ -115,22 +117,23 @@ export class LandingComponent implements OnInit, AfterViewInit{
     }
   }
 
-  async getMovies(url:string) {
-    const res = await fetch(url)
-    const data = await res.json()
+  async getMovies(url: string) {
+    const res = await fetch(url);
+    const data = await res.json();
 
-    console.log(data)
+    console.log(data);
     //debugger;
     //this.showMovies(data.results)
     this.films = data.results;
   }
 
-  addToWatchlist(film:any) {
-    console.log('add the following to addToWatchlist...')
-    console.log(film.title)
+  addToWatchlist(film: any) {
+    console.log('add the following to addToWatchlist...');
+    console.log(film.title);
 
-      this.router.navigate([`watchlist`]).then(r => {})
+    this.watchlistService.addToList(film);
 
+    //this.router.navigate([`watchlist`]).then((r) => {});
   }
 }
 

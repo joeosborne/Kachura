@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import {WatchlistComponent} from './watchlist/watchlist.component';
-import {LandingComponent} from './landing/landing.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
+import { LandingComponent } from './landing/landing.component';
 
 export const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -11,6 +11,5 @@ export const routes: Routes = [
   // { path: 'admin', component: AdminComponent },
   // { path: 'list/:listId', component: ListComponent },
   // { path: 'film/:id', component: FilmComponent },
-
 ];
 // todo: change default back to landing
