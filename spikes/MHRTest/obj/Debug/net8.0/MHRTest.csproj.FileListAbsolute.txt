@@ -1,0 +1,15 @@
+C:\dev\Kachura\spikes\MHRTest\bin\Debug\net8.0\MHRTest.exe
+C:\dev\Kachura\spikes\MHRTest\bin\Debug\net8.0\MHRTest.deps.json
+C:\dev\Kachura\spikes\MHRTest\bin\Debug\net8.0\MHRTest.runtimeconfig.json
+C:\dev\Kachura\spikes\MHRTest\bin\Debug\net8.0\MHRTest.dll
+C:\dev\Kachura\spikes\MHRTest\bin\Debug\net8.0\MHRTest.pdb
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.AssemblyInfoInputs.cache
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.AssemblyInfo.cs
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.csproj.CoreCompileInputs.cache
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.sourcelink.json
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.dll
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\refint\MHRTest.dll
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.pdb
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\MHRTest.genruntimeconfig.cache
+C:\dev\Kachura\spikes\MHRTest\obj\Debug\net8.0\ref\MHRTest.dll

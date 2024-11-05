@@ -1,0 +1,15 @@
+C:\dev\Kachura\spikes\DesignPatternsDemo\bin\Debug\net8.0\DesignPatternsDemo.exe
+C:\dev\Kachura\spikes\DesignPatternsDemo\bin\Debug\net8.0\DesignPatternsDemo.deps.json
+C:\dev\Kachura\spikes\DesignPatternsDemo\bin\Debug\net8.0\DesignPatternsDemo.runtimeconfig.json
+C:\dev\Kachura\spikes\DesignPatternsDemo\bin\Debug\net8.0\DesignPatternsDemo.dll
+C:\dev\Kachura\spikes\DesignPatternsDemo\bin\Debug\net8.0\DesignPatternsDemo.pdb
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.AssemblyInfoInputs.cache
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.AssemblyInfo.cs
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.csproj.CoreCompileInputs.cache
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.sourcelink.json
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.dll
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\refint\DesignPatternsDemo.dll
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.pdb
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\DesignPatternsDemo.genruntimeconfig.cache
+C:\dev\Kachura\spikes\DesignPatternsDemo\obj\Debug\net8.0\ref\DesignPatternsDemo.dll
