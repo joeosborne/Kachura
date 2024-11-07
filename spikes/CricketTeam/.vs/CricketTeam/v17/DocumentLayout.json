@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\Kachura\\spikes\\CricketTeam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48622D45-AE07-49D6-B3A7-1EA0EC8ED02D}|CricketTeam.csproj|c:\\dev\\kachura\\spikes\\cricketteam\\teamvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48622D45-AE07-49D6-B3A7-1EA0EC8ED02D}|CricketTeam.csproj|solutionrelative:teamvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48622D45-AE07-49D6-B3A7-1EA0EC8ED02D}|CricketTeam.csproj|c:\\dev\\kachura\\spikes\\cricketteam\\cricketer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48622D45-AE07-49D6-B3A7-1EA0EC8ED02D}|CricketTeam.csproj|solutionrelative:cricketer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cricketer.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\CricketTeam\\Cricketer.cs",
+              "RelativeDocumentMoniker": "Cricketer.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\CricketTeam\\Cricketer.cs",
+              "RelativeToolTip": "Cricketer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T10:01:18.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeamValidator.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\CricketTeam\\TeamValidator.cs",
+              "RelativeDocumentMoniker": "TeamValidator.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\CricketTeam\\TeamValidator.cs",
+              "RelativeToolTip": "TeamValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:58:30.685Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
