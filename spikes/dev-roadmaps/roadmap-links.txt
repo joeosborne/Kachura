@@ -1,0 +1,8 @@
+https://roadmap.sh/frontend
+https://roadmap.sh/angular
+https://roadmap.sh/typescript
+https://roadmap.sh/r?id=65d8624e66cd6d03d2d7efc9
+https://roadmap.sh/aspnet-core
+https://roadmap.sh/backend
+https://roadmap.sh/full-stack
+

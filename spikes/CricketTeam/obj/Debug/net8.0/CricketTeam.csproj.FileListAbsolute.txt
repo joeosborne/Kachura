@@ -1,0 +1,12 @@
+C:\dev\Kachura\spikes\CricketTeam\bin\Debug\net8.0\CricketTeam.deps.json
+C:\dev\Kachura\spikes\CricketTeam\bin\Debug\net8.0\CricketTeam.dll
+C:\dev\Kachura\spikes\CricketTeam\bin\Debug\net8.0\CricketTeam.pdb
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\CricketTeam.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\CricketTeam.AssemblyInfoInputs.cache
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\CricketTeam.AssemblyInfo.cs
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\CricketTeam.csproj.CoreCompileInputs.cache
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\CricketTeam.sourcelink.json
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\CricketTeam.dll
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\refint\CricketTeam.dll
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\CricketTeam.pdb
+C:\dev\Kachura\spikes\CricketTeam\obj\Debug\net8.0\ref\CricketTeam.dll
