@@ -1,0 +1,12 @@
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\bin\Debug\net8.0\KachuraFilms.EntityModels.deps.json
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\bin\Debug\net8.0\KachuraFilms.EntityModels.dll
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\bin\Debug\net8.0\KachuraFilms.EntityModels.pdb
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\KachuraFilms.EntityModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\KachuraFilms.EntityModels.AssemblyInfoInputs.cache
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\KachuraFilms.EntityModels.AssemblyInfo.cs
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\KachuraFilms.EntityModels.csproj.CoreCompileInputs.cache
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\KachuraFilms.EntityModels.sourcelink.json
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\KachuraFilms.EntityModels.dll
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\refint\KachuraFilms.EntityModels.dll
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\KachuraFilms.EntityModels.pdb
+C:\dev\Kachura\film-watchlist\API\KachuraFilms.EntityModels\obj\Debug\net8.0\ref\KachuraFilms.EntityModels.dll

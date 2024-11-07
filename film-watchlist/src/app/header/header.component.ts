@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   expandHamburger = false;
   ngOnInit(): void {
-    console.log('HeaderComponent|listCount: ' + this.listCount);
+    //console.log('HeaderComponent|listCount: ' + this.listCount);
   }
 
   ngAfterViewInit(): void {}
@@ -44,12 +44,12 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     //   this.renderer.addClass(this.hamburgerBig.nativeElement, 'is-active');
     // }
     //
-    // console.log(this.navLinks.nativeElement.classList)
+    // //console.log(this.navLinks.nativeElement.classList)
     // this.navLinks.nativeElement.classList.toggle('open');
-    // console.log(this.navLinks.nativeElement.classList)
+    // //console.log(this.navLinks.nativeElement.classList)
 
     // const navLinks = document.querySelector('.nav-links');
-    // console.log(navLinks)
+    // //console.log(navLinks)
     // if(!!navLinks) {
     //   navLinks.classList.toggle('open');
     // }

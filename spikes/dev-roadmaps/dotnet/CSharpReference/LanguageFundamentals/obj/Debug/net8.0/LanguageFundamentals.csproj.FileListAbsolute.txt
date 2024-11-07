@@ -1,0 +1,15 @@
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\bin\Debug\net8.0\LanguageFundamentals.exe
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\bin\Debug\net8.0\LanguageFundamentals.deps.json
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\bin\Debug\net8.0\LanguageFundamentals.runtimeconfig.json
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\bin\Debug\net8.0\LanguageFundamentals.dll
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\bin\Debug\net8.0\LanguageFundamentals.pdb
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.AssemblyInfoInputs.cache
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.AssemblyInfo.cs
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.csproj.CoreCompileInputs.cache
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.sourcelink.json
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.dll
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\refint\LanguageFundamentals.dll
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.pdb
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\LanguageFundamentals.genruntimeconfig.cache
+C:\dev\Kachura\spikes\dev-roadmaps\dotnet\CSharpReference\LanguageFundamentals\obj\Debug\net8.0\ref\LanguageFundamentals.dll

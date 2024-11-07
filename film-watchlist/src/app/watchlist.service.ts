@@ -24,8 +24,8 @@ export class WatchlistService {
   // Add the vehicle to the cart
   // If the item is already in the cart, increase the quantity
   addToList(film: Film): void {
-    console.log('addToList...');
-    console.log(film);
+    //console.log('addToList...');
+    //console.log(film);
     const index = this.listItems().findIndex(
       (item) => item.title === film.title
     );

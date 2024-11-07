@@ -53,7 +53,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     // Listen for Enter key press
     // this.searchForm.get('searchTerm')?.valueChanges.subscribe(value => {
     //   if (value && value.trim() !== '') {
-    //     console.log('Search Term:', value);
+    //     //console.log('Search Term:', value);
     //   }
     // });
     // this.searchForm.get('searchTerm')?.valueChanges.subscribe(value => {
@@ -63,8 +63,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   onSearch(): void {
     const searchTerm = this.searchForm.get('searchTerm')?.value;
-    console.log('searchTerm...');
-    console.log(searchTerm);
+    //console.log('searchTerm...');
+    //console.log(searchTerm);
     if (searchTerm && searchTerm !== '') {
       this.getMovies(this.SEARCH_API + searchTerm);
 
@@ -77,8 +77,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
   showMovies(movies: any[]) {
     //main.innerHTML = ''
 
-    console.log('showMovies|movies..');
-    console.log(movies);
+    //console.log('showMovies|movies..');
+    //console.log(movies);
     movies.forEach((movie) => {
       const { title, poster_path, vote_average, overview } = movie;
       debugger;
@@ -97,7 +97,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
         </div>
         `;
       // if(!!this.main) {
-      //   console.log(this.main)
+      //   //console.log(this.main)
       //   this.main.nativeElement.appendChild(movieEl)
       //
       //   // const div = this.someDiv.nativeElement.querySelector(".insert");
@@ -105,14 +105,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
       //   // div.appendChild(button);
       //
       // }else{
-      //   console.log('no main');
+      //   //console.log('no main');
       // }
     });
   }
 
   onKeydown(event: KeyboardEvent): void {
-    // console.log('event..')
-    // console.log(event.key)
+    // //console.log('event..')
+    // //console.log(event.key)
     if (event.key === 'Enter') {
       this.onSearch();
     }
@@ -122,15 +122,15 @@ export class LandingComponent implements OnInit, AfterViewInit {
     const res = await fetch(url);
     const data = await res.json();
 
-    console.log(data);
+    //console.log(data);
     //debugger;
     //this.showMovies(data.results)
     this.films = data.results;
   }
 
   addToWatchlist(film: Film) {
-    console.log('add the following to addToWatchlist...');
-    console.log(film.title);
+    //console.log('add the following to addToWatchlist...');
+    //console.log(film.title);
 
     this.watchlistService.addToList(film);
 
@@ -158,14 +158,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
 //   async getMovies(url:string) {
 //     const res = await fetch(url)
 //     const data = await res.json()
-//     console.log(data)
+//     //console.log(data)
 //
 //     //showMovies(data.results)
 //   }
 //
 //   onSearch($event: SubmitEvent) {
-//     console.log('onSearch..')
-//     console.log($event)
+//     //console.log('onSearch..')
+//     //console.log($event)
 //
 //   }
 // }

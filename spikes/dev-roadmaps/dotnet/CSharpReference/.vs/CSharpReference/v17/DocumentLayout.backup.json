@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|c:\\dev\\kachura\\spikes\\dev-roadmaps\\dotnet\\csharpreference\\languagefundamentals\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|solutionrelative:languagefundamentals\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|c:\\dev\\kachura\\spikes\\dev-roadmaps\\dotnet\\csharpreference\\languagefundamentals\\valuevreferencetypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|solutionrelative:languagefundamentals\\valuevreferencetypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|c:\\dev\\kachura\\spikes\\dev-roadmaps\\dotnet\\csharpreference\\languagefundamentals\\conversions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|solutionrelative:languagefundamentals\\conversions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|c:\\dev\\kachura\\spikes\\dev-roadmaps\\dotnet\\csharpreference\\languagefundamentals\\instancevstatic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FD1D050-C098-4A56-830C-75E62C93587E}|LanguageFundamentals\\LanguageFundamentals.csproj|solutionrelative:languagefundamentals\\instancevstatic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ValuevReferenceTypes.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\ValuevReferenceTypes.cs",
+              "RelativeDocumentMoniker": "LanguageFundamentals\\ValuevReferenceTypes.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\ValuevReferenceTypes.cs*",
+              "RelativeToolTip": "LanguageFundamentals\\ValuevReferenceTypes.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:54:08.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Conversions.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\Conversions.cs",
+              "RelativeDocumentMoniker": "LanguageFundamentals\\Conversions.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\Conversions.cs",
+              "RelativeToolTip": "LanguageFundamentals\\Conversions.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:49:41.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InstanceVStatic.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\InstanceVStatic.cs",
+              "RelativeDocumentMoniker": "LanguageFundamentals\\InstanceVStatic.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\InstanceVStatic.cs",
+              "RelativeToolTip": "LanguageFundamentals\\InstanceVStatic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:43:52.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\Program.cs",
+              "RelativeDocumentMoniker": "LanguageFundamentals\\Program.cs",
+              "ToolTip": "C:\\dev\\Kachura\\spikes\\dev-roadmaps\\dotnet\\CSharpReference\\LanguageFundamentals\\Program.cs",
+              "RelativeToolTip": "LanguageFundamentals\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:41:29.394Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

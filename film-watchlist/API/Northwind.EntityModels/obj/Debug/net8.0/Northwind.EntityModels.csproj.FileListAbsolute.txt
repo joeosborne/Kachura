@@ -1,0 +1,12 @@
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\bin\Debug\net8.0\Northwind.EntityModels.deps.json
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\bin\Debug\net8.0\Northwind.EntityModels.dll
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\bin\Debug\net8.0\Northwind.EntityModels.pdb
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\Northwind.EntityModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\Northwind.EntityModels.AssemblyInfoInputs.cache
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\Northwind.EntityModels.AssemblyInfo.cs
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\Northwind.EntityModels.csproj.CoreCompileInputs.cache
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\Northwind.EntityModels.sourcelink.json
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\Northwind.EntityModels.dll
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\refint\Northwind.EntityModels.dll
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\Northwind.EntityModels.pdb
+C:\dev\Kachura\film-watchlist\API\Northwind.EntityModels\obj\Debug\net8.0\ref\Northwind.EntityModels.dll
