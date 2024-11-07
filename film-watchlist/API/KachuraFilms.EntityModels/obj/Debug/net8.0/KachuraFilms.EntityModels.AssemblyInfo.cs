@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KachuraFilms.EntityModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fc32fb4c244f1a2cf79c76262d41c1be8e031eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83916d9a9683f59abace596a178a00f2a7395bb1")]
 [assembly: System.Reflection.AssemblyProductAttribute("KachuraFilms.EntityModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KachuraFilms.EntityModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

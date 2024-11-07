@@ -6,10 +6,10 @@
       "AbsoluteMoniker": "D:0:0:{F3656647-F3C3-4589-AFCF-B9A69E8606AA}|..\\WorkingWithEFCore\\WorkingWithEFCore.csproj|c:\\dev\\kachura\\film-watchlist\\api\\workingwithefcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3656647-F3C3-4589-AFCF-B9A69E8606AA}|..\\WorkingWithEFCore\\WorkingWithEFCore.csproj|c:\\dev\\kachura\\film-watchlist\\api\\workingwithefcore\\program.queries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3656647-F3C3-4589-AFCF-B9A69E8606AA}|..\\WorkingWithEFCore\\WorkingWithEFCore.csproj|c:\\dev\\kachura\\film-watchlist\\api\\workingwithefcore\\kachurafilmsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3656647-F3C3-4589-AFCF-B9A69E8606AA}|..\\WorkingWithEFCore\\WorkingWithEFCore.csproj|c:\\dev\\kachura\\film-watchlist\\api\\workingwithefcore\\kachurafilmsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3656647-F3C3-4589-AFCF-B9A69E8606AA}|..\\WorkingWithEFCore\\WorkingWithEFCore.csproj|c:\\dev\\kachura\\film-watchlist\\api\\workingwithefcore\\program.queries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5E771096-1E79-43E1-80FB-142633E3CAEE}|..\\KachuraFilms.EntityModels\\KachuraFilms.EntityModels.csproj|c:\\dev\\kachura\\film-watchlist\\api\\kachurafilms.entitymodels\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -31,17 +31,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3656647-F3C3-4589-AFCF-B9A69E8606AA}|..\\WorkingWithEFCore\\WorkingWithEFCore.csproj|c:\\dev\\kachura\\film-watchlist\\api\\workingwithefcore\\program.modifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE3ED843-347D-4802-BFE9-3146C779B0EF}|..\\Northwind.EntityModels\\Northwind.EntityModels.csproj|c:\\dev\\kachura\\film-watchlist\\api\\northwind.entitymodels\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A67A374-B43A-4C4F-838F-53C82CC493E5}|Kachura.Films.Data.csproj|c:\\dev\\kachura\\film-watchlist\\api\\kachura.films.data\\models\\film.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A67A374-B43A-4C4F-838F-53C82CC493E5}|Kachura.Films.Data.csproj|solutionrelative:models\\film.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A67A374-B43A-4C4F-838F-53C82CC493E5}|Kachura.Films.Data.csproj|c:\\dev\\kachura\\film-watchlist\\api\\kachura.films.data\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A67A374-B43A-4C4F-838F-53C82CC493E5}|Kachura.Films.Data.csproj|solutionrelative:models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,21 +40,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "KachuraDb.cs",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\KachuraDb.cs",
-              "RelativeDocumentMoniker": "..\\WorkingWithEFCore\\KachuraDb.cs",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\KachuraDb.cs",
-              "RelativeToolTip": "..\\WorkingWithEFCore\\KachuraDb.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:30:41.877Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
@@ -76,8 +52,7 @@
               "RelativeToolTip": "..\\WorkingWithEFCore\\Genre.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:30:34.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:30:34.546Z"
             },
             {
               "$type": "Document",
@@ -89,8 +64,7 @@
               "RelativeToolTip": "..\\WorkingWithEFCore\\Program.Modifications.cs",
               "ViewState": "AgIAAHEAAAAAAAAAAAAswH8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:30:00.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:30:00.851Z"
             },
             {
               "$type": "Document",
@@ -102,25 +76,23 @@
               "RelativeToolTip": "..\\WorkingWithEFCore\\NorthwindDb.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAA/wCgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:27:41.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:27:41.401Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "WorkingWithEFCore",
+              "Title": "WorkingWithEFCore.csproj",
               "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\WorkingWithEFCore.csproj",
               "RelativeDocumentMoniker": "..\\WorkingWithEFCore\\WorkingWithEFCore.csproj",
               "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\WorkingWithEFCore.csproj",
               "RelativeToolTip": "..\\WorkingWithEFCore\\WorkingWithEFCore.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-07T10:17:21.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:17:21.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.Queries.cs",
               "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\Program.Queries.cs",
               "RelativeDocumentMoniker": "..\\WorkingWithEFCore\\Program.Queries.cs",
@@ -128,8 +100,7 @@
               "RelativeToolTip": "..\\WorkingWithEFCore\\Program.Queries.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:09:13.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:09:13.036Z"
             },
             {
               "$type": "Document",
@@ -154,8 +125,7 @@
               "RelativeToolTip": "..\\KachuraFilms.EntityModels\\Film.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAIwBYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:06:53.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:06:53.891Z"
             },
             {
               "$type": "Document",
@@ -167,12 +137,11 @@
               "RelativeToolTip": "..\\KachuraFilms.EntityModels\\Genre.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:06:59.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:06:59.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "KachuraFilmsDb.cs",
               "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\KachuraFilmsDb.cs",
               "RelativeDocumentMoniker": "..\\WorkingWithEFCore\\KachuraFilmsDb.cs",
@@ -185,42 +154,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Film.cs",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\Kachura.Films.Data\\Models\\Film.cs",
-              "RelativeDocumentMoniker": "Models\\Film.cs",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\Kachura.Films.Data\\Models\\Film.cs",
-              "RelativeToolTip": "Models\\Film.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "KachuraDb.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\KachuraDb.cs",
+              "RelativeDocumentMoniker": "..\\WorkingWithEFCore\\KachuraDb.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\WorkingWithEFCore\\KachuraDb.cs",
+              "RelativeToolTip": "..\\WorkingWithEFCore\\KachuraDb.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:12:13.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\Kachura.Films.Data\\Models\\Genre.cs",
-              "RelativeDocumentMoniker": "Models\\Genre.cs",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\Kachura.Films.Data\\Models\\Genre.cs",
-              "RelativeToolTip": "Models\\Genre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:12:24.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\Northwind.EntityModels\\Category.cs",
-              "RelativeDocumentMoniker": "..\\Northwind.EntityModels\\Category.cs",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\Northwind.EntityModels\\Category.cs",
-              "RelativeToolTip": "..\\Northwind.EntityModels\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:12:49.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T10:30:41.877Z"
             }
           ]
         }
