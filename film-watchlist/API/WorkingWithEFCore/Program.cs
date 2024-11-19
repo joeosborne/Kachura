@@ -19,3 +19,4 @@ GettingAllGenres();
 //WriteLine($"Provider: {db.Database.ProviderName}");
 
 
+/ todo: create a new console app and phase out all refs from book. Move towards production version - see bok code as a RI
