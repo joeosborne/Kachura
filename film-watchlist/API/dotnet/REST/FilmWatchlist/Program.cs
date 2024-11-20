@@ -1,5 +1,7 @@
 ﻿//private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
+using Movies.Application;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -34,27 +36,14 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
+builder.Services.AddApplication();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-
-
-////app.UseHttpsRedirection();
-
-////app.UseStaticFiles(); // 🔴 here it is
-////app.UseRouting(); // 🔴 here it is
 app.UseHttpsRedirection();
-
 app.UseRouting();
-
 app.UseCors("AllowOrigin");
-
 app.UseAuthentication();
-
 app.UseAuthorization();
-app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

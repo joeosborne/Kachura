@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Requests\" />
+    <ProjectReference Include="..\FilmWatchlist.Application\FilmWatchlist.Application.csproj" />
   </ItemGroup>
 
 </Project>

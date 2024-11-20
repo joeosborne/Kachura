@@ -1,12 +1,44 @@
 [
   {
-    "ContainingType": "Movies.Api.Controllers.WatchlistController",
+    "ContainingType": "FilmWatchlist.Api.Controllers.WatchlistController",
+    "Method": "Create",
+    "RelativePath": "api/watchlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FilmWatchlist.Contracts.Requests.CreateWatchlistRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmWatchlist.Api.Controllers.WatchlistController",
     "Method": "GetAll",
     "RelativePath": "api/watchlist",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmWatchlist.Api.Controllers.WatchlistController",
+    "Method": "Get",
+    "RelativePath": "api/watchlist/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

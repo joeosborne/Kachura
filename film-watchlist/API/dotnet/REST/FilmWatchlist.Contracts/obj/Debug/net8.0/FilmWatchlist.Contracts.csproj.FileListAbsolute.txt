@@ -1,11 +1,15 @@
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\bin\Debug\net8.0\FilmWatchlist.Contracts.deps.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\bin\Debug\net8.0\FilmWatchlist.Contracts.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\bin\Debug\net8.0\FilmWatchlist.Contracts.pdb
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\bin\Debug\net8.0\FilmWatchlist.Application.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\bin\Debug\net8.0\FilmWatchlist.Application.pdb
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.csproj.AssemblyReference.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.GeneratedMSBuildEditorConfig.editorconfig
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.AssemblyInfoInputs.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.AssemblyInfo.cs
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.csproj.CoreCompileInputs.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.sourcelink.json
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatc.EBF7E387.Up2Date
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\refint\FilmWatchlist.Contracts.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Contracts\obj\Debug\net8.0\FilmWatchlist.Contracts.pdb

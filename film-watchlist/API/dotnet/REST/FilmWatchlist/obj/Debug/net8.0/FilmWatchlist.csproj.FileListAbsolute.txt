@@ -31,3 +31,5 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\ref
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.pdb
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.genruntimeconfig.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\ref\FilmWatchlist.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

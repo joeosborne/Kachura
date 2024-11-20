@@ -46,6 +46,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -91,7 +97,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.Application\\FilmWatchlist.Application.csproj": {
+                "projectPath": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.Application\\FilmWatchlist.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
