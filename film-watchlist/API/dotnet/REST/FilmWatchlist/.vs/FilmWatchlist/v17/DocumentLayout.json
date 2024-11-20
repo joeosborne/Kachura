@@ -1,12 +1,154 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B893EA7-0E7F-456C-B37F-3558C0E7F21F}|..\\FilmWatchlist.Contracts\\FilmWatchlist.Contracts.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist.contracts\\responses\\watchlistresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\apiendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:apiendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\filmwatchlist.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:filmwatchlist.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{490F276C-A6F3-4C0B-9262-9AE8DEF5C32F}|..\\FilmWatchlist.Application\\FilmWatchlist.Application.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAWwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T08:50:49.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T06:51:09.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApiEndpoints.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\ApiEndpoints.cs",
+              "RelativeDocumentMoniker": "ApiEndpoints.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\ApiEndpoints.cs",
+              "RelativeToolTip": "ApiEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T06:44:25.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WatchlistController.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WatchlistController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WatchlistController.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WatchlistController.cs",
+              "RelativeToolTip": "Controllers\\WatchlistController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwD8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T06:43:39.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WatchlistResponse.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.Contracts\\Responses\\WatchlistResponse.cs",
+              "RelativeDocumentMoniker": "..\\FilmWatchlist.Contracts\\Responses\\WatchlistResponse.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.Contracts\\Responses\\WatchlistResponse.cs",
+              "RelativeToolTip": "..\\FilmWatchlist.Contracts\\Responses\\WatchlistResponse.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T06:35:36.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FilmWatchlist.csproj",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\FilmWatchlist.csproj",
+              "RelativeDocumentMoniker": "FilmWatchlist.csproj",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\FilmWatchlist.csproj",
+              "RelativeToolTip": "FilmWatchlist.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-20T06:30:51.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\FilmWatchlist.Application\\Class1.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.Application\\Class1.cs",
+              "RelativeToolTip": "..\\FilmWatchlist.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T06:33:50.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T06:27:37.555Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

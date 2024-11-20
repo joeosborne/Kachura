@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmWatchlist", "FilmWatchlist.csproj", "{4C2DBC01-9723-4A07-A71F-97729E6807D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmWatchlist", "FilmWatchlist.csproj", "{4C2DBC01-9723-4A07-A71F-97729E6807D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmWatchlist.Application", "..\FilmWatchlist.Application\FilmWatchlist.Application.csproj", "{490F276C-A6F3-4C0B-9262-9AE8DEF5C32F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmWatchlist.Contracts", "..\FilmWatchlist.Contracts\FilmWatchlist.Contracts.csproj", "{3B893EA7-0E7F-456C-B37F-3558C0E7F21F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4C2DBC01-9723-4A07-A71F-97729E6807D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C2DBC01-9723-4A07-A71F-97729E6807D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C2DBC01-9723-4A07-A71F-97729E6807D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{490F276C-A6F3-4C0B-9262-9AE8DEF5C32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490F276C-A6F3-4C0B-9262-9AE8DEF5C32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490F276C-A6F3-4C0B-9262-9AE8DEF5C32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490F276C-A6F3-4C0B-9262-9AE8DEF5C32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B893EA7-0E7F-456C-B37F-3558C0E7F21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B893EA7-0E7F-456C-B37F-3558C0E7F21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B893EA7-0E7F-456C-B37F-3558C0E7F21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B893EA7-0E7F-456C-B37F-3558C0E7F21F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

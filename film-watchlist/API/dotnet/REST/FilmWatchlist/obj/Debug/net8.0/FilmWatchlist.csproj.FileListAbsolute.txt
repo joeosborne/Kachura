@@ -5,6 +5,12 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\Fil
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.runtimeconfig.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.pdb
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\System.Web.Cors.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Application.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Contracts.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Application.pdb
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Contracts.pdb
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.csproj.AssemblyReference.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.GeneratedMSBuildEditorConfig.editorconfig
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.AssemblyInfoInputs.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.AssemblyInfo.cs
@@ -19,6 +25,7 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\sta
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FilmWatchlist.props
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\staticwebassets.pack.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\scopedcss\bundle\FilmWatchlist.styles.css
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatc.6E4597EF.Up2Date
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\refint\FilmWatchlist.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\FilmWatchlist.pdb

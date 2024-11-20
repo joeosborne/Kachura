@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "Movies.Api.Controllers.WatchlistController",
+    "Method": "GetAll",
+    "RelativePath": "api/watchlist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FilmWatchlist.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
