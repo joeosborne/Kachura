@@ -50,7 +50,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.watchlistService.getWatchlist();
+    // todo: replace 999 with the actual watchlist id
+    this.watchlistService.loadWatchlist(999);
     // Listen for Enter key press
     // this.searchForm.get('searchTerm')?.valueChanges.subscribe(value => {
     //   if (value && value.trim() !== '') {

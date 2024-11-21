@@ -38,18 +38,15 @@ export class WatchlistService {
       });
   }
 
-  getAllWatchlists(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:5009/api/watchlist');
+  getAllWatchlists(): Observable<any> {
+    return this.http.get<any>('http://localhost:5009/api/watchlist');
   }
-  getWatchlist() {
-    //const apiUrl = `${this.urlPrefixAdmin}GetAllUserGroupUsers/${id}`;
+
+  loadWatchlist(id: number): void {
     this.http
-      .get<any>('http://localhost:5009/api/watchlist/999')
+      .get<any>('http://localhost:5009/api/watchlist/' + id)
       .subscribe((x) => {
-        //console.log(x)
-        //this.watchlist = x;
         this.watchlist.set(x);
-        //console.log(this.watchlist())
       });
   }
 }
