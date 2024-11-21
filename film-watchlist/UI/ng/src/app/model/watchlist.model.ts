@@ -1,6 +1,6 @@
-import {Film} from './film.model';
+import { Film } from './film.model';
 
-export interface Watchlist{
+// todo: use or remove
+export interface Watchlist {
   films: Film[];
-
 }

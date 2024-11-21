@@ -13,6 +13,5 @@ export class WatchlistComponent {
   IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
 
   watchlistService = inject(WatchlistService);
-    listItems = this.watchlistService.listItems;
   watchlist = this.watchlistService.watchlist;
 }

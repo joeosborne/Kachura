@@ -3,17 +3,20 @@
     <div class="logo">MyWebsite</div>
     <div class="menu-icon" id="menu-icon">&#9776;</div>
     <ul class="nav-links" id="nav-links">
-<!--      <li><a href="#">Home</a></li>-->
-<!--      <li><a href="#">About</a></li>-->
-<!--      <li><a href="#">Services</a></li>-->
-<!--      <li><a href="#">Contact</a></li>-->
+      <!--      <li><a href="#">Home</a></li>-->
+      <!--      <li><a href="#">About</a></li>-->
+      <!--      <li><a href="#">Services</a></li>-->
+      <!--      <li><a href="#">Contact</a></li>-->
 
-            <li><a routerLink="home">Home</a></li>
-            <li>
-              <a routerLink="watchlist"
-                >Watchlist
-                <span *ngIf="listCount()">{{ listCount().length }}</span></a>
-            </li>
+      <li><a routerLink="home">Home</a></li>
+      <li>
+        <a routerLink="watchlist"
+          >Watchlist
+          <span *ngIf="watchlist()?.movies">{{
+            watchlist()?.movies.length
+          }}</span></a
+        >
+      </li>
     </ul>
   </nav>
 </header>

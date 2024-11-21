@@ -26,15 +26,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   watchlistService = inject(WatchlistService);
   //listCoun= signal<number> = 0;
 
-  listCount = this.watchlistService.listItems; //()
+  watchlist = this.watchlistService.watchlist; //()
 
   expandHamburger = false;
-  ngOnInit(): void {
-    ////console.log('HeaderComponent|listCount: ' + this.listCount);
-    //console.log('getting lists...')
-    this.watchlistService.getAllWatchlists().subscribe((data) => { console.log(data); });
-
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {}
 

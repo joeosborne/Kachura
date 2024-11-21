@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { WatchlistService } from '../watchlist.service';
-import {Film} from '../model/film.model';
+import { Film } from '../model/film.model';
 
 @Component({
   selector: 'app-landing',
@@ -64,16 +64,13 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   onSearch(): void {
     const searchTerm = this.searchForm.get('searchTerm')?.value;
-    ////console.log('searchTerm...');
-    ////console.log(searchTerm);
     if (searchTerm && searchTerm !== '') {
+      // todo: remove this when no longer needed. For now, it's a hack to get the data
       // var temp = ['Fight Club', 'The Matrix', 'Office Space', 'Election', 'The Blair Witch Project', 'The Sixth Sense', 'Being John Malkovich', 'Star Wars: The Phantom Menace', 'American Beauty', 'The Virgin Suicides', 'Boys Don&;t Cry', 'The Best Man', 'Three Kings', 'Magnolia']
       //
       // temp.forEach(x=>{
       //   this.getMovies(this.SEARCH_API + x);
       // })
-
-
 
       this.getMovies(this.SEARCH_API + searchTerm);
       //this.searchForm.get('searchTerm')?.value = ''
@@ -104,17 +101,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
           ${overview}
         </div>
         `;
-      // if(!!this.main) {
-      //   ////console.log(this.main)
-      //   this.main.nativeElement.appendChild(movieEl)
-      //
-      //   // const div = this.someDiv.nativeElement.querySelector(".insert");
-      //   // const button = this.someButton.nativeElement;
-      //   // div.appendChild(button);
-      //
-      // }else{
-      //   ////console.log('no main');
-      // }
     });
   }
 
@@ -134,20 +120,20 @@ export class LandingComponent implements OnInit, AfterViewInit {
     //debugger;
     //this.showMovies(data.results)
     this.films = data.results;
-    console.log('----')
-    console.log('----')
-    this.films.forEach(film=>{
+    console.log('----');
+    console.log('----');
+    this.films.forEach((film) => {
       if (film.release_date.startsWith('1999')) {
-        console.log('---')
+        console.log('---');
         console.log('title: ' + film.title);
         console.log('overview: ' + film.overview);
         console.log('release_date: ' + film.release_date);
         console.log('poster_path: ' + film.poster_path);
-        console.log('---')
+        console.log('---');
       }
-    })
-    console.log('----')
-    console.log('----')
+    });
+    console.log('----');
+    console.log('----');
   }
 
   addToWatchlist(film: Film) {
