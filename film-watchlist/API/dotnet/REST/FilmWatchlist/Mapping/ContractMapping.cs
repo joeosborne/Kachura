@@ -16,7 +16,19 @@ public static class ContractMapping
             Movies = request.Movies.ToList()
         };
     }
-    
+
+    public static Watchlist MapToWatchlist(this UpdateWatchlistRequest request, int id)
+    {
+        return new Watchlist
+        {
+            Id = id,
+            Name = request.Name,
+            Description = request.Description,
+            UserId = request.UserId,
+            Movies = request.Movies.ToList()
+        };
+    }
+
     //public static Movie MapToMovie(this UpdateMovieRequest request, Guid id)
     //{
     //    return new Movie
