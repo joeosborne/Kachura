@@ -1,6 +1,7 @@
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\bin\Debug\net8.0\FilmWatchlist.Application.deps.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\bin\Debug\net8.0\FilmWatchlist.Application.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\bin\Debug\net8.0\FilmWatchlist.Application.pdb
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatchlist.Application.csproj.AssemblyReference.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatchlist.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatchlist.Application.AssemblyInfoInputs.cache
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatchlist.Application.AssemblyInfo.cs
@@ -10,4 +11,3 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debu
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\refint\FilmWatchlist.Application.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatchlist.Application.pdb
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\ref\FilmWatchlist.Application.dll
-C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatchlist.Application.csproj.AssemblyReference.cache

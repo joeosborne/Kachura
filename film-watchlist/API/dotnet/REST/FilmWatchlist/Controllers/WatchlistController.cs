@@ -2,7 +2,9 @@
 using FilmWatchlist.Application.Models;
 using FilmWatchlist.Application.Repositories;
 using FilmWatchlist.Contracts.Requests;
+using FilmWatchlist.EFCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 //using Movies.Api.Mapping;
 //using Movies.Application.Repositories;
 //using Movies.Contracts.Requests;
@@ -35,20 +37,52 @@ public class WatchlistController : ControllerBase
     [HttpGet(ApiEndpoints.FilmWatchlist.Get)]
     public async Task<IActionResult> Get([FromRoute] int id)
     {
-        Watchlist? watchlist = await _watchlistRepository.GetByIdAsync(id);
-        if (watchlist is null)
-        {
-            return NotFound();
-        }
+        throw new NotImplementedException();
+        //Watchlist? watchlist = await _watchlistRepository.GetByIdAsync(id);
+        //if (watchlist is null)
+        //{
+        //    return NotFound();
+        //}
 
-        var response = watchlist.MapToResponse();
-        return Ok(response);
+        //var response = watchlist.MapToResponse();
+        //return Ok(response);
     }
 
 
     [HttpGet(ApiEndpoints.FilmWatchlist.GetAll)]
     public async Task<IActionResult> GetAll()
     {
+        using FilmWatchlistContext db = new();
+        var tables = db.Database.ExecuteSqlRaw("SELECT name FROM sqlite_master WHERE type='table';");
+        var x = db.Watchlists.ToList();
+        var q = db.Movies.ToList();
+        
+
+        using (var context = new FilmWatchlistContext())
+        {
+            //var tables = context.Database.ExecuteSqlRaw("SELECT name FROM sqlite_master WHERE type='table';");
+            //Console.WriteLine(tables);
+
+            //// Add a new movie
+            //var movie = new Movie
+            //{
+            //    Title = "Fighht wr3fgk3m ",
+            //    Genre = "Sci-Fi",
+            //    Overview = "A mind-bending thriller.",
+            //    ReleaseDate = "2010-07-16",
+            //    PosterPath = "/path/to/pddddoster.jpg"
+            //};
+            //context.Movies.Add(movie);
+            //context.SaveChanges();
+
+            // Retrieve and display all movies
+            //var x = context.Watchlists.ToList();
+            //foreach (var m in movies)
+            //{
+            //    Console.WriteLine($"Title: {m.Title}, Genre: {m.Genre}");
+            //}
+        }
+
         var watchlists = await _watchlistRepository.GetAllAsync();
 
         var watchlistsResponse = watchlists.MapToResponse();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FilmWatchlist.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de34f2f735af9d122dfefc6251ac11942a0f2847")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1e44f58fc8f25c208811eb21e2b434aa1e7ca06")]
 [assembly: System.Reflection.AssemblyProductAttribute("FilmWatchlist.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FilmWatchlist.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
