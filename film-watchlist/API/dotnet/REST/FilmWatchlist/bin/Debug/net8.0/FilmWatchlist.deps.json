@@ -821,6 +821,7 @@
       "System.Threading.Channels/7.0.0": {},
       "FilmWatchlist.Application/1.0.0": {
         "dependencies": {
+          "FilmWatchlist.EFCore": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.0"
         },
         "runtime": {

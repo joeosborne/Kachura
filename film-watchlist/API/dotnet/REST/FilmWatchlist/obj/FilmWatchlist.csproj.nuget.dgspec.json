@@ -32,7 +32,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.EFCore\\FilmWatchlist.EFCore.csproj": {
+                "projectPath": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.EFCore\\FilmWatchlist.EFCore.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

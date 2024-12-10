@@ -1,5 +1,6 @@
 ﻿using FilmWatchlist.Application.Models;
 using FilmWatchlist.Application.Repositories;
+using FilmWatchlist.EFCore;
 
 namespace Watchlists.Application.Repositories;
 

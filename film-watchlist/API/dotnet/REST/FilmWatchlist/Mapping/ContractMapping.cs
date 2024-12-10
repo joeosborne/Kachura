@@ -1,6 +1,10 @@
 ﻿
-using FilmWatchlist.Application.Models;
+//using FilmWatchlist.Application.Models;
+//using FilmWatchlist.Contracts.Requests;
+//using Movies.Contracts.Responses;
+
 using FilmWatchlist.Contracts.Requests;
+using FilmWatchlist.EFCore;
 using Movies.Contracts.Responses;
 
 public static class ContractMapping

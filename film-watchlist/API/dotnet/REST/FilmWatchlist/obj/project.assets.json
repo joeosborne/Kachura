@@ -1147,6 +1147,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "FilmWatchlist.EFCore": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.0"
         },
         "compile": {

@@ -1,7 +1,8 @@
 ﻿
 
 
-using FilmWatchlist.Application.Models;
+
+using FilmWatchlist.EFCore;
 
 public class WatchlistResponse
 {

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace FilmWatchlist.Application.Models
 {
-    public class Watchlist
-    {
-        public required int Id { get; init; }
+    //public class Watchlist
+    //{
+    //    public required int Id { get; init; }
 
-        public required string Name { get; init; }
+    //    public required string Name { get; init; }
 
-        public string Description { get; init; }
+    //    public string Description { get; init; }
 
-        public required int UserId { get; init; }
+    //    public required int UserId { get; init; }
 
-        public required IEnumerable<Movie> Movies { get; init; } = Enumerable.Empty<Movie>();
-    }
+    //    public required IEnumerable<Movie> Movies { get; init; } = Enumerable.Empty<Movie>();
+    //}
 }

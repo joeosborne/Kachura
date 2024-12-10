@@ -1,4 +1,4 @@
-﻿using FilmWatchlist.Application.Models;
+﻿using FilmWatchlist.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

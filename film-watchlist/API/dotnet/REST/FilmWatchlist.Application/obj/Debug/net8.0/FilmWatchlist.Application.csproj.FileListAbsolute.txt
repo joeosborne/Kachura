@@ -11,3 +11,7 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debu
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\refint\FilmWatchlist.Application.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatchlist.Application.pdb
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\ref\FilmWatchlist.Application.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\bin\Debug\net8.0\FilmWatchlist.db
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\bin\Debug\net8.0\FilmWatchlist.EFCore.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\bin\Debug\net8.0\FilmWatchlist.EFCore.pdb
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist.Application\obj\Debug\net8.0\FilmWatc.DE577BA3.Up2Date
