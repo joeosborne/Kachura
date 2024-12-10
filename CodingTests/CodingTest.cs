@@ -84,16 +84,44 @@ namespace CodingTests
             throw new NotImplementedException();
 
         }
-        public static string TreeDeothFirstSearch(string input)
+        public static string TreeDepthFirstSearch(string input)
         {
             // todo: change method signature and implement
             throw new NotImplementedException();
 
         }
-        public static string MaximumSubarray(string input)
+
+
+
+        //The Maximum Subarray Problem is a classic problem that involves finding the contiguous subarray within
+        //a one-dimensional numeric array that has the largest sum.
+        //Problem Statement
+        //Given an integer array nums, find the contiguous subarray (containing at least one number) that has the largest sum and return its sum.
+
+
+        public static int FindMaxSubarraySum(int[] nums)
         {
-            // todo: change method signature and implement
-            throw new NotImplementedException();
+            if(nums is null || nums.Length == 0)
+            {
+                throw new ArgumentException("nums is empty");
+            }
+
+            // int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+            int currentMax = nums[0];
+            int maxSoFar = nums[0];
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                currentMax = Math.Max(nums[i], currentMax + nums[i]);
+                maxSoFar = Math.Max(maxSoFar, currentMax);
+
+            }
+
+            return maxSoFar;
+
+
+
+
 
         }
         public static string ReverseBinaryTree(string input)
@@ -120,6 +148,22 @@ namespace CodingTests
             throw new NotImplementedException();
 
         }
+
+
+        
+
+        public static bool IsAPalindrome(string input)
+        {
+            var reversed = "";
+
+            for (int i = input.Length-1; i >= 0; i--)
+            {
+                reversed += input[i];
+            }
+
+            return reversed == input;
+        }
+
         public static string PalindromeLinkedList(string input)
         {
             // todo: change method signature and implement
@@ -185,7 +229,10 @@ namespace CodingTests
          * ReverseLinkedList
          * PeakFinding
          * PalindromeLinkedList
+         * 
+         * IsPalindrome
          * LongestPossiblePalindrome
+         * 
          * GetSubstringIndex
          * TreeBreadthFirstSearch
          * SortLinkedList

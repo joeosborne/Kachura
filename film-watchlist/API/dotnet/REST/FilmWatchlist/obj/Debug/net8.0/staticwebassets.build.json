@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "hHw7algHu3vXki5oAlC5tDfpsZCS1xZwNEpw6Y4We8A=",
+  "Hash": "hUufF3x5204Ai/tAqDDzMEIQBrRPUd1QORSs6RyVgqw=",
   "Source": "FilmWatchlist",
   "BasePath": "_content/FilmWatchlist",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

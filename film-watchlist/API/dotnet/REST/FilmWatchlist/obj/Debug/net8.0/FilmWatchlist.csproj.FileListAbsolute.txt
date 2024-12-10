@@ -33,3 +33,7 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\Fil
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\ref\FilmWatchlist.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.staticwebassets.endpoints.json
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\staticwebassets\msbuild.FilmWatchlist.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
