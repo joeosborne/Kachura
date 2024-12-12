@@ -164,18 +164,57 @@ namespace CodingTests
             return reversed == input;
         }
 
+
+
+        //The solution uses the "expand around center" approach:
+
+        //Treat every character and every gap between characters as a potential center of a palindrome.
+        //Expand outward while characters match.
+        //Keep track of the maximum length palindrome found.
+        public static string FindLongestPalindrome(string inputString)
+        {
+            if (string.IsNullOrEmpty(inputString)) return "";
+
+            int start = 0, maxLength = 0;
+
+            for (int i = 0; i < inputString.Length; i++)
+            {
+                // Odd-length palindrome (center is one character)
+                ExpandAroundCenter(inputString, i, i, ref start, ref maxLength);
+
+                // Even-length palindrome (center is between two characters)
+                ExpandAroundCenter(inputString, i, i + 1, ref start, ref maxLength);
+            }
+
+            return inputString.Substring(start, maxLength);
+
+        }
+
+        private static void ExpandAroundCenter(string inputString, int left, int right, ref int start, ref int maxLength)
+        {
+            while (left >= 0 && right < inputString.Length && inputString[left] == inputString[right])
+            {
+                left--;
+                right++;
+            }
+
+            // Adjust to the last valid palindrome indexes
+            int length = right - left - 1;
+            if (length > maxLength)
+            {
+                // found a larger palindrome so up[date maxLength and move start along 1
+                maxLength = length;
+                start = left + 1;
+            }
+        }
+
         public static string PalindromeLinkedList(string input)
         {
             // todo: change method signature and implement
             throw new NotImplementedException();
 
         }
-        public static string LongestPossiblePalindrome(string input)
-        {
-            // todo: change method signature and implement
-            throw new NotImplementedException();
 
-        }
         public static string GetSubstringIndex(string input)
         {
             // todo: change method signature and implement
@@ -221,25 +260,6 @@ namespace CodingTests
 
 
         /*
-         * FindTheDuplicate
-         * TreeDeothFirstSearch
-         * MaximumSubarray
-         * ReverseBinaryTree
-         * LongestSubstringWithoutRepeatingCharacters
-         * ReverseLinkedList
-         * PeakFinding
-         * PalindromeLinkedList
-         * 
-         * IsPalindrome
-         * LongestPossiblePalindrome
-         * 
-         * GetSubstringIndex
-         * TreeBreadthFirstSearch
-         * SortLinkedList
-         * ValidBinarySearchTree
-         * MinimumCostPathInMatrix
-         * BalancedBinaryTree
-         * PathsInMatrix
          * 
          * 
          * Roman numerals - both ways

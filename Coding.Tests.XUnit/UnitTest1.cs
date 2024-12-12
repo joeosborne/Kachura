@@ -1,5 +1,6 @@
 namespace Coding.Tests.XUnit
 {
+    using Microsoft.VisualStudio.TestPlatform.TestHost;
     using System;
     using System.Drawing;
     using System.Reflection.Emit;
@@ -101,6 +102,64 @@ namespace Coding.Tests.XUnit
             var result = CodingTests.CodingTest.IsAPalindrome(input);
             Assert.False(result);
         }
+
+        [Fact]
+        public void todo4()
+        {
+            string input = "levelz";
+            var result = CodingTests.CodingTest.IsAPalindrome(input);
+            Assert.False(result);
+        }
     }
 
+    public class LongestPossiblePalindromeTests
+    {
+
+        [Theory]
+        //[InlineData("babad", "bab")] // or "aba"
+        //[InlineData("cbbd", "bb")]
+        //[InlineData("racecar", "racecar")]
+        [InlineData("mumreferdad", "refer")]
+        //[InlineData("forgeeksskeegfor", "geeksskeeg")]
+        //[InlineData("", "")]
+        public void TestLongestPalindrome(string input, string expected)
+        {
+            // Arrange
+            var program = new Program();
+
+            // Act
+            string result = CodingTests.CodingTest.FindLongestPalindrome(input);
+
+            // Assert
+            Assert.Contains(expected, result); // Check if result is one of the valid options
+        }
+
+        [Fact]
+        public void TestLongestPalindrome_WithNullInput()
+        {
+            // Arrange
+            string input = null;
+
+            // Act
+            string result = CodingTests.CodingTest.FindLongestPalindrome(input);
+
+            // Assert
+            Assert.Equal("", result);
+        }
+
+        [Fact]
+        public void TestLongestPalindrome_WithSpecialCharacters()
+        {
+            // Arrange
+            string input = "A man, a plan, a canal, Panama";
+
+            // Act
+            string result = CodingTests.CodingTest.FindLongestPalindrome(input);
+
+            // Assert
+            Assert.True(result.Length > 0); // Ensure a palindrome substring is found
+        }
+    }
+
+        //}
     }

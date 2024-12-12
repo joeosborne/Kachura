@@ -272,22 +272,7 @@ namespace CodingTest.UnitTests
         }
 
     }
-    [TestClass]
-    public class LongestPossiblePalindrome
-    {
-        [TestMethod]
-        public void TestMethod1()
-        {
-            string input = "";
-            string expected = "";
 
-
-            var result = "x";// CodingTests.CodingTest.(input);
-
-            Assert.AreEqual(expected, result);
-        }
-
-    }
     [TestClass]
     public class GetSubstringIndex
     {
