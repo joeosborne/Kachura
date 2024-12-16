@@ -26,20 +26,3 @@
         }
     }
 }
-
-//class Program
-//{
-//    static void Main(string[] args)
-//    {
-//        try
-//        {
-//            TeamPicker teamPicker = new TeamPicker();
-//            var team = teamPicker.PickTeam();
-//            teamPicker.DisplayTeam();
-//        }
-//        catch (Exception ex)
-//        {
-//            Console.WriteLine($"Error: {ex.Message}");
-//        }
-//    }
-//}

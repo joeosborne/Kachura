@@ -12,15 +12,21 @@ namespace CricketTeamPicker
     {
         private List<Player> availablePlayers = new List<Player>();
         private List<Player> selectedTeam = new List<Player>();
+        private ICricketerDataService _cricketerDataService;
 
-        public TeamPicker(IEnumerable<Player> players)
+        //public TeamPicker(IEnumerable<Player> players)
+        //{
+        //    //InitializePlayers();
+        //    availablePlayers = players.ToList();
+        //}
+
+        public TeamPicker(ICricketerDataService cricketerDataService)
         {
-            //InitializePlayers();
-            availablePlayers = players.ToList();
+            _cricketerDataService = cricketerDataService;
         }
 
         // todo: this class is intially setup so that "PickTeam" acts like auto selection. Change so that PickTeam accepts a team and validates it accordingly
-        public List<Player> PickTeam()
+        public IList<Player> PickTeam()
         {
             selectedTeam.Clear();
 
@@ -67,7 +73,13 @@ namespace CricketTeamPicker
             foreach (var player in selectedTeam)
             {
                 Console.WriteLine(player);
+                
             }
+        }
+
+        public IList<Player> GetAvailablePlayers()
+        {
+            return _cricketerDataService.GetAvailablePlayers();
         }
     }
 }

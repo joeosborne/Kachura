@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CricketTeamPicker", "CricketTeamPicker.csproj", "{E7DBDCA2-509C-42F0-BF3B-FA877BE16BF5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrickerTeamPicker.UnitTests", "..\CrickerTeamPicker.UnitTests\CrickerTeamPicker.UnitTests.csproj", "{52755B14-1A4D-4D09-BC22-3D8394CC6152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CricketTeamPicker.Host", "..\CricketTeamPicker.Host\CricketTeamPicker.Host.csproj", "{5E471817-ABC8-4521-8B0F-88B1371F124B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{52755B14-1A4D-4D09-BC22-3D8394CC6152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52755B14-1A4D-4D09-BC22-3D8394CC6152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52755B14-1A4D-4D09-BC22-3D8394CC6152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E471817-ABC8-4521-8B0F-88B1371F124B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E471817-ABC8-4521-8B0F-88B1371F124B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E471817-ABC8-4521-8B0F-88B1371F124B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E471817-ABC8-4521-8B0F-88B1371F124B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
