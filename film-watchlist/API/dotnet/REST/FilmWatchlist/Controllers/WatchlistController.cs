@@ -58,7 +58,7 @@ public class WatchlistController : ControllerBase
     public async Task<IActionResult> GetAll()
     {
         using FilmWatchlistContext db = new();
-
+        
         var watchlists = db.Watchlists.ToList();
         
         var watchlistsResponse = watchlists.MapToResponse();

@@ -83,12 +83,6 @@ namespace CodingTests
         }
 
 
-        public static string FindTheDuplicate(string input)
-        {
-            // todo: change method signature and implement
-            throw new NotImplementedException();
-
-        }
 
         //The Maximum Subarray Problem is a classic problem that involves finding the contiguous subarray within
         //a one-dimensional numeric array that has the largest sum.
@@ -262,9 +256,6 @@ namespace CodingTests
                     number -= mapItem.Item1;
 
                 }
-                //if (mapItem.Item1 > number)
-                //{
-                //}
 
             }
 
@@ -312,17 +303,5 @@ namespace CodingTests
                 start = left + 1;
             }
         }
-
-
-
-        /*
-         * todo: add must dosand inlcude link to 50 UD course
-         * 
-         * Roman numerals - both ways
-         * fizzbuzz
-         * IsPalindrome
-         * any completed tests
-         * 
-         */
     }
 }

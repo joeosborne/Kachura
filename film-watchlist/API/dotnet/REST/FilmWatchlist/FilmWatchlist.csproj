@@ -20,10 +20,4 @@
     <ProjectReference Include="..\FilmWatchlist.EFCore\FilmWatchlist.EFCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="FilmWatchlist.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>

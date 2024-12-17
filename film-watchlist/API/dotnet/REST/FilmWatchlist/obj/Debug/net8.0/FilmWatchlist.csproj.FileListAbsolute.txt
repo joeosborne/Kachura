@@ -2,7 +2,6 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\app
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\appsettings.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.staticwebassets.endpoints.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.exe
-C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.db
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.deps.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.runtimeconfig.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.dll
