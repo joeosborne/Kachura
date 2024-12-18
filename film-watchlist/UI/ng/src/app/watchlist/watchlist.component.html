@@ -1,21 +1,43 @@
 <div class="card-body">
   <div class="landing-container">
+    <div>
+      {{watchlist() | json}}
+    </div>
     @for (film of watchlist().movies; track film) {
-    <div class="movie">
+      <div class="movie">
       <img
         src="{{ this.IMG_PATH }}{{ film.posterPath }}"
-        alt="{{ film.title }}"
+        alt="{{ film?.title }}"
       />
       <div class="movie-info">
-        <h3>{{ film.title }}</h3>
+        <h3>{{ film?.title }}</h3>
       </div>
       <div class="overview">
         <h3>Overview</h3>
-        {{ film.overview }}
+        {{ film?.description }}
       </div>
     </div>
 
     }
+
+
+<!--    {-->
+<!--    "id": 4,-->
+<!--    "name": "1999",-->
+<!--    "description": "Films from the year 1999",-->
+<!--    "movies": [-->
+<!--    {-->
+<!--    "id": 4,-->
+<!--    "title": "Office Space",-->
+<!--    "releaseDate": "1999-07-16",-->
+<!--    "posterPath": "/poster/inception.jpg",-->
+<!--    "overview": "A skilled thief is given a chance at redemption if he can successfully perform an inception."-->
+<!--    }-->
+<!--    ]-->
+<!--    }-->
+
+
+<!--    {"id":4,"name":"1999","description":"Filmsfrom the year 1999","movies":[]}-->
   </div>
 </div>
 

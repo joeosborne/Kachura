@@ -8,8 +8,12 @@ import {
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { Router } from '@angular/router';
-import { WatchlistService } from '../watchlist.service';
+import { FilmDTO, WatchlistService } from '../watchlist.service';
 import { Film } from '../model/film.model';
+
+export interface AddMovieToWatchlistDto {
+  movieId: number;
+}
 
 @Component({
   selector: 'app-landing',
@@ -51,7 +55,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     // todo: replace 999 with the actual watchlist id
-    this.watchlistService.loadWatchlist(999);
+    this.watchlistService.loadWatchlist(4);
     // Listen for Enter key press
     // this.searchForm.get('searchTerm')?.valueChanges.subscribe(value => {
     //   if (value && value.trim() !== '') {
@@ -133,13 +137,39 @@ export class LandingComponent implements OnInit, AfterViewInit {
     console.log('----');
   }
 
-  addToWatchlist(film: Film) {
-    ////console.log('add the following to addToWatchlist...');
-    ////console.log(film.title);
+  addToWatchlist(film: any) {
+    //console.log('add the following to addToWatchlist...');
+    console.log(film);
 
-    //this.watchlistService.addToList(film);
+    let dto: FilmDTO = {
+      title: film.title,
+      posterPath: film.poster_path,
+      overview: film.overview,
+      releaseDate: film.release_date,
+    };
+
+    // todo: refactor out initial call to add film to DB.
+    //var newFilm = this.watchlistService.addFilm(film).;
+    //this.watchlistService.addFilmToWatchlist(film);
+
+    this.watchlistService.addFilm(dto).subscribe((newFilm) => {
+      console.log(newFilm);
+      if (newFilm.id != null) {
+        this.addFilmToList(newFilm.id);
+      }
+    });
 
     //this.router.navigate([`watchlist`]).then((r) => {});
+  }
+
+  private addFilmToList(id: number) {
+    let dto: AddMovieToWatchlistDto = {
+      movieId: id
+    };
+
+    this.watchlistService.addFilmToList(dto).subscribe((newFilm) => {
+      console.log(newFilm);
+    });
   }
 }
 
