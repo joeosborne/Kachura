@@ -13,7 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    // todo: correct all of these settings
     options.AddPolicy("AllowOrigin", builder =>
         {
             builder.WithOrigins(
@@ -24,36 +23,11 @@ builder.Services.AddCors(options =>
     .AllowAnyMethod()
     .AllowCredentials();
         });
-
-
-    //options.AddPolicy(
-    //name: "AllowOrigin",
-    //builder => {
-    //    builder.AllowAnyOrigin()
-    //            .AllowAnyMethod()
-    //            .AllowAnyHeader();
-    //});
-
 });
 
 builder.Services.AddControllers();
-//builder.Services.AddApplication();
-
-// Add the DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Data Source=KachuraWatchlists.db")));
-
-//builder.Services.AddDbContext<ApplicationDbContext>(optionsBuilder =>
-//{
-//    //var connectionString = builder.Configuration.GetConnectionString("MoviesContext");
-//    var connectionString = "";
-//    optionsBuilder
-//        .UseSqlite(connectionString, sqlBuilder =>
-//            sqlBuilder.MaxBatchSize(50))
-//        .LogTo(Console.WriteLine);
-//},
-//    ServiceLifetime.Scoped,
-//    ServiceLifetime.Singleton);
 
 var app = builder.Build();
 
@@ -64,3 +38,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+
+
+
+// TODO: Improve API overall - add authentication, authorisation, request/response etc. See dometain API course/code for reference

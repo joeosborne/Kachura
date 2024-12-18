@@ -140,10 +140,6 @@ C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\run
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Application.dll
-C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Contracts.dll
-C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Application.pdb
-C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\bin\Debug\net8.0\FilmWatchlist.Contracts.pdb
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\scopedcss\bundle\FilmWatchlist.styles.css
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\staticwebassets.build.json
 C:\dev\Kachura\film-watchlist\API\dotnet\REST\FilmWatchlist\obj\Debug\net8.0\staticwebassets.development.json

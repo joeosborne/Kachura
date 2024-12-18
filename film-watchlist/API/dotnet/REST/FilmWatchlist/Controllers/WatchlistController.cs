@@ -2,9 +2,6 @@
 using FilmWatchlist.Application.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-//using Movies.Api.Mapping;
-//using Movies.Application.Repositories;
-//using Movies.Contracts.Requests;
 
 namespace FilmWatchlist.Api.Controllers;
 
@@ -16,10 +13,6 @@ public class AddMovieToWatchlistDto
 [ApiController]
 public class WatchlistController : ControllerBase
 {
-    // use  using DI
-
-
-
     private readonly ApplicationDbContext _context;
 
     public WatchlistController(ApplicationDbContext context)

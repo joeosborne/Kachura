@@ -87,7 +87,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
     ////console.log(movies);
     movies.forEach((movie) => {
       const { title, poster_path, vote_average, overview } = movie;
-      debugger;
       const movieEl = document.createElement('div');
       movieEl.classList.add('movie');
 
@@ -117,9 +116,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
     const res = await fetch(url);
     const data = await res.json();
 
-    ////console.log(data);
-    //debugger;
-    //this.showMovies(data.results)
     this.films = data.results;
     console.log('----');
     console.log('----');
@@ -141,7 +137,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     ////console.log('add the following to addToWatchlist...');
     ////console.log(film.title);
 
-    this.watchlistService.addToList(film);
+    //this.watchlistService.addToList(film);
 
     //this.router.navigate([`watchlist`]).then((r) => {});
   }

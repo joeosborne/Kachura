@@ -1,21 +1,13 @@
 ﻿using EFSampleSQLiteApp.Models;
-using FilmWatchlist.Api;
 using FilmWatchlist.Application.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-//using Movies.Api.Mapping;
-//using Movies.Application.Repositories;
-//using Movies.Contracts.Requests;
 
-namespace FilmMovie.Api.Controllers;
+namespace FilmWatchlist.Api.Controllers;
 
 [ApiController]
 public class MovieController : ControllerBase
 {
-    // use  using DI
-
-
-
     private readonly ApplicationDbContext _context;
 
     public MovieController(ApplicationDbContext context)
@@ -28,11 +20,7 @@ public class MovieController : ControllerBase
     {
         await _context.Movies.AddAsync(Movie);
 
-        // movie has no ID
-
         await _context.SaveChangesAsync();
-
-        // movie has an ID
 
         return CreatedAtAction(nameof(Get), new { id = Movie.Id }, Movie);
     }
@@ -40,24 +28,20 @@ public class MovieController : ControllerBase
     [HttpGet(ApiEndpoints.Film.Get)]
     public async Task<IActionResult> Get([FromRoute] int id)
     {
-        var Movie = await _context.Movies
-            .SingleOrDefaultAsync(m => m.Id == id);
+        // Fetch the Movie and include associated movies
+        var movie = await _context.Movies
+            .FirstOrDefaultAsync(w => w.Id == id);
 
-        return Movie == null
-            ? NotFound()
-            : Ok(Movie);
+        if (movie == null)
+            return NotFound(new { message = "Movie not found" });
+
+        return Ok(movie);
     }
 
 
     [HttpGet(ApiEndpoints.Film.GetAll)]
     public async Task<IActionResult> GetAll()
     {
-        //using FilmMovieContext db = new();
-
-        //var Movies = db.Movies.ToList();
-
-        //var MoviesResponse = Movies.MapToResponse();
-        //return Ok(MoviesResponse);
         var Movies = await _context.Movies
             .AsNoTracking()
             .ToListAsync();
@@ -66,30 +50,38 @@ public class MovieController : ControllerBase
     }
 
 
-    //[HttpPut(ApiEndpoints.FilmMovie.Update)]
-    //public async Task<IActionResult> Update([FromRoute] int id,
-    //    [FromBody] UpdateMovieRequest request)
-    //{
-    //    var Movie = request.MapToMovie(id);
-    //    var updated = await _MovieRepository.UpdateAsync(Movie);
-    //    if (!updated)
-    //    {
-    //        return NotFound();
-    //    }
+    [HttpPut(ApiEndpoints.Film.Update)]
+    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] Movie movie)
+    {
+        var existingMovie = await _context.Movies.FindAsync(id);
 
-    //    var response = Movie.MapToResponse();
-    //    return Ok(response);
-    //}
+        if (existingMovie is null)
+            return NotFound();
 
-    //[HttpDelete(ApiEndpoints.FilmMovie.Delete)]
-    //public async Task<IActionResult> Delete([FromRoute] int id)
-    //{
-    //    var deleted = await _MovieRepository.DeleteByIdAsync(id);
-    //    if (!deleted)
-    //    {
-    //        return NotFound();
-    //    }
+        existingMovie.Title = movie.Title;
+        existingMovie.ReleaseDate = movie.ReleaseDate;
+        existingMovie.PosterPath = movie.PosterPath;
+        existingMovie.Overview = movie.Overview;
 
-    //    return Ok();
-    //}
+        await _context.SaveChangesAsync();
+
+        return Ok(id);
+    }
+
+
+    [HttpDelete(ApiEndpoints.Film.Delete)]
+    public async Task<IActionResult> Delete([FromRoute] int id)
+    {
+        var existingMovie = await _context.Movies.FindAsync(id);
+
+        if (existingMovie is null)
+            return NotFound();
+
+        _context.Movies.Remove(existingMovie);
+
+        await _context.SaveChangesAsync();
+
+        return Ok();
+    }
+
 }

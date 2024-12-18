@@ -15,11 +15,18 @@ export class WatchlistsComponent implements OnInit {
 
   ngOnInit() {
     // call this.watchlistService.getAllWatchlists(); and store the result in a variable
-    debugger;
+
     this.watchlistService.getAllWatchlists().subscribe((watchlists) => {
-      console.log(watchlists.items)
-      console.log(watchlists.items.length)
-     this.watchlists = watchlists.items;
+      // {
+      //   "id": 4,
+      //   "name": "1999",
+      //   "description": "Films from the year 1999",
+      //   "watchlistMovies": []
+      // }
+
+
+      console.log(watchlists)
+     this.watchlists = watchlists;
     });
   }
 }
