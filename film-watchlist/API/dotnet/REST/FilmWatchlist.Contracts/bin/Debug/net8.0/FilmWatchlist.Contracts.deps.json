@@ -395,23 +395,12 @@
       },
       "FilmWatchlist.Application/1.0.0": {
         "dependencies": {
-          "FilmWatchlist.EFCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.0"
         },
         "runtime": {
           "FilmWatchlist.Application.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "FilmWatchlist.EFCore/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0"
-        },
-        "runtime": {
-          "FilmWatchlist.EFCore.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -608,11 +597,6 @@
       "hashPath": "system.text.json.9.0.0.nupkg.sha512"
     },
     "FilmWatchlist.Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "FilmWatchlist.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

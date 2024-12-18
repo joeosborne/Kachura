@@ -539,7 +539,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FilmWatchlist.EFCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.0"
         },
         "compile": {
@@ -547,20 +548,6 @@
         },
         "runtime": {
           "bin/placeholder/FilmWatchlist.Application.dll": {}
-        }
-      },
-      "FilmWatchlist.EFCore/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/FilmWatchlist.EFCore.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FilmWatchlist.EFCore.dll": {}
         }
       }
     }
@@ -1300,11 +1287,6 @@
       "type": "project",
       "path": "../FilmWatchlist.Application/FilmWatchlist.Application.csproj",
       "msbuildProject": "../FilmWatchlist.Application/FilmWatchlist.Application.csproj"
-    },
-    "FilmWatchlist.EFCore/1.0.0": {
-      "type": "project",
-      "path": "../FilmWatchlist.EFCore/FilmWatchlist.EFCore.csproj",
-      "msbuildProject": "../FilmWatchlist.EFCore/FilmWatchlist.EFCore.csproj"
     }
   },
   "projectFileDependencyGroups": {

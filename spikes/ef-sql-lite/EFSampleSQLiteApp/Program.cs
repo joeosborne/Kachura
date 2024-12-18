@@ -2,6 +2,7 @@
 using System.Linq;
 using EFSampleSQLiteApp;
 using EFSampleSQLiteApp.Models;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 class Program
 {
@@ -12,28 +13,46 @@ class Program
             // Ensure the database is created
             context.Database.EnsureCreated();
 
-            // Example: Add a movie to a watchlist
-            var watchlistId = 1; // Assume watchlist ID is 1
-            //var movieIdToAdd = 2; // Assume movie ID is 2
+            /********************/
+            // DataHelpers
 
-            DataHelpers.EmptyWatchlist(context, 1);
-            // DataHelpers.AddMovieToWatchlist(context, watchlistId, 1);
-            DataHelpers.AddMovieToWatchlist(context, watchlistId, 2);
+            //// Example: Add a movie to a watchlist
+            //var watchlistId = 1; // Assume watchlist ID is 1
+            ////var movieIdToAdd = 2; // Assume movie ID is 2
+            //DataHelpers.EmptyWatchlist(context, 1);
+            //// DataHelpers.AddMovieToWatchlist(context, watchlistId, 1);
+            //DataHelpers.AddMovieToWatchlist(context, watchlistId, 2);
 
-            // Example: Remove a movie from a watchlist
-            //var movieIdToRemove = 1; // Assume movie ID 1 needs to be removed
-            //DataHelpers.RemoveMovieFromWatchlist(context, watchlistId, movieIdToRemove);
+            //// Example: Remove a movie from a watchlist
+            ////var movieIdToRemove = 1; // Assume movie ID 1 needs to be removed
+            ////DataHelpers.RemoveMovieFromWatchlist(context, watchlistId, movieIdToRemove);
 
 
-            //DataHelpers.EmptyWatchlist(context, 2);
-            //DataHelpers.EmptyWatchlist(context, 3);
+            DataHelpers.EmptyWatchlist(context, 2);
+            DataHelpers.EmptyWatchlist(context, 3);
+            DataHelpers.EmptyWatchlist(context, 4);
+            DataHelpers.EmptyWatchlist(context, 5);
+            /********************/
 
-            //// Add unique Movies
+
+
+
+
+
+            /********************/
+            // todo: add films(s)
+            // Add unique Movies
             //var inception = new Movie { Title = "Inception" };
             //var interstellar = new Movie { Title = "Interstellar" };
 
             //context.Movies.AddRange(inception, interstellar);
             //context.SaveChanges();
+
+
+            /********************/
+
+            /********************/
+            //// todo: add list(s)
 
             //// Add Watchlists
             //var favorites = new Watchlist { Name = "Favorites", Description = "My favorite movies" };
@@ -51,23 +70,36 @@ class Program
 
             //context.SaveChanges();
 
-            //// Fetch and display Watchlists with their Movies
-            //var watchlists = context.Watchlists
-            //    .Select(w => new
-            //    {
-            //        w.Name,
-            //        Movies = w.WatchlistMovies.Select(wm => wm.Movie.Title)
-            //    })
-            //    .ToList();
+            /********************/
 
-            //foreach (var watchlist in watchlists)
-            //{
-            //    Console.WriteLine($"Watchlist: {watchlist.Name}");
-            //    foreach (var movie in watchlist.Movies)
-            //    {
-            //        Console.WriteLine($"   Movie: {movie}");
-            //    }
-            //}
+
+
+            /********************/
+            //// Fetch and display Watchlists with their Movies
+            var watchlists = context.Watchlists
+                .Select(w => new
+                {
+                    w.Id,
+                    w.Name,
+                    Movies = w.WatchlistMovies.Select(wm => wm.Movie.Title)
+                })
+                .ToList();
+
+            foreach (var watchlist in watchlists)
+            {
+                Console.WriteLine($"Watchlist: {watchlist.Id}: {watchlist.Name}");
+                foreach (var movie in watchlist.Movies)
+                {
+                    Console.WriteLine($"   Movie: {movie}");
+                }
+            }
+            /********************/
+
+
+
+
+
+
         }
     }
 }

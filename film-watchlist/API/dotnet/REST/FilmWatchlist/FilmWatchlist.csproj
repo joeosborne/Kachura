@@ -12,12 +12,21 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FilmWatchlist.Application\FilmWatchlist.Application.csproj" />
     <ProjectReference Include="..\FilmWatchlist.Contracts\FilmWatchlist.Contracts.csproj" />
-    <ProjectReference Include="..\FilmWatchlist.EFCore\FilmWatchlist.EFCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="KachuraWatchlists.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

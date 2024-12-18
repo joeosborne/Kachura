@@ -1,6 +1,7 @@
 ﻿//private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
-using Movies.Application;
+using EFSampleSQLiteApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,7 +37,23 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
-builder.Services.AddApplication();
+//builder.Services.AddApplication();
+
+// Add the DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("Data Source=KachuraWatchlists.db")));
+
+//builder.Services.AddDbContext<ApplicationDbContext>(optionsBuilder =>
+//{
+//    //var connectionString = builder.Configuration.GetConnectionString("MoviesContext");
+//    var connectionString = "";
+//    optionsBuilder
+//        .UseSqlite(connectionString, sqlBuilder =>
+//            sqlBuilder.MaxBatchSize(50))
+//        .LogTo(Console.WriteLine);
+//},
+//    ServiceLifetime.Scoped,
+//    ServiceLifetime.Singleton);
 
 var app = builder.Build();
 

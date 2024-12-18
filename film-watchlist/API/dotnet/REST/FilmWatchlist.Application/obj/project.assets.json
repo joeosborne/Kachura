@@ -534,20 +534,6 @@
         "build": {
           "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
-      },
-      "FilmWatchlist.EFCore/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/FilmWatchlist.EFCore.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FilmWatchlist.EFCore.dll": {}
-        }
       }
     }
   },
@@ -1281,16 +1267,12 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "FilmWatchlist.EFCore/1.0.0": {
-      "type": "project",
-      "path": "../FilmWatchlist.EFCore/FilmWatchlist.EFCore.csproj",
-      "msbuildProject": "../FilmWatchlist.EFCore/FilmWatchlist.EFCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FilmWatchlist.EFCore >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 9.0.0",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.0",
       "Microsoft.Extensions.DependencyInjection >= 9.0.0"
     ]
   },
@@ -1326,11 +1308,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.EFCore\\FilmWatchlist.EFCore.csproj": {
-              "projectPath": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist.EFCore\\FilmWatchlist.EFCore.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -1349,6 +1327,14 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[9.0.0, )"

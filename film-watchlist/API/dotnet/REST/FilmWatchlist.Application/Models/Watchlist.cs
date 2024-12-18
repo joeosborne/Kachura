@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FilmWatchlist.Application.Models
+﻿namespace FilmWatchlist.Application.Models
 {
-    //public class Watchlist
-    //{
-    //    public required int Id { get; init; }
+    public class Watchlist
+    {
+        public int Id { get; set; } // Primary Key
+        public string Name { get; set; } = string.Empty;
+        public string? Description { get; set; } = string.Empty;
 
-    //    public required string Name { get; init; }
-
-    //    public string Description { get; init; }
-
-    //    public required int UserId { get; init; }
-
-    //    public required IEnumerable<Movie> Movies { get; init; } = Enumerable.Empty<Movie>();
-    //}
+        // Navigation property: A Watchlist has many Movies
+        public ICollection<WatchlistMovie> WatchlistMovies { get; set; } = new List<WatchlistMovie>();
+    }
 }
+
+
+// dotnet ef migrations add InitialCreate
+// dotnet ef database update
