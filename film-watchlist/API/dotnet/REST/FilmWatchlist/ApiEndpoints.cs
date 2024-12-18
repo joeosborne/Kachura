@@ -14,4 +14,15 @@ public static class ApiEndpoints
         public const string Update = $"{Base}/{{id:int}}";
         public const string Delete = $"{Base}/{{id:int}}";
     }
+
+    public static class Film
+    {
+        private const string Base = $"{ApiBase}/film";
+
+        public const string Create = Base;
+        public const string Get = $"{Base}/{{id:int}}";
+        public const string GetAll = Base;
+        public const string Update = $"{Base}/{{id:int}}";
+        public const string Delete = $"{Base}/{{id:int}}";
+    }
 }
