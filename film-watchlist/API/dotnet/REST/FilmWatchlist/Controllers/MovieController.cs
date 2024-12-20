@@ -16,13 +16,13 @@ public class MovieController : ControllerBase
     }
 
     [HttpPost(ApiEndpoints.Film.Create)]
-    public async Task<IActionResult> Create([FromBody] Movie Movie)
+    public async Task<IActionResult> Create([FromBody] Movie movie)
     {
-        await _context.Movies.AddAsync(Movie);
+        await _context.Movies.AddAsync(movie);
 
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(Get), new { id = Movie.Id }, Movie);
+        return CreatedAtAction(nameof(Get), new { id = movie.Id }, movie);
     }
 
     [HttpGet(ApiEndpoints.Film.Get)]

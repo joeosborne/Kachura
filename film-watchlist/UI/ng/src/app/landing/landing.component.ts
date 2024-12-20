@@ -12,7 +12,9 @@ import { FilmDTO, WatchlistService } from '../watchlist.service';
 import { Film } from '../model/film.model';
 
 export interface AddMovieToWatchlistDto {
-  movieId: number;
+  movieId?: number;
+  movie?: FilmDTO;
+
 }
 
 @Component({
@@ -141,66 +143,44 @@ export class LandingComponent implements OnInit, AfterViewInit {
     //console.log('add the following to addToWatchlist...');
     console.log(film);
 
-    let dto: FilmDTO = {
+    let filmDTO: FilmDTO = {
       title: film.title,
       posterPath: film.poster_path,
       overview: film.overview,
       releaseDate: film.release_date,
     };
 
-    // todo: refactor out initial call to add film to DB.
-    //var newFilm = this.watchlistService.addFilm(film).;
-    //this.watchlistService.addFilmToWatchlist(film);
-
-    this.watchlistService.addFilm(dto).subscribe((newFilm) => {
-      console.log(newFilm);
-      if (newFilm.id != null) {
-        this.addFilmToList(newFilm.id);
-      }
-    });
-
-    //this.router.navigate([`watchlist`]).then((r) => {});
-  }
-
-  private addFilmToList(id: number) {
     let dto: AddMovieToWatchlistDto = {
-      movieId: id
+      movie: filmDTO
     };
 
     this.watchlistService.addFilmToList(dto).subscribe((newFilm) => {
       console.log(newFilm);
+      this.watchlistService.loadWatchlist(4);
     });
-  }
-}
 
-//   searchForm: FormGroup;
-//
-//
-//   constructor(
-//     private formBuilder: FormBuilder,
-//   ) {
-//     this.searchForm = this.formBuilder.group({
-//       value: '',
-//     });
-//
-//   }
-//
-//   ngOnInit(): void {
-//     //this.getMovies(this.API_URL).then(r => {})
-//
-//   }
-//
-//   async getMovies(url:string) {
-//     const res = await fetch(url)
-//     const data = await res.json()
-//     ////console.log(data)
-//
-//     //showMovies(data.results)
-//   }
-//
-//   onSearch($event: SubmitEvent) {
-//     ////console.log('onSearch..')
-//     ////console.log($event)
-//
-//   }
-// }
+    // todo: refactor out initial call to add film to DB.
+    //var newFilm = this.watchlistService.addFilm(film).;
+    //this.watchlistService.addFilmToWatchlist(film);
+
+    // this.watchlistService.addFilm(dto).subscribe((newFilm) => {
+    //   console.log(newFilm);
+    //   if (newFilm.id != null) {
+    //     this.addFilmToList(newFilm.id);
+    //   }
+    // });
+  }
+
+
+
+  // private addFilmToList(id: number) {
+  //   let dto: AddMovieToWatchlistDto = {
+  //     movieId: id
+  //   };
+  //
+  //   this.watchlistService.addFilmToList(dto).subscribe((newFilm) => {
+  //     console.log(newFilm);
+  //     this.watchlistService.loadWatchlist(4);
+  //   });
+  // }
+}

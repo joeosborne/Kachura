@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { WatchlistService } from '../watchlist.service';
 import { JsonPipe, NgForOf, NgIf } from '@angular/common';
+import {AddMovieToWatchlistDto} from '../landing/landing.component';
 
 @Component({
   selector: 'app-watchlist',
@@ -14,4 +15,19 @@ export class WatchlistComponent {
 
   watchlistService = inject(WatchlistService);
   watchlist = this.watchlistService.watchlist;
+
+  removeFromList(film:any) {
+    console.log('todo: remove film')
+    console.log(film)
+
+    let dto: AddMovieToWatchlistDto = {
+      movieId: film.id
+    };
+
+    this.watchlistService.removeFilmFromList(dto).subscribe((newFilm) => {
+      console.log(newFilm);
+      this.watchlistService.loadWatchlist(4);
+    });
+
+  }
 }
