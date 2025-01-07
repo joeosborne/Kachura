@@ -1,15 +1,22 @@
 Nick Chapsas..
 https://roadmap.sh/r?id=65d8624e66cd6d03d2d7efc9
 
+https://roadmap.alexhyett.com/backend-developer-roadmap/
+https://roadmap.sh/aspnet-core
+https://roadmap.sh/full-stack
+https://roadmap.sh/backend
+
+
 https://roadmap.sh/frontend
 https://roadmap.sh/angular
 https://roadmap.sh/typescript
+react
+https://roadmap.sh/react
 
 
 CSS
 https://roadmap.sh/r/css-6nqag
 
-https://roadmap.sh/aspnet-core
-https://roadmap.sh/backend
-https://roadmap.sh/full-stack
+
+
 

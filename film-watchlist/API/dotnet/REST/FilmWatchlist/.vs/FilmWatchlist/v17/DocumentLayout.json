@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\models\\watchlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:models\\watchlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\models\\watchlistmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:models\\watchlistmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\filmwatchlist.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -29,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|c:\\dev\\kachura\\film-watchlist\\api\\dotnet\\rest\\filmwatchlist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C2DBC01-9723-4A07-A71F-97729E6807D7}|FilmWatchlist.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,44 +66,72 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FilmWatchlist.http",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\FilmWatchlist.http",
-              "RelativeDocumentMoniker": "FilmWatchlist.http",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\FilmWatchlist.http",
-              "RelativeToolTip": "FilmWatchlist.http",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-12-20T06:49:05.39Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T09:37:08.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApiEndpoints.cs",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\ApiEndpoints.cs",
-              "RelativeDocumentMoniker": "ApiEndpoints.cs",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\ApiEndpoints.cs",
-              "RelativeToolTip": "ApiEndpoints.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T16:29:06.059Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "20241218065859_InitialCreate.Designer.cs",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Migrations\\20241218065859_InitialCreate.Designer.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241218065859_InitialCreate.Designer.cs",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Migrations\\20241218065859_InitialCreate.Designer.cs",
-              "RelativeToolTip": "Migrations\\20241218065859_InitialCreate.Designer.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAsAAAAtAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T16:24:42.848Z"
+              "WhenOpened": "2024-12-20T09:29:54.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "WatchlistMovie.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\WatchlistMovie.cs",
+              "RelativeDocumentMoniker": "Models\\WatchlistMovie.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\WatchlistMovie.cs",
+              "RelativeToolTip": "Models\\WatchlistMovie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T09:17:10.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Watchlist.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\Watchlist.cs",
+              "RelativeDocumentMoniker": "Models\\Watchlist.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\Watchlist.cs",
+              "RelativeToolTip": "Models\\Watchlist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T09:17:00.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "Models\\Movie.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Models\\Movie.cs",
+              "RelativeToolTip": "Models\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T07:22:31.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -95,19 +143,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowCIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowC0AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T16:17:16.261Z"
+              "WhenOpened": "2024-12-18T16:17:16.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "ApplicationDbContext.cs",
@@ -119,20 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WatchlistController.cs",
-              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WatchlistController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WatchlistController.cs",
-              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WatchlistController.cs",
-              "RelativeToolTip": "Controllers\\WatchlistController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAD4v1UAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T16:09:55.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MovieController.cs",
               "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\MovieController.cs",
               "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
@@ -141,6 +177,56 @@
               "ViewState": "AgIAABUAAAAAAAAAAAAYwBIAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T16:09:52.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiEndpoints.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\ApiEndpoints.cs",
+              "RelativeDocumentMoniker": "ApiEndpoints.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\ApiEndpoints.cs",
+              "RelativeToolTip": "ApiEndpoints.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T16:29:06.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WatchlistController.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WatchlistController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WatchlistController.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Controllers\\WatchlistController.cs",
+              "RelativeToolTip": "Controllers\\WatchlistController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAASwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T16:09:55.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20241218065859_InitialCreate.Designer.cs",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Migrations\\20241218065859_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241218065859_InitialCreate.Designer.cs",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\Migrations\\20241218065859_InitialCreate.Designer.cs",
+              "RelativeToolTip": "Migrations\\20241218065859_InitialCreate.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T16:24:42.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FilmWatchlist.http",
+              "DocumentMoniker": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\FilmWatchlist.http",
+              "RelativeDocumentMoniker": "FilmWatchlist.http",
+              "ToolTip": "C:\\dev\\Kachura\\film-watchlist\\API\\dotnet\\REST\\FilmWatchlist\\FilmWatchlist.http",
+              "RelativeToolTip": "FilmWatchlist.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-12-20T06:49:05.39Z",
               "EditorCaption": ""
             }
           ]

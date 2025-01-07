@@ -9,6 +9,7 @@
         public string Overview { get; set; } = string.Empty;
         public ICollection<WatchlistMovie> WatchlistMovies { get; set; } = new List<WatchlistMovie>();
     }
+
 }
 
 

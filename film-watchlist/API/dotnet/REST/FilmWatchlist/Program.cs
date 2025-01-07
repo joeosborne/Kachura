@@ -42,3 +42,5 @@ app.Run();
 
 
 // TODO: Improve API overall - add authentication, authorisation, request/response etc. See dometain API course/code for reference
+
+// TODO: Add integration tests - see asp.net core course
