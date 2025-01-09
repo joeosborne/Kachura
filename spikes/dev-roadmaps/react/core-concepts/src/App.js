@@ -16,23 +16,44 @@
 //           rel="noopener noreferrer"
 //         >
 
-import React from 'react';
+import React, {useState} from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
 
 function App() {
+    // State to track whether the checkbox is checked
+    const [addTaskIsEnabled, setAddTaskIsEnabled] = useState(false);
+
+    // Event handler for checkbox toggle
+    const handleCheckboxChange = (event) => {
+        setAddTaskIsEnabled(event.target.checked);
+    };
   return (
       <div>
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/tasks">Tasks</Link> | <Link to="/add-task">Add Task</Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tasks" element={<TaskList />} />
-          <Route path="/add-task" element={<AddTask />} />
-        </Routes>
+          <div>
+              <h1>Checkbox with State</h1>
+              <label>
+                  <input
+                      type="checkbox"
+                      checked={addTaskIsEnabled}
+                      onChange={handleCheckboxChange}
+                  />
+                  Enable add task functionality
+              </label>
+              <p>addTaskIsEnabled: {addTaskIsEnabled ? 'ON' : 'OFF'}.</p>
+          </div>
+          <div>
+              <nav>
+                  <Link to="/">Home</Link> | <Link to="/tasks">Tasks</Link> | {addTaskIsEnabled && <Link to="/add-task">Add Task</Link>}
+              </nav>
+              <Routes>
+                  <Route path="/" element={<Home/>}/>
+                  <Route path="/tasks" element={<TaskList/>}/>
+              <Route path="/add-task" element={<AddTask/>}/>
+          </Routes>
+          </div>
       </div>
   );
 }

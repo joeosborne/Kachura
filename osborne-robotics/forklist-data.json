@@ -1,0 +1,247 @@
+[
+  {
+    "Name": "Crimson Lift",
+    "Model Number": "CL-101",
+    "Manufacturing Date": "2022-03-15"
+  },
+  {
+    "Name": "Azure Mover",
+    "Model Number": "AM-203",
+    "Manufacturing Date": "2021-07-11"
+  },
+  {
+    "Name": "Emerald Carrier",
+    "Model Number": "EC-305",
+    "Manufacturing Date": "2023-01-22"
+  },
+  {
+    "Name": "Amber Hauler",
+    "Model Number": "AH-407",
+    "Manufacturing Date": "2020-10-05"
+  },
+  {
+    "Name": "Sapphire Loader",
+    "Model Number": "SL-509",
+    "Manufacturing Date": "2019-04-16"
+  },
+  {
+    "Name": "Onyx Lifter",
+    "Model Number": "OL-611",
+    "Manufacturing Date": "2022-12-19"
+  },
+  {
+    "Name": "Ivory Transporter",
+    "Model Number": "IT-713",
+    "Manufacturing Date": "2021-06-24"
+  },
+  {
+    "Name": "Ruby Hoist",
+    "Model Number": "RH-815",
+    "Manufacturing Date": "2020-03-29"
+  },
+  {
+    "Name": "Topaz Lift",
+    "Model Number": "TL-917",
+    "Manufacturing Date": "2023-07-18"
+  },
+  {
+    "Name": "Silver Carrier",
+    "Model Number": "SC-019",
+    "Manufacturing Date": "2019-09-12"
+  },
+  {
+    "Name": "Gold Loader",
+    "Model Number": "GL-121",
+    "Manufacturing Date": "2021-05-30"
+  },
+  {
+    "Name": "Platinum Hauler",
+    "Model Number": "PH-223",
+    "Manufacturing Date": "2020-11-08"
+  },
+  {
+    "Name": "Bronze Lifter",
+    "Model Number": "BL-325",
+    "Manufacturing Date": "2022-08-14"
+  },
+  {
+    "Name": "Lilac Mover",
+    "Model Number": "LM-427",
+    "Manufacturing Date": "2019-12-21"
+  },
+  {
+    "Name": "Turquoise Transporter",
+    "Model Number": "TT-529",
+    "Manufacturing Date": "2021-03-03"
+  },
+  {
+    "Name": "Pearl Loader",
+    "Model Number": "PL-631",
+    "Manufacturing Date": "2020-01-19"
+  },
+  {
+    "Name": "Violet Lift",
+    "Model Number": "VL-733",
+    "Manufacturing Date": "2023-05-05"
+  },
+  {
+    "Name": "Indigo Carrier",
+    "Model Number": "IC-835",
+    "Manufacturing Date": "2022-02-10"
+  },
+  {
+    "Name": "Magenta Hoist",
+    "Model Number": "MH-937",
+    "Manufacturing Date": "2021-08-22"
+  },
+  {
+    "Name": "Cobalt Loader",
+    "Model Number": "CL-039",
+    "Manufacturing Date": "2020-04-09"
+  },
+  {
+    "Name": "Ochre Hauler",
+    "Model Number": "OH-141",
+    "Manufacturing Date": "2019-06-28"
+  },
+  {
+    "Name": "Teal Lifter",
+    "Model Number": "TL-243",
+    "Manufacturing Date": "2022-11-17"
+  },
+  {
+    "Name": "Maroon Carrier",
+    "Model Number": "MC-345",
+    "Manufacturing Date": "2023-04-12"
+  },
+  {
+    "Name": "Rose Transporter",
+    "Model Number": "RT-447",
+    "Manufacturing Date": "2021-09-08"
+  },
+  {
+    "Name": "Cerulean Hoist",
+    "Model Number": "CH-549",
+    "Manufacturing Date": "2020-07-25"
+  },
+  {
+    "Name": "Lime Loader",
+    "Model Number": "LL-651",
+    "Manufacturing Date": "2019-11-30"
+  },
+  {
+    "Name": "Coral Mover",
+    "Model Number": "CM-753",
+    "Manufacturing Date": "2022-01-18"
+  },
+  {
+    "Name": "Beige Lifter",
+    "Model Number": "BL-855",
+    "Manufacturing Date": "2023-06-22"
+  },
+  {
+    "Name": "Fuchsia Carrier",
+    "Model Number": "FC-957",
+    "Manufacturing Date": "2021-02-14"
+  },
+  {
+    "Name": "Chartreuse Hauler",
+    "Model Number": "CH-059",
+    "Manufacturing Date": "2020-05-07"
+  },
+  {
+    "Name": "Periwinkle Loader",
+    "Model Number": "PL-161",
+    "Manufacturing Date": "2019-03-22"
+  },
+  {
+    "Name": "Mint Lift",
+    "Model Number": "ML-263",
+    "Manufacturing Date": "2022-09-11"
+  },
+  {
+    "Name": "Lavender Transporter",
+    "Model Number": "LT-365",
+    "Manufacturing Date": "2023-02-03"
+  },
+  {
+    "Name": "Olive Hoist",
+    "Model Number": "OH-467",
+    "Manufacturing Date": "2021-07-20"
+  },
+  {
+    "Name": "Charcoal Carrier",
+    "Model Number": "CC-569",
+    "Manufacturing Date": "2020-02-25"
+  },
+  {
+    "Name": "Ivory Loader",
+    "Model Number": "IL-671",
+    "Manufacturing Date": "2019-08-15"
+  },
+  {
+    "Name": "Cyan Mover",
+    "Model Number": "CM-773",
+    "Manufacturing Date": "2022-10-02"
+  },
+  {
+    "Name": "Blush Lifter",
+    "Model Number": "BL-875",
+    "Manufacturing Date": "2023-03-08"
+  },
+  {
+    "Name": "Slate Carrier",
+    "Model Number": "SC-977",
+    "Manufacturing Date": "2021-05-12"
+  },
+  {
+    "Name": "Crimson Loader",
+    "Model Number": "CL-079",
+    "Manufacturing Date": "2020-09-27"
+  },
+  {
+    "Name": "Burgundy Hauler",
+    "Model Number": "BH-181",
+    "Manufacturing Date": "2019-12-19"
+  },
+  {
+    "Name": "Taupe Lifter",
+    "Model Number": "TL-283",
+    "Manufacturing Date": "2022-06-30"
+  },
+  {
+    "Name": "Eggshell Transporter",
+    "Model Number": "ET-385",
+    "Manufacturing Date": "2023-01-01"
+  },
+  {
+    "Name": "Dusty Rose Hoist",
+    "Model Number": "DRH-487",
+    "Manufacturing Date": "2021-04-06"
+  },
+  {
+    "Name": "Seafoam Loader",
+    "Model Number": "SL-589",
+    "Manufacturing Date": "2020-08-17"
+  },
+  {
+    "Name": "Sand Mover",
+    "Model Number": "SM-691",
+    "Manufacturing Date": "2019-10-13"
+  },
+  {
+    "Name": "Amethyst Carrier",
+    "Model Number": "AC-793",
+    "Manufacturing Date": "2022-03-26"
+  },
+  {
+    "Name": "Dandelion Hauler",
+    "Model Number": "DH-895",
+    "Manufacturing Date": "2023-07-14"
+  },
+  {
+    "Name": "Peach Lifter",
+    "Model Number": "PL-997",
+    "Manufacturing Date": "2021-12-09"
+  }
+]
