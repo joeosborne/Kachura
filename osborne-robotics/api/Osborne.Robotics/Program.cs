@@ -3,7 +3,38 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Adjust Angular app's URL
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+
+
 var app = builder.Build();
+
+app.UseCors("AllowAngularApp");
+
+
+// add the default getWeather GET operation back in
+
+app.MapGet("/weather", () =>
+{
+    var weatherData = new
+    {
+        Date = DateTime.Now,
+        TemperatureC = 25,
+        Summary = "Sunny"
+    };
+    return Results.Ok(weatherData);
+});
+
+
 
 // Endpoint for JSON file upload
 app.MapPost("/upload-json", async (HttpRequest request) =>

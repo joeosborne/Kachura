@@ -1,0 +1,107 @@
+[
+  {
+    "Name": "Crimson Lift",
+    "Model Number": "CL-101",
+    "Manufacturing Date": "2022-03-15"
+  },
+  {
+    "Name": "Azure Mover",
+    "Model Number": "AM-203",
+    "Manufacturing Date": "2021-07-11"
+  },
+  {
+    "Name": "Emerald Carrier",
+    "Model Number": "EC-305",
+    "Manufacturing Date": "2023-01-22"
+  },
+  {
+    "Name": "Amber Hauler",
+    "Model Number": "AH-407",
+    "Manufacturing Date": "2020-10-05"
+  },
+  {
+    "Name": "Sapphire Loader",
+    "Model Number": "SL-509",
+    "Manufacturing Date": "2019-04-16"
+  },
+  {
+    "Name": "Onyx Lifter",
+    "Model Number": "OL-611",
+    "Manufacturing Date": "2022-12-19"
+  },
+  {
+    "Name": "Ivory Transporter",
+    "Model Number": "IT-713",
+    "Manufacturing Date": "2021-06-24"
+  },
+  {
+    "Name": "Ruby Hoist",
+    "Model Number": "RH-815",
+    "Manufacturing Date": "2020-03-29"
+  },
+  {
+    "Name": "Topaz Lift",
+    "Model Number": "TL-917",
+    "Manufacturing Date": "2023-07-18"
+  },
+  {
+    "Name": "Silver Carrier",
+    "Model Number": "SC-019",
+    "Manufacturing Date": "2019-09-12"
+  },
+  {
+    "Name": "Gold Loader",
+    "Model Number": "GL-121",
+    "Manufacturing Date": "2021-05-30"
+  },
+  {
+    "Name": "Platinum Hauler",
+    "Model Number": "PH-223",
+    "Manufacturing Date": "2020-11-08"
+  },
+  {
+    "Name": "Bronze Lifter",
+    "Model Number": "BL-325",
+    "Manufacturing Date": "2022-08-14"
+  },
+  {
+    "Name": "Lilac Mover",
+    "Model Number": "LM-427",
+    "Manufacturing Date": "2019-12-21"
+  },
+  {
+    "Name": "Turquoise Transporter",
+    "Model Number": "TT-529",
+    "Manufacturing Date": "2021-03-03"
+  },
+  {
+    "Name": "Pearl Loader",
+    "Model Number": "PL-631",
+    "Manufacturing Date": "2020-01-19"
+  },
+  {
+    "Name": "Violet Lift",
+    "Model Number": "VL-733",
+    "Manufacturing Date": "2023-05-05"
+  },
+  {
+    "Name": "Indigo Carrier",
+    "Model Number": "IC-835",
+    "Manufacturing Date": "2022-02-10"
+  },
+  {
+    "Name": "Magenta Hoist",
+    "Model Number": "MH-937",
+    "Manufacturing Date": "2021-08-22"
+  },
+  {
+    "Name": "Cobalt Loader",
+    "Model Number": "CL-039",
+    "Manufacturing Date": "2020-04-09"
+  },
+  {
+    "Name": "Ochre Hauler",
+    "Model Number": "OH-141",
+    "Manufacturing Date": "2019-06-28"
+  }
+]
