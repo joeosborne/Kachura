@@ -1,1 +1,166 @@
-/* You can add global styles to this file, and also import other style files */
+/*!* You can add global styles to this file, and also import other style files *!*/
+/*!*!*body {*!*!*/
+/*!*!*  display: flex;*!*!*/
+/*!*!*  justify-content: center;*!*!*/
+/*!*!*  align-items: center;*!*!*/
+/*!*!*  min-height: 100vh;*!*!*/
+/*!*!*  margin: 0;*!*!*/
+/*!*!*  background-color: #f0f0f0;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.chessboard {*!*!*/
+/*!*!*  display: grid;*!*!*/
+/*!*!*  grid-template-columns: repeat(8, 50px);*!*!*/
+/*!*!*  grid-template-rows: repeat(8, 50px);*!*!*/
+/*!*!*  border: 2px solid #333;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.square {*!*!*/
+/*!*!*  display: flex;*!*!*/
+/*!*!*  min-height: 40px;*!*!*/
+/*!*!*  justify-content: center;*!*!*/
+/*!*!*  align-items: center;*!*!*/
+/*!*!*  font-size: 12px;*!*!*/
+/*!*!*  font-family: Arial, sans-serif;*!*!*/
+/*!*!*  color: white;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.square:nth-child(even) {*!*!*/
+/*!*!*  background-color: #444;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*!*.square:nth-child(odd) {*!*!*/
+/*!*!*  background-color: #999;*!*!*/
+/*!*!*}*!*!*/
+
+
+/*!*!*.ag-theme-alpine {*!*!*/
+/*!*!*       font-size: 14px;*!*!*/
+/*!*!*      }*!*!*/
+
+
+/*!*.chessboard {*!*/
+/*!*  display: grid;*!*/
+/*!*  grid-template-columns: repeat(8, 50px);*!*/
+/*!*  grid-template-rows: repeat(8, 50px);*!*/
+/*!*  gap: 1px;*!*/
+/*!*  width: 402px;*!*/
+/*!*  background-color: black;*!*/
+/*!*}*!*/
+
+/*!*.chess-square {*!*/
+/*!*  display: flex;*!*/
+/*!*  justify-content: center;*!*/
+/*!*  align-items: center;*!*/
+/*!*  background-color: #eee;*!*/
+/*!*  color: black;*!*/
+/*!*  font-size: 14px;*!*/
+/*!*  cursor: pointer;*!*/
+/*!*}*!*/
+
+/*!*.chess-square:nth-child(even) {*!*/
+/*!*  background-color: #ddd;*!*/
+/*!*}*!*/
+
+
+/*.chessboard {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(10, 50px);*/
+/*  grid-template-rows: repeat(10, 50px);*/
+/*  gap: 1px;*/
+/*  width: 402px;*/
+/*  background-color: black;*/
+/*  position: relative;*/
+/*}*/
+
+/*.chess-square {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  background-color: #eee;*/
+/*  color: black;*/
+/*  font-size: 14px;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.chess-square:nth-child(even) {*/
+/*  background-color: #ddd;*/
+/*}*/
+
+/*.circle {*/
+/*  width: 40px;*/
+/*  height: 40px;*/
+/*  border-radius: 50%;*/
+/*  background-color: red;*/
+/*  position: absolute;*/
+/*  transition: transform 0.5s ease;*/
+/*  margin-top: 6px;*/
+/*}*/
+
+/*.controls {*/
+/*  margin-top: 20px;*/
+/*}*/
+
+/*.output {*/
+/*  margin-top: 10px;*/
+/*  font-family: Arial, sans-serif;*/
+/*}*/
+
+
+/*.chessboard {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(8, 50px);*/
+/*  grid-template-rows: repeat(8, 50px);*/
+/*  gap: 1px;*/
+/*  width: 402px;*/
+/*  background-color: black;*/
+/*  position: relative;*/
+/*  margin: auto;*/
+/*}*/
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  gap: 1px;
+  max-width: 511px;
+  background-color: black;
+  position: relative;
+  margin: auto;
+  border: 1px solid #333;
+}
+
+.chess-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chess-square:nth-child(even) {
+  background-color: #ddd;
+}
+
+.circle {
+  margin: 9px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid red;
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.output {
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}

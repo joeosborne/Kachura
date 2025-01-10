@@ -1,5 +1,5 @@
 <div class="chessboard">
-  <div *ngFor="let square of squares" (click)="gridItemClicked(square)"
+  <div *ngFor="let square of squares"
        class="chess-square">
     <div>{{square?.x}}</div>
   </div>
@@ -8,7 +8,11 @@
 <div>squares: |{{squares?.length}}|</div>
 <div class="controls">
   <input [(ngModel)]="command" placeholder="Enter commands (e.g., F10R90L90B5)" />
-  <button (click)="runCommand(command)">Execute</button>
+  <div class="mb-3">
+    <button (click)="runCommand(command)" class="btn btn-primary me-2">Execute</button>
+    <button (click)="resetCommand()"  class="btn btn-secondary">Reset</button>
+  </div>
+
 </div>
 <div class="output">
   <h4>Actions:</h4>

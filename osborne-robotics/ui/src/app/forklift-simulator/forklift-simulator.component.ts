@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {JsonPipe, NgClass, NgForOf, NgStyle} from '@angular/common';
 import {AgGridAngular} from 'ag-grid-angular';
@@ -6,7 +6,6 @@ import {FormsModule} from '@angular/forms';
 import {FileUploadComponent} from '../file-upload/file-upload.component';
 import {GridItem} from '../grid-item';
 import {ForkliftService} from '../forklift.service';
-
 
 export interface CommandResponse {
   x: number,
@@ -24,7 +23,7 @@ export interface CommandResponse {
   styleUrl: './forklift-simulator.component.css',
   standalone: true,
 })
-export class ForkliftSimulatorComponent {
+export class ForkliftSimulatorComponent implements OnInit{
  squares: GridItem[] = Array.from({ length: 100 });
   forkliftTransform = 'translate(0px, 0px)';
   // todo: dont init twice
@@ -35,14 +34,7 @@ export class ForkliftSimulatorComponent {
     command: '',
     actions: [] = []
   }
-  // x = 0; // Initial x-coordinate
-  // y = 0; // Initial y-coordinate
-  // direction = 0; // Initial direction in degrees
   command = '';
-  // actions: string[] = [];
-
-
-  // add a constructor and inject the forklift service
   constructor(private forkliftService: ForkliftService) {
 
   }
@@ -53,7 +45,7 @@ export class ForkliftSimulatorComponent {
       this.cmdResponse = this.forkliftService.doStuff(command);
     }
 
-    this.updateForkliftPosition(this.cmdResponse.x, this.cmdResponse.y);
+    this.updateForkliftPosition(this.cmdResponse);
   }
 
   getDirectionName(cmdResponse: CommandResponse): string {
@@ -68,21 +60,37 @@ export class ForkliftSimulatorComponent {
     return 'Unknown';
   }
 
-  private updateForkliftPosition(x:number, y:number): void {
-    const pixelX = x * 50;
-    const pixelY = (9 - y) * 50;
-    this.forkliftTransform = `translate(${pixelX}px, ${pixelY}px)`;
+  private updateForkliftPosition(cmdResponse: CommandResponse): void {
+    // const pixelX = x * 50;
+    // const pixelY = (9 - y) * 50;
+    // this.forkliftTransform = `translate(${pixelX}px, ${pixelY}px)`;
+
+
+      const pixelX = cmdResponse.x * 50;
+      const pixelY = (9 - cmdResponse.y) * 50;
+      const rotation = cmdResponse.direction % 360;
+      this.forkliftTransform = `translate(${pixelX}px, ${pixelY}px) rotate(${rotation}deg)`;
+
   }
 
-  gridItemClicked(square: any) {
-    console.log(square)
-    console.log(square?.x, square?.y)
+  resetCommand() {
+    console.log(this.command)
+    this.command = '';
+    // todo: dont init twice
+    this.cmdResponse = {
+      x: 0,
+      y: 0,
+      direction: 0,
+      command: '',
+      actions: [] = []
+    }
+    this.updateForkliftPosition(this.cmdResponse);
+    console.log(this.command)
 
   }
 
-  logCoordinates(x: number, y: number) {
-    console.log('x: ' + x)
-
+  ngOnInit(): void {
+    this.updateForkliftPosition(this.cmdResponse);
   }
 }
 

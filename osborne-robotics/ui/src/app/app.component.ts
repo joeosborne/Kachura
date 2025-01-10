@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import {ForkliftSimulatorComponent} from './forklift-simulator/forklift-simulator.component';
+import {RouterLink, RouterOutlet} from '@angular/router';
 // todo: renames chess, circle
 
 @Component({
   selector: 'app-root',
   imports: [
-    ForkliftSimulatorComponent
+    ForkliftSimulatorComponent,
+    RouterOutlet,
+    RouterLink
   ],
   templateUrl: './app.component.html',
   standalone: true,

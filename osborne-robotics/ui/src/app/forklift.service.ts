@@ -32,15 +32,6 @@ export class ForkliftService {
       command: '',
       actions: [] = []
     }
-    // squares: GridItem[] = Array.from({ length: 100 });
-    // forkliftTransform = 'translate(0px, 0px)';
-    // x = 0; // Initial x-coordinate
-    // y = 0; // Initial y-coordinate
-    // direction = 0; // Initial direction in degrees
-    // command = '';
-    // actions: string[] = [];
-
-
 
     const commands = command.match(/[A-Z][0-9]+/g) || [];
 
@@ -76,30 +67,20 @@ export class ForkliftService {
 
     console.log('in moveForklift')
     console.log('moveForklift:units: ' + units)
-    debugger;
 
-    // todo: replace 999s
-    // let attemptedX = 0;
-    // let attemptedY = 0;
     switch (cmdResponse.direction) {
       case 0:
         cmdResponse.y += units;
-        //attemptedY += units;
         break;
       case 90:
         cmdResponse.x += units;
-        //attemptedX += units;
         break;
       case 180:
-
         cmdResponse.y -= units;
-        //attemptedY -= units;
         break;
       case 270:
-        //attemptedX -= units;
         cmdResponse.x -= units;
         break;
-
       default:
         break;
     }
