@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {GridItem} from './grid-item';
-import {CommandResponse} from './app.component';
+import {CommandResponse} from './forklift-simulator/forklift-simulator.component';
+
 
 
 interface Coords{

@@ -1,23 +1,26 @@
-<div>
-  <app-file-upload></app-file-upload>
-</div>
-<div class="chessboard">
-  <div *ngFor="let square of squares" (click)="gridItemClicked(square)"
-       class="chess-square">
-    <div>{{square?.x}}</div>
-  </div>
-  <div class="circle" [style.transform]="forkliftTransform"></div>
-</div>
-<div>squares: |{{squares?.length}}|</div>
-<div class="controls">
-  <input [(ngModel)]="command" placeholder="Enter commands (e.g., F10R90L90B5)" />
-  <button (click)="runCommand(command)">Execute</button>
-</div>
-<div class="output">
-  <h4>Actions:</h4>
-  <ul>
-    <li *ngFor="let action of cmdResponse?.actions">{{ action }}</li>
-  </ul>
-  <p><strong>Final Position:</strong> ({{ cmdResponse?.x }}, {{ cmdResponse?.y }})</p>
-  <p><strong>Facing:</strong> {{ getDirectionName(cmdResponse) }}</p>
-</div>
+<!--<div>-->
+<!--  <app-file-upload></app-file-upload>-->
+<!--</div>-->
+<!--<div class="chessboard">-->
+<!--  <div *ngFor="let square of squares" (click)="gridItemClicked(square)"-->
+<!--       class="chess-square">-->
+<!--    <div>{{square?.x}}</div>-->
+<!--  </div>-->
+<!--  <div class="circle" [style.transform]="forkliftTransform"></div>-->
+<!--</div>-->
+<!--<div>squares: |{{squares?.length}}|</div>-->
+<!--<div class="controls">-->
+<!--  <input [(ngModel)]="command" placeholder="Enter commands (e.g., F10R90L90B5)" />-->
+<!--  <button (click)="runCommand(command)">Execute</button>-->
+<!--</div>-->
+<!--<div class="output">-->
+<!--  <h4>Actions:</h4>-->
+<!--  <ul>-->
+<!--    <li *ngFor="let action of cmdResponse?.actions">{{ action }}</li>-->
+<!--  </ul>-->
+<!--  <p><strong>Final Position:</strong> ({{ cmdResponse?.x }}, {{ cmdResponse?.y }})</p>-->
+<!--  <p><strong>Facing:</strong> {{ getDirectionName(cmdResponse) }}</p>-->
+<!--</div>-->
+<div>one</div>
+<app-forklift-simulator/>
+<div>two</div>
