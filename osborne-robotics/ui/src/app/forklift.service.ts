@@ -2,16 +2,28 @@ import { Injectable } from '@angular/core';
 import {GridItem} from './grid-item';
 import {CommandResponse} from './app.component';
 
+
+interface Coords{
+  x: number;
+  y: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ForkliftService {
 
-  constructor() { }
+  private obstacles: Coords[] = []
+
+  constructor() {
+    this.obstacles =[{x: 2, y: 5}, {x: 3, y: 1}];
+  }
 
 
 
   doStuff(command: string):CommandResponse{
+
+
     const cmdResponse: CommandResponse = {
       x: 0,
       y: 0,
@@ -61,17 +73,29 @@ export class ForkliftService {
     // this.x += Math.round(Math.cos(radians) * units);
     // this.y += Math.round(Math.sin(radians) * units);
 
+    console.log('in moveForklift')
+    console.log('moveForklift:units: ' + units)
+    debugger;
+
+    // todo: replace 999s
+    // let attemptedX = 0;
+    // let attemptedY = 0;
     switch (cmdResponse.direction) {
       case 0:
         cmdResponse.y += units;
+        //attemptedY += units;
         break;
       case 90:
         cmdResponse.x += units;
+        //attemptedX += units;
         break;
       case 180:
+
         cmdResponse.y -= units;
+        //attemptedY -= units;
         break;
       case 270:
+        //attemptedX -= units;
         cmdResponse.x -= units;
         break;
 
@@ -79,10 +103,16 @@ export class ForkliftService {
         break;
     }
 
+    if (this.obstacles.some(obstacle => obstacle.x === cmdResponse.x && obstacle.y === cmdResponse.y)) {
+      alert('Obstacle detected at ' + cmdResponse.x + ', ' + cmdResponse.y);
+      cmdResponse.x = 0;
+      cmdResponse.y = 0;
+    }else{
+      // Clamp within grid bounds
+      cmdResponse.x = Math.max(0, Math.min(9, cmdResponse.x));
+      cmdResponse.y = Math.max(0, Math.min(9, cmdResponse.y));
+    }
 
-    // Clamp within grid bounds
-    cmdResponse.x = Math.max(0, Math.min(9, cmdResponse.x));
-    cmdResponse.y = Math.max(0, Math.min(9, cmdResponse.y));
     console.log('x: ' + cmdResponse.x)
     console.log('y: ' + cmdResponse.y)
   }

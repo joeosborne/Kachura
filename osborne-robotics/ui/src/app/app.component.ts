@@ -52,81 +52,21 @@ export class AppComponent {
     if (command != null) {
       this.cmdResponse = this.forkliftService.doStuff(command);
     }
-    // this.actions = [];
-    // const commands = this.command.match(/[A-Z][0-9]+/g) || [];
-    //
-    // commands.forEach(cmd => {
-    //   const action = cmd[0];
-    //   const value = parseInt(cmd.slice(1), 10);
-    //
-    //   if (action === 'F') {
-    //     this.moveForklift(value);
-    //     this.actions.push(`Move Forward by ${value} units.`);
-    //   } else if (action === 'B') {
-    //     this.moveForklift(-value);
-    //     this.actions.push(`Move Backward by ${value} units.`);
-    //   } else if (action === 'L') {
-    //     this.turnForklift(-value);
-    //     this.actions.push(`Turn Left by ${value} degrees.`);
-    //   } else if (action === 'R') {
-    //     this.turnForklift(value);
-    //     this.actions.push(`Turn Right by ${value} degrees.`);
-    //   }
-    // });
 
     this.updateForkliftPosition(this.cmdResponse.x, this.cmdResponse.y);
   }
 
-  getDirectionName(): string {
+  getDirectionName(cmdResponse: CommandResponse): string {
     // todo:
-    // switch (this.direction) {
-    //   case 0: return 'North';
-    //   case 90: return 'East';
-    //   case 180: return 'South';
-    //   case 270: return 'West';
-    //   default: return 'Unknown';
-    // }
+    switch (cmdResponse?.direction) {
+      case 0: return 'North';
+      case 90: return 'East';
+      case 180: return 'South';
+      case 270: return 'West';
+      default: return 'Unknown';
+    }
     return 'Unknown';
   }
-
-  // private moveForklift(units: number): void {
-  //   // todo: improve this
-  //   // const radians = (Math.PI / 180) * this.direction;
-  //   // this.x += Math.round(Math.cos(radians) * units);
-  //   // this.y += Math.round(Math.sin(radians) * units);
-  //
-  //   // this.x += Math.round(Math.cos(radians) * units);
-  //   // this.y += Math.round(Math.sin(radians) * units);
-  //
-  //   switch (this.direction) {
-  //     case 0:
-  //       this.y += units;
-  //       break;
-  //     case 90:
-  //       this.x += units;
-  //       break;
-  //     case 180:
-  //       this.y -= units;
-  //       break;
-  //     case 270:
-  //       this.x -= units;
-  //       break;
-  //
-  //     default:
-  //       break;
-  //   }
-  //
-  //
-  //   // Clamp within grid bounds
-  //   this.x = Math.max(0, Math.min(9, this.x));
-  //   this.y = Math.max(0, Math.min(9, this.y));
-  //   console.log('x: ' + this.x)
-  //   console.log('y: ' + this.y)
-  // }
-  //
-  // private turnForklift(degrees: number): void {
-  //   this.direction = (this.direction + degrees + 360) % 360;
-  // }
 
   private updateForkliftPosition(x:number, y:number): void {
     const pixelX = x * 50;
