@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {FileUploadComponent} from '../file-upload/file-upload.component';
-import {Forklift, ForkliftDataServiceService} from '../forklift-data-service.service';
-import {CommonModule, NgForOf, NgIf, NgStyle} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FileUploadComponent } from '../file-upload/file-upload.component';
+import { ForkliftDataServiceService } from '../forklift-data-service.service';
+import { CommonModule, NgForOf, NgIf, NgStyle } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-forklift-fleet',
@@ -18,46 +18,20 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './forklift-fleet.component.css',
   standalone: true,
 })
-export class ForkliftFleetComponent implements OnInit{
+export class ForkliftFleetComponent implements OnInit {
+  forklifts: any; //todo: change
 
-  // inject forkliftService into constructor
-  //forklifts: Forklift[] = [];
-  forklifts:any;//todo: change
-
-  sampleJsonEntry: Forklift[] = [];
   constructor(private forkliftService: ForkliftDataServiceService) {
     this.forklifts = this.forkliftService.forklifts;
   }
 
   ngOnInit(): void {
-    console.log('loadForklifts...')
     this.forkliftService.loadForklifts();
-    // todo: ensure dueForAService is set
-    // this.forkliftService.getForklifts().subscribe({
-    //   next: (data) => {
-    //     this.forklifts = data.map(forklift => ({
-    //       ...forklift,
-    //       dueForAService: this.forkLiftRequiresAService(forklift)
-    //     }));
-    //
-    //     //this.forklifts = data;
-    //     console.log('Forklifts...');
-    //     console.log(this.forklifts)
-    //   },
-    //   error: (err) => {
-    //     console.error('Error fetching forklifts:', err);
-    //   }
-    // });
   }
 
   // todo: Utils
   onlyShowServiceableForklifts = false;
+
+  // TODO: DE-DUPE
   serviceRequiredThreshold = 5;
-  forkLiftRequiresAService(forklifts: Forklift):boolean{
-    // todo: add const
-    return forklifts.age > this.serviceRequiredThreshold;
-
-  }
-
-
 }

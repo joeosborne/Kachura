@@ -1,48 +1,47 @@
-import {Injectable, signal} from '@angular/core';
-import { catchError } from 'rxjs/operators';
-import {Observable, throwError} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
 
 export interface Forklift {
   name: string;
   modelNumber: string;
-  manufacturingDate: string;//todo: change to Date
+  manufacturingDate: string; //todo: change to Date
   age?: number;
   dueForAService?: boolean;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ForkliftDataServiceService {
-  //private apiUrl = `${environment.apiUrl}/forklifts`;
-  private apiUrl = "http://localhost:5286/forklift-fleet";
+  // TODO: DE-DUPE
+  serviceRequiredThreshold = 5;
+
+  private apiUrl = 'http://localhost:5286/forklift-fleet';
   forklifts = signal<any>({});
   constructor(private http: HttpClient) {}
 
-
-  getForklifts(): Observable<Forklift[]> {
-    return this.http.get<any>(this.apiUrl); // Sends a GET request to the endpoint
-  }
-
   loadForklifts() {
-    this.http
-      .get<any>(this.apiUrl)
-      .subscribe((x) => {
-        console.log(x)
-        this.forklifts.set(x);
-      });
+    this.http.get<any>(this.apiUrl).subscribe((x) => {
+      // todo: de-dupe
+      const forklifts = x.map((forklift: Forklift) => ({
+        ...forklift,
+        dueForAService: this.forkLiftRequiresAService(forklift),
+      }));
+      this.forklifts.set(forklifts);
+    });
   }
 
+  forkLiftRequiresAService(forklifts: Forklift): boolean {
+    return forklifts.age > this.serviceRequiredThreshold;
+  }
 
-// getForklifts(): Observable<Forklift[]> {
-//   return this.http.get<Forklift[]>(this.apiUrl).pipe(
-//     catchError(err => {
-//       console.error('Error occurred:', err);
-//       return throwError(() => err);
-//     })
-//   );
-// }
+  uploadFile(file: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('file', file);
 
+    return this.http.post('http://localhost:5286/upload-json', formData, {
+      headers: new HttpHeaders(),
+    });
+  }
 }

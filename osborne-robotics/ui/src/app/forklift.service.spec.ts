@@ -23,7 +23,6 @@ import { CommandResponse } from './app.component';
 describe('ForkliftService', () => {
   let service: ForkliftSimulatorService;
 
-
   // todo: update or remove
   beforeEach(() => {
     TestBed.configureTestingModule({});
@@ -73,7 +72,7 @@ describe('ForkliftService', () => {
     expect(response.actions).toEqual([
       'Move Forward by 9 units.',
       'Turn Right by 90 degrees.',
-      'Move Forward by 5 units.'
+      'Move Forward by 5 units.',
     ]);
   });
 });

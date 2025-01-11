@@ -1,124 +1,4 @@
-/*!* You can add global styles to this file, and also import other style files *!*/
-/*!*!*body {*!*!*/
-/*!*!*  display: flex;*!*!*/
-/*!*!*  justify-content: center;*!*!*/
-/*!*!*  align-items: center;*!*!*/
-/*!*!*  min-height: 100vh;*!*!*/
-/*!*!*  margin: 0;*!*!*/
-/*!*!*  background-color: #f0f0f0;*!*!*/
-/*!*!*}*!*!*/
-
-/*!*!*.chessboard {*!*!*/
-/*!*!*  display: grid;*!*!*/
-/*!*!*  grid-template-columns: repeat(8, 50px);*!*!*/
-/*!*!*  grid-template-rows: repeat(8, 50px);*!*!*/
-/*!*!*  border: 2px solid #333;*!*!*/
-/*!*!*}*!*!*/
-
-/*!*!*.square {*!*!*/
-/*!*!*  display: flex;*!*!*/
-/*!*!*  min-height: 40px;*!*!*/
-/*!*!*  justify-content: center;*!*!*/
-/*!*!*  align-items: center;*!*!*/
-/*!*!*  font-size: 12px;*!*!*/
-/*!*!*  font-family: Arial, sans-serif;*!*!*/
-/*!*!*  color: white;*!*!*/
-/*!*!*}*!*!*/
-
-/*!*!*.square:nth-child(even) {*!*!*/
-/*!*!*  background-color: #444;*!*!*/
-/*!*!*}*!*!*/
-
-/*!*!*.square:nth-child(odd) {*!*!*/
-/*!*!*  background-color: #999;*!*!*/
-/*!*!*}*!*!*/
-
-
-/*!*!*.ag-theme-alpine {*!*!*/
-/*!*!*       font-size: 14px;*!*!*/
-/*!*!*      }*!*!*/
-
-
-/*!*.chessboard {*!*/
-/*!*  display: grid;*!*/
-/*!*  grid-template-columns: repeat(8, 50px);*!*/
-/*!*  grid-template-rows: repeat(8, 50px);*!*/
-/*!*  gap: 1px;*!*/
-/*!*  width: 402px;*!*/
-/*!*  background-color: black;*!*/
-/*!*}*!*/
-
-/*!*.chess-square {*!*/
-/*!*  display: flex;*!*/
-/*!*  justify-content: center;*!*/
-/*!*  align-items: center;*!*/
-/*!*  background-color: #eee;*!*/
-/*!*  color: black;*!*/
-/*!*  font-size: 14px;*!*/
-/*!*  cursor: pointer;*!*/
-/*!*}*!*/
-
-/*!*.chess-square:nth-child(even) {*!*/
-/*!*  background-color: #ddd;*!*/
-/*!*}*!*/
-
-
-/*.chessboard {*/
-/*  display: grid;*/
-/*  grid-template-columns: repeat(10, 50px);*/
-/*  grid-template-rows: repeat(10, 50px);*/
-/*  gap: 1px;*/
-/*  width: 402px;*/
-/*  background-color: black;*/
-/*  position: relative;*/
-/*}*/
-
-/*.chess-square {*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  background-color: #eee;*/
-/*  color: black;*/
-/*  font-size: 14px;*/
-/*  cursor: pointer;*/
-/*}*/
-
-/*.chess-square:nth-child(even) {*/
-/*  background-color: #ddd;*/
-/*}*/
-
-/*.circle {*/
-/*  width: 40px;*/
-/*  height: 40px;*/
-/*  border-radius: 50%;*/
-/*  background-color: red;*/
-/*  position: absolute;*/
-/*  transition: transform 0.5s ease;*/
-/*  margin-top: 6px;*/
-/*}*/
-
-/*.controls {*/
-/*  margin-top: 20px;*/
-/*}*/
-
-/*.output {*/
-/*  margin-top: 10px;*/
-/*  font-family: Arial, sans-serif;*/
-/*}*/
-
-
-/*.chessboard {*/
-/*  display: grid;*/
-/*  grid-template-columns: repeat(8, 50px);*/
-/*  grid-template-rows: repeat(8, 50px);*/
-/*  gap: 1px;*/
-/*  width: 402px;*/
-/*  background-color: black;*/
-/*  position: relative;*/
-/*  margin: auto;*/
-/*}*/
-
-.chessboard {
+.forklift-grid {
   display: grid;
   grid-template-columns: repeat(10, 50px);
   grid-template-rows: repeat(10, 50px);
@@ -130,7 +10,7 @@
   border: 1px solid #333;
 }
 
-.chess-square {
+.grid-square {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,11 +20,11 @@
   cursor: pointer;
 }
 
-.chess-square:nth-child(even) {
+.grid-square:nth-child(even) {
   background-color: #ddd;
 }
 
-.circle {
+.arrow {
   margin-top: 22px;
   margin-left: 10px;
   position: absolute;
@@ -158,45 +38,15 @@
   transform: rotate(45deg);
 }
 
-
-.output {
-  margin-top: 10px;
-  font-family: Arial, sans-serif;
-}
-
-
 .container {
   display: flex;
-  gap: 20px; /* Space between columns */
+  gap: 20px;
 }
 
 .column {
-  flex: 1; /* Each column takes equal space */
+  flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
 }
-
-/*.grid {*/
-/*  display: grid;*/
-/*  grid-template-columns: repeat(4, 1fr); !* 4 columns: Name, Model Number, Manufacturing Date, Age *!*/
-/*  gap: 10px;*/
-/*  margin-top: 20px;*/
-/*}*/
-
-/*.grid-header {*/
-/*  font-weight: bold;*/
-/*  background-color: #f2f2f2;*/
-/*  padding: 10px;*/
-/*  border: 1px solid #ddd;*/
-/*}*/
-
-/*.grid-item {*/
-/*  padding: 10px;*/
-/*  border: 1px solid #ddd;*/
-/*  text-align: left;*/
-/*}*/
-
 
 .command-input {
   width: 90%;

@@ -32,7 +32,8 @@ builder.Services.AddCors(options =>
 });
 
 
-builder.Services.AddMemoryCache();
+// TODO: Maybe restore and introduce IMemoryCache cache usage
+// builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<IForkliftFleetService, ForkliftFleetService>();
 builder.Services.AddSingleton<IForkliftRepository, ForkliftRepository>();
 
@@ -56,7 +57,7 @@ app.MapGet("/forklift-fleet", async (IForkliftFleetService forkliftFleetService)
     return Results.Ok(response);
 });
 
-app.MapPost("/upload-json", async (IMemoryCache cache, IForkliftFleetService forkliftFleetService, HttpRequest request) =>
+app.MapPost("/upload-json", async (IForkliftFleetService forkliftFleetService, HttpRequest request) =>
 {
     // todo: add guards to both methods
     if (!request.HasFormContentType || request.Form.Files.Count == 0)
@@ -76,34 +77,6 @@ app.MapPost("/upload-json", async (IMemoryCache cache, IForkliftFleetService for
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
         var forklifts = await JsonSerializer.DeserializeAsync<IList<Forklift>>(stream, options);
-
-        //if (!cache.TryGetValue(ForkliftCacheKey, out List<Forklift> cachedValue))
-        //{
-        //    // If not in cache, generate the data
-        //    cachedValue = forklifts;
-
-        //    // Set cache options (e.g., expiration)
-        //    var cacheEntryOptions = new MemoryCacheEntryOptions()
-        //        .SetSlidingExpiration(TimeSpan.FromMinutes(ForkliftCacheExpirationMinutes)); //todo:
-
-        //    // Save data in cache
-        //    cache.Set(ForkliftCacheKey, cachedValue, cacheEntryOptions);
-        //}
-
-        //if (!cache.TryGetValue(ForkliftCacheKey, out List<Forklift> cachedValue))
-        //{
-        //    // If not in cache, generate the data
-        //    cachedValue = forklifts;
-
-        // Set cache options (e.g., expiration)
-        //var cacheEntryOptions = new MemoryCacheEntryOptions()
-        //    .SetSlidingExpiration(TimeSpan.FromMinutes(ForkliftCacheExpirationMinutes)); //todo:
-
-        //// Save data in cache
-        //cache.Set(ForkliftCacheKey, forklifts, cacheEntryOptions);
-        //}
-
-        //await forkliftFleetService.Cre
 
         if(forklifts != null)
         {

@@ -1,36 +1,22 @@
 import { Component } from '@angular/core';
-import {CommonModule, NgIf} from '@angular/common';
-import {FileUploadService} from '../file-upload.service';
-import {ForkliftDataServiceService} from '../forklift-data-service.service';
+import { CommonModule, NgIf } from '@angular/common';
+import {
+  Forklift,
+  ForkliftDataServiceService,
+} from '../forklift-data-service.service';
 
 @Component({
   selector: 'app-file-upload',
-  template: `
-<div>
-    <div class="mb-3">
-        <label for="fileInput" class="text-s text-primary">Choose a file to upload:</label>
-        <input type="file" id="fileInput" class="form-control" (change)="onFileSelected($event)" />
-    </div>
-
-    <button class="btn btn-primary" (click)="upload()">Upload</button>
-
-    <p *ngIf="message" class="mt-3 text-s text-success">{{ message }}</p>
-    <p *ngIf="errorMsg" class="mt-3 text-s text-danger">{{ errorMsg }}</p>
-</div>
-
-  `,
-  imports: [
-    NgIf,
-    CommonModule,
-  ],
-  standalone: true
+  templateUrl: './file-upload.component.html',
+  imports: [NgIf, CommonModule],
+  standalone: true,
 })
 export class FileUploadComponent {
-  selectedFile: File | null = null;
-  message: string = '';
   errorMsg: string = '';
+  message: string = '';
+  selectedFile: File | null = null;
 
-  constructor(private fileUploadService: FileUploadService, private forkliftService: ForkliftDataServiceService) {}
+  constructor(private forkliftService: ForkliftDataServiceService) {}
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -47,19 +33,23 @@ export class FileUploadComponent {
       return;
     }
 
-    this.fileUploadService.uploadFile(this.selectedFile).subscribe({
+    this.forkliftService.uploadFile(this.selectedFile).subscribe({
       next: (response) => {
-        console.log('response')
-        console.log(response)
-        console.log('response.forklifts');
-        console.log(response.forklifts);
+        // todo: de-dupe
+        response.forklifts = response.forklifts.map((forklift: Forklift) => ({
+          ...forklift,
+          dueForAService:
+            this.forkliftService.forkLiftRequiresAService(forklift),
+        }));
+
         this.forkliftService.forklifts.set(response.forklifts);
         this.message = `Success: ${response.message}, Total Items: ${response.totalItems}`;
       },
       error: (error) => {
         //todo: log error
         //this.errorMsg = `Error: ${error.message}`;
-        this.errorMsg = 'There was an error uploading this file. Please check that it is formatted correctly and try again';
+        this.errorMsg =
+          'There was an error uploading this file. Please check that it is formatted correctly and try again';
       },
     });
   }

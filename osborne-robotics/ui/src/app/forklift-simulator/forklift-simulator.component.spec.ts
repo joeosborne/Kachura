@@ -8,9 +8,8 @@ describe('ForkliftSimulatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ForkliftSimulatorComponent]
-    })
-    .compileComponents();
+      imports: [ForkliftSimulatorComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ForkliftSimulatorComponent);
     component = fixture.componentInstance;
