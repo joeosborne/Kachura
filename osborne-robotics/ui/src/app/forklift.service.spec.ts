@@ -17,15 +17,15 @@
 //
 //
 import { TestBed } from '@angular/core/testing';
-import { ForkliftService } from './forklift.service';
+import { ForkliftSimulatorService } from './forklift-simulator.service';
 import { CommandResponse } from './app.component';
 
 describe('ForkliftService', () => {
-  let service: ForkliftService;
+  let service: ForkliftSimulatorService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ForkliftService);
+    service = TestBed.inject(ForkliftSimulatorService);
   });
 
   it('should be created', () => {

@@ -1,21 +1,6 @@
-// import { Component } from '@angular/core';
-//
-// @Component({
-//   selector: 'app-file-upload',
-//   imports: [],
-//   templateUrl: './file-upload.component.html',
-//   styleUrl: './file-upload.component.css'
-// })
-// export class FileUploadComponent {
-//
-// }
-
-
-
 import { Component } from '@angular/core';
 import {CommonModule, NgIf} from '@angular/common';
 import {FileUploadService} from '../file-upload.service';
-import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-file-upload',
@@ -29,7 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
   `,
   imports: [
     NgIf,
-    CommonModule, HttpClientModule
+    CommonModule,
   ],
   standalone: true
 })

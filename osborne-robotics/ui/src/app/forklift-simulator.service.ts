@@ -12,7 +12,7 @@ interface Coords{
 @Injectable({
   providedIn: 'root'
 })
-export class ForkliftService {
+export class ForkliftSimulatorService {
 
   private obstacles: Coords[] = []
 
@@ -22,13 +22,13 @@ export class ForkliftService {
 
 
 
-  doStuff(command: string):CommandResponse{
+  doStuff(command: string, current: CommandResponse):CommandResponse{
 
 
     const cmdResponse: CommandResponse = {
-      x: 0,
-      y: 0,
-      direction: 0,
+      x: current.x,
+      y: current.y,
+      direction: current.direction,
       command: '',
       actions: [] = []
     }

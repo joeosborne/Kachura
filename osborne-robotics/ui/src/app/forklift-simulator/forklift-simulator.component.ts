@@ -5,7 +5,7 @@ import {AgGridAngular} from 'ag-grid-angular';
 import {FormsModule} from '@angular/forms';
 import {FileUploadComponent} from '../file-upload/file-upload.component';
 import {GridItem} from '../grid-item';
-import {ForkliftService} from '../forklift.service';
+import {ForkliftSimulatorService} from '../forklift-simulator.service';
 
 export interface CommandResponse {
   x: number,
@@ -26,7 +26,8 @@ export interface CommandResponse {
 export class ForkliftSimulatorComponent implements OnInit{
  squares: GridItem[] = Array.from({ length: 100 });
   forkliftTransform = 'translate(0px, 0px)';
-  // todo: dont init twice
+  // todo: dont init twice.
+  // todo: rename
   cmdResponse: CommandResponse = {
     x: 0,
     y: 0,
@@ -35,16 +36,22 @@ export class ForkliftSimulatorComponent implements OnInit{
     actions: [] = []
   }
   command = '';
-  constructor(private forkliftService: ForkliftService) {
+  constructor(private forkliftService: ForkliftSimulatorService) {
 
   }
 
 
   runCommand(command: string | undefined){
+    console.log('command')
+    console.log(command)
+    console.log('this.cmdResponse BEFORE calling doStuff...')
+    console.log(this.cmdResponse)
     if (command != null) {
-      this.cmdResponse = this.forkliftService.doStuff(command);
+      this.cmdResponse = this.forkliftService.doStuff(command, this.cmdResponse);
     }
 
+    console.log('this.cmdResponse')
+    console.log(this.cmdResponse)
     this.updateForkliftPosition(this.cmdResponse);
   }
 

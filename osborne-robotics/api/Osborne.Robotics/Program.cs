@@ -1,45 +1,67 @@
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using System.Collections.Generic;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularApp", policy =>
+    options.AddPolicy("OsborneRoboticsUI", policy =>
     {
-        policy.WithOrigins("http://localhost:4200") // Adjust Angular app's URL
+        policy.WithOrigins("http://localhost:4200") // todo:
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
 });
 
 
-
+builder.Services.AddMemoryCache();
 var app = builder.Build();
 
-app.UseCors("AllowAngularApp");
+app.UseCors("OsborneRoboticsUI");
 
 
-// add the default getWeather GET operation back in
-
-app.MapGet("/weather", () =>
+app.MapGet("/forklift-fleet", (IMemoryCache cache) =>
 {
-    var weatherData = new
+    string cacheKey = "forklift-fleet";
+    List<Forklift> response;
+    if (cache.TryGetValue(cacheKey, out List<Forklift> cachedValue))
     {
-        Date = DateTime.Now,
-        TemperatureC = 25,
-        Summary = "Sunny"
-    };
-    return Results.Ok(weatherData);
+        response = cachedValue;
+    }
+    else
+    {
+        response = new List<Forklift>
+        {
+            new("Forklift A", "Model-123",  new DateOnly(2022, 1, 11)),
+            new Forklift("Forklift B", "Model-234", new DateOnly(2018, 5, 12)),
+            new Forklift("Forklift C", "Model-345", new DateOnly(2021, 6, 4)),
+            new Forklift("Forklift YADA", "Model-345", new DateOnly(2024, 1, 15)),
+            new Forklift("Forklift D", "Model-456", new DateOnly(2017, 10, 30))
+        };
+    }
+
+    if (response == null || response.Count == 0)
+    {
+        return Results.NotFound("No forklifts found.");
+    }
+
+
+    DateTime today = DateTime.Today;
+    foreach (var forklift in response)
+    {
+        forklift.Age = today.Year - forklift.ManufacturingDate.Year;
+    }
+
+    return Results.Ok(response);
 });
 
 
 
-// Endpoint for JSON file upload
-app.MapPost("/upload-json", async (HttpRequest request) =>
+
+app.MapPost("/upload-json", async (IMemoryCache cache, HttpRequest request) =>
 {
-    // Ensure the request contains a file
+    // todo: add guards to both methods
     if (!request.HasFormContentType || request.Form.Files.Count == 0)
     {
         return Results.BadRequest("No file uploaded.");
@@ -56,11 +78,23 @@ app.MapPost("/upload-json", async (HttpRequest request) =>
         using var stream = file.OpenReadStream();
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
-        // Deserialize the JSON into a dynamic object or a specific class
         var forklifts = await JsonSerializer.DeserializeAsync<List<Forklift>>(stream, options);
 
-        // Add logic to process/import forklifts (e.g., save to a database)
-        // For demonstration, we're just returning the count
+        string cacheKey = "forklift-fleet";
+        if (!cache.TryGetValue(cacheKey, out List<Forklift> cachedValue))
+        {
+            // If not in cache, generate the data
+            cachedValue = forklifts;
+
+            // Set cache options (e.g., expiration)
+            var cacheEntryOptions = new MemoryCacheEntryOptions()
+                .SetSlidingExpiration(TimeSpan.FromHours(1)); //todo:
+
+            // Save data in cache
+            cache.Set(cacheKey, cachedValue, cacheEntryOptions);
+        }
+        
+
         return Results.Ok(new
         {
             Message = "File uploaded and processed successfully.",
@@ -78,37 +112,25 @@ app.Run();
 
 
 
-//var builder = WebApplication.CreateBuilder(args);
 
-//// Add services to the container.
 
-//var app = builder.Build();
 
-//// Configure the HTTP request pipeline.
+// todo:
 
-//app.UseHttpsRedirection();
+//Create an API endpoint to return the forklift list.
+//Display the following details for each forklift in the UI:
+//Name
+//Model Number
+//Manufacturing Date
+//Age (calculated from the Manufacturing Date)
 
-//var summaries = new[]
-//{
-//    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-//};
+// todo:
+//DateTime today = DateTime.Today;
+//int age = today.Year - theDate.Year;
 
-//app.MapGet("/weatherforecast", () =>
-//{
-//    var forecast = Enumerable.Range(1, 5).Select(index =>
-//        new WeatherForecast
-//        (
-//            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-//            Random.Shared.Next(-20, 55),
-//            summaries[Random.Shared.Next(summaries.Length)]
-//        ))
-//        .ToArray();
-//    return forecast;
-//});
 
-//app.Run();
+//Ensure that each forklift's age is accurately calculated in whole years based on the
+//current date.
 
-//internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-//{
-//    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-//}
+//The maintenance team should be able to easily spot forklifts needing repairs or service from
+//the displayed list.

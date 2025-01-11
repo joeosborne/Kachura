@@ -1,3 +1,13 @@
 <div>
   <app-file-upload></app-file-upload>
 </div>
+<h1>Forklifts</h1>
+<div *ngIf="!!forklifts.length">
+  <div *ngFor="let forklift of forklifts">
+<!--    todo: 6-->
+    <div [ngStyle]="{'color': forklift.dueForAService ? 'red' : 'black'}">
+      Name: {{ forklift.name }}, Model: {{ forklift.modelNumber }}, Age: {{ forklift.age ?? 'N/A' }}
+    </div>
+
+  </div>
+</div>
