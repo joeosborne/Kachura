@@ -21,28 +21,33 @@ import {FormsModule} from '@angular/forms';
 export class ForkliftFleetComponent implements OnInit{
 
   // inject forkliftService into constructor
-  forklifts: Forklift[] = [];
+  //forklifts: Forklift[] = [];
+  forklifts:any;//todo: change
 
   sampleJsonEntry: Forklift[] = [];
-  constructor(private forkliftService: ForkliftDataServiceService) {}
+  constructor(private forkliftService: ForkliftDataServiceService) {
+    this.forklifts = this.forkliftService.forklifts;
+  }
 
   ngOnInit(): void {
-    console.log('getForklifts...')
-    this.forkliftService.getForklifts().subscribe({
-      next: (data) => {
-        this.forklifts = data.map(forklift => ({
-          ...forklift,
-          dueForAService: this.forkLiftRequiresAService(forklift)
-        }));
-
-        //this.forklifts = data;
-        console.log('Forklifts...');
-        console.log(this.forklifts)
-      },
-      error: (err) => {
-        console.error('Error fetching forklifts:', err);
-      }
-    });
+    console.log('loadForklifts...')
+    this.forkliftService.loadForklifts();
+    // todo: ensure dueForAService is set
+    // this.forkliftService.getForklifts().subscribe({
+    //   next: (data) => {
+    //     this.forklifts = data.map(forklift => ({
+    //       ...forklift,
+    //       dueForAService: this.forkLiftRequiresAService(forklift)
+    //     }));
+    //
+    //     //this.forklifts = data;
+    //     console.log('Forklifts...');
+    //     console.log(this.forklifts)
+    //   },
+    //   error: (err) => {
+    //     console.error('Error fetching forklifts:', err);
+    //   }
+    // });
   }
 
   // todo: Utils

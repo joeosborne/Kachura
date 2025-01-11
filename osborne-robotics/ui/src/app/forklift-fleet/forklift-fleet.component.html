@@ -20,8 +20,8 @@
     </div>
 
 
-    <div *ngIf="!!forklifts.length">
-      <div *ngFor="let forklift of forklifts">
+    <div *ngIf="!!forklifts().length">
+      <div *ngFor="let forklift of forklifts()">
         @if (onlyShowServiceableForklifts){
           @if (forklift.dueForAService){
             <div>

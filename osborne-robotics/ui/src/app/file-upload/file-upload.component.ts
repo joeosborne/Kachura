@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {CommonModule, NgIf} from '@angular/common';
 import {FileUploadService} from '../file-upload.service';
+import {ForkliftDataServiceService} from '../forklift-data-service.service';
 
 @Component({
   selector: 'app-file-upload',
@@ -29,7 +30,7 @@ export class FileUploadComponent {
   message: string = '';
   errorMsg: string = '';
 
-  constructor(private fileUploadService: FileUploadService) {}
+  constructor(private fileUploadService: FileUploadService, private forkliftService: ForkliftDataServiceService) {}
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -48,6 +49,11 @@ export class FileUploadComponent {
 
     this.fileUploadService.uploadFile(this.selectedFile).subscribe({
       next: (response) => {
+        console.log('response')
+        console.log(response)
+        console.log('response.forklifts');
+        console.log(response.forklifts);
+        this.forkliftService.forklifts.set(response.forklifts);
         this.message = `Success: ${response.message}, Total Items: ${response.totalItems}`;
       },
       error: (error) => {

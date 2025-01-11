@@ -1,8 +1,15 @@
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Win32;
+using Osborne.Robotics.Services;
+using System;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 
 const string CorsPolicyName = "OsborneRoboticsUI";
+
+// todo: de-dupe
 const string ForkliftCacheKey = "forklift-fleet";
+const int ForkliftCacheExpirationMinutes = 10;
 const string ForkliftsNotFoundMsg = "No forklifts found.";
 const string ImportMsgFailedInvallidFileType = "Invalid file type. Please upload a JSON file.";
 const string ImportMsgFailedMissingFile = "No file uploaded.";
@@ -26,51 +33,29 @@ builder.Services.AddCors(options =>
 
 
 builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<IForkliftFleetService, ForkliftFleetService>();
+
 var app = builder.Build();
 
 app.UseCors(CorsPolicyName);
 
-// todo: clean up endpoints
-// todo: etract logic into svc
-app.MapGet("/forklift-fleet", (IMemoryCache cache) =>
+/* todo: clean up endpoints
+rename forklift-fleet to fleet
+*/
+
+app.MapGet("/forklift-fleet", (IForkliftFleetService forkliftFleetService) =>
 {
-    string cacheKey = ForkliftCacheKey;
-    List<Forklift> response;
-    if (cache.TryGetValue(cacheKey, out List<Forklift> cachedValue))
-    {
-        response = cachedValue;
-    }
-    else
-    {
-        response = new List<Forklift>
-        {
-            new("Forklift A", "Model-123",  new DateOnly(2022, 1, 11)),
-            new ("Forklift B", "Model-234", new DateOnly(2018, 5, 12)),
-            new ("Forklift C", "Model-345", new DateOnly(2021, 6, 4)),
-            new ("Forklift YADA", "Model-345", new DateOnly(2024, 1, 15)),
-            new ("Forklift D", "Model-456", new DateOnly(2017, 10, 30))
-        };
-    }
+    var response = forkliftFleetService.GetForkliftFleet();
 
     if (response == null || response.Count == 0)
     {
         return Results.NotFound(ForkliftsNotFoundMsg);
     }
 
-
-    DateTime today = DateTime.Today;
-    foreach (var forklift in response)
-    {
-        forklift.Age = today.Year - forklift.ManufacturingDate.Year;
-    }
-
     return Results.Ok(response);
 });
 
-
-
-
-app.MapPost("/upload-json", async (IMemoryCache cache, HttpRequest request) =>
+app.MapPost("/upload-json", async (IMemoryCache cache, IForkliftFleetService forkliftFleetService, HttpRequest request) =>
 {
     // todo: add guards to both methods
     if (!request.HasFormContentType || request.Form.Files.Count == 0)
@@ -91,23 +76,39 @@ app.MapPost("/upload-json", async (IMemoryCache cache, HttpRequest request) =>
 
         var forklifts = await JsonSerializer.DeserializeAsync<List<Forklift>>(stream, options);
 
-        if (!cache.TryGetValue(ForkliftCacheKey, out List<Forklift> cachedValue))
-        {
-            // If not in cache, generate the data
-            cachedValue = forklifts;
+        //if (!cache.TryGetValue(ForkliftCacheKey, out List<Forklift> cachedValue))
+        //{
+        //    // If not in cache, generate the data
+        //    cachedValue = forklifts;
+
+        //    // Set cache options (e.g., expiration)
+        //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+        //        .SetSlidingExpiration(TimeSpan.FromMinutes(ForkliftCacheExpirationMinutes)); //todo:
+
+        //    // Save data in cache
+        //    cache.Set(ForkliftCacheKey, cachedValue, cacheEntryOptions);
+        //}
+
+        //if (!cache.TryGetValue(ForkliftCacheKey, out List<Forklift> cachedValue))
+        //{
+        //    // If not in cache, generate the data
+        //    cachedValue = forklifts;
 
             // Set cache options (e.g., expiration)
             var cacheEntryOptions = new MemoryCacheEntryOptions()
-                .SetSlidingExpiration(TimeSpan.FromMinutes(10)); //todo:
+                .SetSlidingExpiration(TimeSpan.FromMinutes(ForkliftCacheExpirationMinutes)); //todo:
 
             // Save data in cache
-            cache.Set(ForkliftCacheKey, cachedValue, cacheEntryOptions);
-        }
+            cache.Set(ForkliftCacheKey, forklifts, cacheEntryOptions);
+        //}
+
+        forklifts = forkliftFleetService.GetForkliftFleet().ToList();
         
         // todo: change to return the updated list here
         return Results.Ok(new
         {
             Message = ImportMsgSuccess,
+            Forklifts = forklifts,
             TotalItems = forklifts?.Count ?? 0
         });
     }
@@ -116,8 +117,6 @@ app.MapPost("/upload-json", async (IMemoryCache cache, HttpRequest request) =>
         return Results.Problem($"{ImportMsgFailedProcessingError}:{ex.Message}");
     }
 });
-
-
 app.Run();
 
 
@@ -128,3 +127,19 @@ app.Run();
 
 
 
+
+
+
+
+//todo:...
+//public static class ServiceExtensions
+//{
+//    public static IServiceCollection AddMyAppServices(this IServiceCollection services)
+//    {
+//        services.AddMemoryCache();
+//        services.AddScoped<MyCacheService>();
+//        return services;
+//    }
+//}
+
+// builder.Services.AddMyAppServices();
