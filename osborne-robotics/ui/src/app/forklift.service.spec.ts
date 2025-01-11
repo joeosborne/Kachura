@@ -23,6 +23,8 @@ import { CommandResponse } from './app.component';
 describe('ForkliftService', () => {
   let service: ForkliftSimulatorService;
 
+
+  // todo: update or remove
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(ForkliftSimulatorService);
@@ -34,7 +36,7 @@ describe('ForkliftService', () => {
 
   it('should move forward correctly', () => {
     const command = 'F9';
-    const response: CommandResponse = service.doStuff(command);
+    const response: CommandResponse = service.executeCommand(command);
     expect(response.x).toBe(0);
     expect(response.y).toBe(9);
     expect(response.actions).toContain('Move Forward by 9 units.');
@@ -50,21 +52,21 @@ describe('ForkliftService', () => {
 
   it('should turn left correctly', () => {
     const command = 'L90';
-    const response: CommandResponse = service.doStuff(command);
+    const response: CommandResponse = service.executeCommand(command);
     expect(response.direction).toBe(270);
     expect(response.actions).toContain('Turn Left by 90 degrees.');
   });
 
   it('should turn right correctly', () => {
     const command = 'R90';
-    const response: CommandResponse = service.doStuff(command);
+    const response: CommandResponse = service.executeCommand(command);
     expect(response.direction).toBe(90);
     expect(response.actions).toContain('Turn Right by 90 degrees.');
   });
 
   it('should handle multiple commands correctly', () => {
     const command = 'F9R90F5';
-    const response: CommandResponse = service.doStuff(command);
+    const response: CommandResponse = service.executeCommand(command);
     expect(response.x).toBe(5);
     expect(response.y).toBe(9);
     expect(response.direction).toBe(90);

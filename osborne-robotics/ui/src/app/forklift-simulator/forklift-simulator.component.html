@@ -1,24 +1,60 @@
-<div class="chessboard">
-  <div *ngFor="let square of squares"
-       class="chess-square">
-    <div>{{square?.x}}</div>
-  </div>
-  <div class="circle" [style.transform]="forkliftTransform"></div>
-</div>
-<div>squares: |{{squares?.length}}|</div>
-<div class="controls">
-  <input [(ngModel)]="command" placeholder="Enter commands (e.g., F10R90L90B5)" />
-  <div class="mb-3">
-    <button (click)="runCommand(command)" class="btn btn-primary me-2">Execute</button>
-    <button (click)="resetCommand()"  class="btn btn-secondary">Reset</button>
-  </div>
+<div class="container">
+  <div class="column">
+    <div>
+      <p class="text-md-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci id laboriosam molestias nostrum officiis provident quia rem velit voluptate. Adipisci illo itaque omnis perspiciatis placeat quia, recusandae. Eligendi, quaerat.</p>
+          <div>
+            <input [(ngModel)]="command" class="m-2 command-input" placeholder="Enter commands here" />
+            <div>
+              <button (click)="resetCommand()"  class="btn btn-secondary m-2">Reset</button>
+              <button (click)="runCommand(command)" class="btn btn-primary m-2">Execute</button>
+            </div>
+            <div>
+              {{cmdResponse | json}}
+            </div>
+                  <p *ngIf="errorMsg" class="mt-3 text-s text-danger">{{ errorMsg }}</p>
+          </div>
+    </div>
+<!--    <div>-->
+<!--      <div class="mb-3">-->
+<!--        <label for="fileInput" class="text-s text-primary">Choose a file to upload:</label>-->
+<!--        <input type="file" id="fileInput" class="form-control" (change)="onFileSelected($event)" />-->
+<!--      </div>-->
 
+<!--      <button class="btn btn-primary" (click)="upload()">Upload</button>-->
+
+<!--      <p *ngIf="message" class="mt-3 text-s text-success">{{ message }}</p>-->
+<!--      <p *ngIf="errorMsg" class="mt-3 text-s text-danger">{{ errorMsg }}</p>-->
+<!--    </div>-->
+
+
+
+
+
+  </div>
+  <div class="column">
+    <div class="chessboard">
+      <div *ngFor="let square of squares"
+           class="chess-square">
+        <div>{{square?.x}}</div>
+      </div>
+      <div class="circle" [style.transform]="forkliftTransform"></div>
+    </div>
+    <div>squares: |{{squares?.length}}|</div>
+    </div>
+
+  <div class="column">
+    <div class="output">
+      <h4>Actions:</h4>
+      <ul>
+        <li *ngFor="let action of cmdResponse?.actions">{{ action }}</li>
+      </ul>
+      <p><strong>Final Position:</strong> ({{ cmdResponse?.x }}, {{ cmdResponse?.y }})</p>
+      <p><strong>Facing:</strong> {{ getDirectionName(cmdResponse) }}</p>
+    </div>
+  </div>
 </div>
-<div class="output">
-  <h4>Actions:</h4>
-  <ul>
-    <li *ngFor="let action of cmdResponse?.actions">{{ action }}</li>
-  </ul>
-  <p><strong>Final Position:</strong> ({{ cmdResponse?.x }}, {{ cmdResponse?.y }})</p>
-  <p><strong>Facing:</strong> {{ getDirectionName(cmdResponse) }}</p>
-</div>
+
+
+
+
+

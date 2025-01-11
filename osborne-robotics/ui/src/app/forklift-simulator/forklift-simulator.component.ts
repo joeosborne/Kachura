@@ -1,24 +1,24 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {JsonPipe, NgClass, NgForOf, NgStyle} from '@angular/common';
+import {JsonPipe, NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
 import {AgGridAngular} from 'ag-grid-angular';
 import {FormsModule} from '@angular/forms';
 import {FileUploadComponent} from '../file-upload/file-upload.component';
 import {GridItem} from '../grid-item';
 import {ForkliftSimulatorService} from '../forklift-simulator.service';
 
-export interface CommandResponse {
+export interface CommandInstruction {
   x: number,
-  y: number, // Initial y-coordinate
-  direction: number, // Initial direction in degrees
-  command: string,
+  y: number,
+  direction: number,
   actions: string[];
+  collisionMsg?: string;
 }
 
 // todo: renames chess, circle
 @Component({
   selector: 'app-forklift-simulator',
-  imports: [RouterOutlet, FileUploadComponent, NgForOf, NgStyle, AgGridAngular, NgClass, JsonPipe, FormsModule],
+  imports: [RouterOutlet, FileUploadComponent, NgForOf, NgStyle, AgGridAngular, NgClass, JsonPipe, FormsModule, NgIf],
   templateUrl: './forklift-simulator.component.html',
   styleUrl: './forklift-simulator.component.css',
   standalone: true,
@@ -28,14 +28,10 @@ export class ForkliftSimulatorComponent implements OnInit{
   forkliftTransform = 'translate(0px, 0px)';
   // todo: dont init twice.
   // todo: rename
-  cmdResponse: CommandResponse = {
-    x: 0,
-    y: 0,
-    direction: 0,
-    command: '',
-    actions: [] = []
-  }
+  cmdResponse = this.initCommandResponse();
   command = '';
+  errorMsg: string = '';
+
   constructor(private forkliftService: ForkliftSimulatorService) {
 
   }
@@ -46,16 +42,27 @@ export class ForkliftSimulatorComponent implements OnInit{
     console.log(command)
     console.log('this.cmdResponse BEFORE calling doStuff...')
     console.log(this.cmdResponse)
-    if (command != null) {
-      this.cmdResponse = this.forkliftService.doStuff(command, this.cmdResponse);
-    }
-
+    //debugger;
+    if (!!command) {
+      this.errorMsg = '';
+      this.cmdResponse = this.forkliftService.executeCommand(command, this.cmdResponse);
+    } //else{
     console.log('this.cmdResponse')
     console.log(this.cmdResponse)
-    this.updateForkliftPosition(this.cmdResponse);
+
+    debugger;
+    const commandCouldBeProcessed = this.cmdResponse.actions.length > 0 && !this.cmdResponse.collisionMsg;
+
+    if (commandCouldBeProcessed) {
+      this.updateForkliftPosition(this.cmdResponse);
+    }
+    else{
+      this.errorMsg = !!this.cmdResponse.collisionMsg ?  this.cmdResponse.collisionMsg :  'Command could not be processed. Please ensure that you have entered a valid command.';
+    }
+
   }
 
-  getDirectionName(cmdResponse: CommandResponse): string {
+  getDirectionName(cmdResponse: CommandInstruction): string {
     // todo:
     switch (cmdResponse?.direction) {
       case 0: return 'North';
@@ -67,7 +74,7 @@ export class ForkliftSimulatorComponent implements OnInit{
     return 'Unknown';
   }
 
-  private updateForkliftPosition(cmdResponse: CommandResponse): void {
+  private updateForkliftPosition(cmdResponse: CommandInstruction): void {
     // const pixelX = x * 50;
     // const pixelY = (9 - y) * 50;
     // this.forkliftTransform = `translate(${pixelX}px, ${pixelY}px)`;
@@ -83,17 +90,21 @@ export class ForkliftSimulatorComponent implements OnInit{
   resetCommand() {
     console.log(this.command)
     this.command = '';
+    this.errorMsg = '';
     // todo: dont init twice
-    this.cmdResponse = {
-      x: 0,
-      y: 0,
-      direction: 0,
-      command: '',
-      actions: [] = []
-    }
+    this.cmdResponse = this.initCommandResponse();
     this.updateForkliftPosition(this.cmdResponse);
     console.log(this.command)
 
+  }
+
+  private initCommandResponse():CommandInstruction {
+    return {
+      x: 0,
+      y: 0,
+      direction: 0,
+      actions: [] = []
+    }
   }
 
   ngOnInit(): void {

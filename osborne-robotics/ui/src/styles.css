@@ -158,9 +158,6 @@
   transform: rotate(45deg);
 }
 
-.controls {
-  margin-top: 20px;
-}
 
 .output {
   margin-top: 10px;
@@ -199,3 +196,8 @@
 /*  border: 1px solid #ddd;*/
 /*  text-align: left;*/
 /*}*/
+
+
+.command-input {
+  width: 90%;
+}
