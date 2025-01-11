@@ -168,6 +168,17 @@
 }
 
 
+.container {
+  display: flex;
+  gap: 20px; /* Space between columns */
+}
+
+.column {
+  flex: 1; /* Each column takes equal space */
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
 
 /*.grid {*/
 /*  display: grid;*/

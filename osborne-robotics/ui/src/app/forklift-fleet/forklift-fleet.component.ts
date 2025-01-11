@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FileUploadComponent} from '../file-upload/file-upload.component';
 import {Forklift, ForkliftDataServiceService} from '../forklift-data-service.service';
 import {CommonModule, NgForOf, NgIf, NgStyle} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-forklift-fleet',
@@ -11,6 +12,7 @@ import {CommonModule, NgForOf, NgIf, NgStyle} from '@angular/common';
     NgForOf,
     NgIf,
     CommonModule,
+    FormsModule,
   ],
   templateUrl: './forklift-fleet.component.html',
   styleUrl: './forklift-fleet.component.css',
@@ -20,6 +22,8 @@ export class ForkliftFleetComponent implements OnInit{
 
   // inject forkliftService into constructor
   forklifts: Forklift[] = [];
+
+  sampleJsonEntry: Forklift[] = [];
   constructor(private forkliftService: ForkliftDataServiceService) {}
 
   ngOnInit(): void {
@@ -42,9 +46,11 @@ export class ForkliftFleetComponent implements OnInit{
   }
 
   // todo: Utils
+  onlyShowServiceableForklifts = false;
+  serviceRequiredThreshold = 5;
   forkLiftRequiresAService(forklifts: Forklift):boolean{
     // todo: add const
-    return forklifts.age > 5;
+    return forklifts.age > this.serviceRequiredThreshold;
 
   }
 
