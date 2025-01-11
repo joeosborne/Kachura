@@ -15,31 +15,46 @@ namespace Osborne.Robotics.Services
 
         private readonly IMemoryCache _memoryCache;
 
-        public ForkliftFleetService(IMemoryCache memoryCache)
+
+        private readonly IForkliftRepository _forkliftRepository;
+
+        public ForkliftFleetService(IMemoryCache memoryCache, IForkliftRepository forkliftRepository)
         {
             _memoryCache = memoryCache;
-        }
-        public IList<Forklift> GetForkliftFleet()
+            _forkliftRepository = forkliftRepository;
+
+            var fake = new List<Forklift>
         {
-            //app.MapGet("/forklift-fleet", (IMemoryCache cache) =>
-            //{
-            string cacheKey = ForkliftCacheKey;
-            List<Forklift> response;
-            if (_memoryCache.TryGetValue(cacheKey, out List<Forklift> cachedValue))
-            {
-                response = cachedValue;
-            }
-            else
-            {
-                response = new List<Forklift>
-        {
-            new("Forklift A", "Model-123",  new DateOnly(2022, 1, 11)),
+            new("1428 Forklift A", "Model-123",  new DateOnly(2022, 1, 11)),
             new ("Forklift B", "Model-234", new DateOnly(2018, 5, 12)),
             new ("Forklift C", "Model-345", new DateOnly(2021, 6, 4)),
             new ("Forklift YADA", "Model-345", new DateOnly(2024, 1, 15)),
             new ("Forklift D", "Model-456", new DateOnly(2017, 10, 30))
         };
-            }
+            _forkliftRepository.ReplaceFleetAsync(fake);
+        }
+        public async Task<IList<Forklift>> GetForkliftFleet()
+        {
+            //app.MapGet("/forklift-fleet", (IMemoryCache cache) =>
+            //{
+            //string cacheKey = ForkliftCacheKey;
+            //List<Forklift> response;
+            //if (_memoryCache.TryGetValue(cacheKey, out List<Forklift> cachedValue))
+            //{
+            //    response = cachedValue;
+            //}
+            //else
+            //{
+            //        response = new List<Forklift>
+            //{
+            //    new("Forklift A", "Model-123",  new DateOnly(2022, 1, 11)),
+            //    new ("Forklift B", "Model-234", new DateOnly(2018, 5, 12)),
+            //    new ("Forklift C", "Model-345", new DateOnly(2021, 6, 4)),
+            //    new ("Forklift YADA", "Model-345", new DateOnly(2024, 1, 15)),
+            //    new ("Forklift D", "Model-456", new DateOnly(2017, 10, 30))
+            //};
+            //}
+            var response = await _forkliftRepository.GetAllAsync();
 
             DateTime today = DateTime.Today;
             foreach (var forklift in response)
@@ -47,7 +62,12 @@ namespace Osborne.Robotics.Services
                 forklift.Age = today.Year - forklift.ManufacturingDate.Year;
             }
 
-            return response;
+            return response.ToList();
+        }
+
+        public Task<bool> ReplaceForkliftFleet(IList<Forklift> fleet)
+        {
+            return _forkliftRepository.ReplaceFleetAsync(fleet);
         }
     }
 }

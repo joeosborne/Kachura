@@ -2,6 +2,9 @@
 {
     public interface IForkliftFleetService
     {
-        IList<Forklift> GetForkliftFleet();
+        //IList<Forklift> GetForkliftFleet();
+        Task<IList<Forklift>> GetForkliftFleet();
+
+        Task<bool> ReplaceForkliftFleet(IList<Forklift> fleet);
     }
 }
