@@ -1,11 +1,12 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable, signal } from '@angular/core';
+import { Constants } from '../shared/constants';
 
 export interface Forklift {
   name: string;
   modelNumber: string;
-  manufacturingDate: string; //todo: change to Date
+  manufacturingDate: string; // todo: change type to Date
   age?: number;
   dueForAService?: boolean;
 }
@@ -13,16 +14,12 @@ export interface Forklift {
 @Injectable({
   providedIn: 'root',
 })
-export class ForkliftDataServiceService {
-  // TODO: DE-DUPE
-  serviceRequiredThreshold = 5;
-
-  private apiUrl = 'http://localhost:5286/forklifts';
+export class ForkliftDataService {
   forklifts = signal<any>({});
   constructor(private http: HttpClient) {}
 
   loadForklifts() {
-    this.http.get<any>(this.apiUrl).subscribe((x) => {
+    this.http.get<any>(Constants.API_FORKLIFTS_GET_ALL).subscribe((x) => {
       // todo: de-dupe
       const forklifts = x.map((forklift: Forklift) => ({
         ...forklift,
@@ -33,19 +30,15 @@ export class ForkliftDataServiceService {
   }
 
   forkLiftRequiresAService(forklifts: Forklift): boolean {
-    return forklifts.age > this.serviceRequiredThreshold;
+    return forklifts.age > Constants.SERVICE_REQUIRED_THRESHOLD;
   }
 
   uploadFile(file: File): Observable<any> {
     const formData = new FormData();
     formData.append('file', file);
 
-    return this.http.post(
-      'http://localhost:5286/forklifts/upload-json',
-      formData,
-      {
-        headers: new HttpHeaders(),
-      },
-    );
+    return this.http.post(Constants.API_FORKLIFTS_UPLOAD_JSON, formData, {
+      headers: new HttpHeaders(),
+    });
   }
 }

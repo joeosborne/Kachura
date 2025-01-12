@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import {
   Forklift,
-  ForkliftDataServiceService,
-} from '../data-services/forklift-data-service.service';
+  ForkliftDataService,
+} from '../data-services/forklift-data.service';
 
 @Component({
   selector: 'app-file-upload',
@@ -16,11 +16,11 @@ export class FileUploadComponent {
   message: string = '';
   selectedFile: File | null = null;
 
-  constructor(private forkliftService: ForkliftDataServiceService) {}
+  constructor(private forkliftService: ForkliftDataService) {}
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
+    if (!!input && input.files && !!input.files.length) {
       this.selectedFile = input.files[0];
       this.message = '';
       this.errorMsg = '';
@@ -46,8 +46,6 @@ export class FileUploadComponent {
         this.message = `Success: ${response.message}, Total Items: ${response.totalItems}`;
       },
       error: (error) => {
-        //todo: log error
-        //this.errorMsg = `Error: ${error.message}`;
         this.errorMsg =
           'There was an error uploading this file. Please check that it is formatted correctly and try again';
       },

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadComponent } from '../file-upload/file-upload.component';
-import { ForkliftDataServiceService } from '../data-services/forklift-data-service.service';
+import { ForkliftDataService } from '../data-services/forklift-data.service';
 import { CommonModule, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Constants } from '../shared/constants';
 
 @Component({
   selector: 'app-forklift-fleet',
@@ -20,8 +21,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class ForkliftFleetComponent implements OnInit {
   forklifts: any; //todo: change
+  onlyShowServiceableForklifts = false;
 
-  constructor(private forkliftService: ForkliftDataServiceService) {
+  constructor(private forkliftService: ForkliftDataService) {
     this.forklifts = this.forkliftService.forklifts;
   }
 
@@ -29,9 +31,5 @@ export class ForkliftFleetComponent implements OnInit {
     this.forkliftService.loadForklifts();
   }
 
-  // todo: Utils
-  onlyShowServiceableForklifts = false;
-
-  // TODO: DE-DUPE
-  serviceRequiredThreshold = 5;
+  protected readonly Constants = Constants;
 }
