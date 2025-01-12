@@ -6,6 +6,8 @@ import { WarehouseGridCell } from './model/warehouse-grid-cell';
   providedIn: 'root',
 })
 export class ForkliftSimulatorService {
+  // TODO: Fix bug which allows the forklift jump over the obstacles.
+  // TODO: Fix bug which displays actions which have exceeded the grid boundaries.
   // TODO: For now, the obstacles are hardcoded. Make them dynamic or configurable.
   private readonly obstacles: WarehouseGridCell[] = [
     { x: 2, y: 5 },
