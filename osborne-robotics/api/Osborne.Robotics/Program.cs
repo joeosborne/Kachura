@@ -40,11 +40,7 @@ var app = builder.Build();
 
 app.UseCors(CorsPolicyName);
 
-/* todo: clean up endpoints
-rename forklift-fleet to fleet
-*/
-
-app.MapGet("/forklift-fleet", async (IForkliftFleetService forkliftFleetService) =>
+app.MapGet(ApiEndpoints.Forklift.GetAll, async (IForkliftFleetService forkliftFleetService) =>
 {
     // TODO: Add guards input params
     var response = await forkliftFleetService.GetForkliftFleet();
@@ -57,8 +53,7 @@ app.MapGet("/forklift-fleet", async (IForkliftFleetService forkliftFleetService)
     return Results.Ok(response);
 });
 
-// todo: ProcessForkliftJsonImport
-app.MapPost("/upload-json", async (IForkliftFleetService forkliftFleetService, HttpRequest request) =>
+app.MapPost(ApiEndpoints.Forklift.UploadJson, async (IForkliftFleetService forkliftFleetService, HttpRequest request) =>
 {
     // TODO: Add guards input params
     if (!request.HasFormContentType || request.Form.Files.Count == 0)

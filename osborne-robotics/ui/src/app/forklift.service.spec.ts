@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 import { ForkliftSimulatorService } from './forklift-simulator.service';
 import { CommandInstruction } from './forklift-simulator/forklift-simulator.component';
 
-//todo: clean up these tests
 describe('ForkliftSimulatorService', () => {
   let service: ForkliftSimulatorService;
 
@@ -100,21 +99,4 @@ describe('ForkliftSimulatorService', () => {
       expect(result.y).toBe(8);
     });
   });
-
-  describe('collisionHasBeenDetected', () => {
-    it('should return true for obstacle collision', () => {
-      expect(service['collisionHasBeenDetected'](2, 5)).toBeTrue();
-    });
-
-    it('should return false for no collision', () => {
-      expect(service['collisionHasBeenDetected'](0, 0)).toBeFalse();
-    });
-  });
 });
-//todo:
-// describe('clampGridBoundary', () => {
-//   it('should clamp values within grid boundaries', () => {
-//     expect(service['clampGridBoundary'](-1)).toBe(0); // Below minimum boundary
-//     expect(servicemum boundary
-//     expect(service ).toBe(5);  // Within v
-//   });

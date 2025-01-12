@@ -17,7 +17,7 @@ export class ForkliftDataServiceService {
   // TODO: DE-DUPE
   serviceRequiredThreshold = 5;
 
-  private apiUrl = 'http://localhost:5286/forklift-fleet';
+  private apiUrl = 'http://localhost:5286/forklifts';
   forklifts = signal<any>({});
   constructor(private http: HttpClient) {}
 
@@ -40,8 +40,12 @@ export class ForkliftDataServiceService {
     const formData = new FormData();
     formData.append('file', file);
 
-    return this.http.post('http://localhost:5286/upload-json', formData, {
-      headers: new HttpHeaders(),
-    });
+    return this.http.post(
+      'http://localhost:5286/forklifts/upload-json',
+      formData,
+      {
+        headers: new HttpHeaders(),
+      },
+    );
   }
 }
