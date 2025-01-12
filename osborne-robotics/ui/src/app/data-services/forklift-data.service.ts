@@ -6,7 +6,7 @@ import { Constants } from '../shared/constants';
 export interface Forklift {
   name: string;
   modelNumber: string;
-  manufacturingDate: string; // todo: change type to Date
+  manufacturingDate: string; // TODO: change type to Date
   age?: number;
   dueForAService?: boolean;
 }
@@ -15,12 +15,13 @@ export interface Forklift {
   providedIn: 'root',
 })
 export class ForkliftDataService {
+  // TODO: strongly type this forklift data going in and out of API. Use Forklift interface for this.
   forklifts = signal<any>({});
   constructor(private http: HttpClient) {}
 
   loadForklifts() {
     this.http.get<any>(Constants.API_FORKLIFTS_GET_ALL).subscribe((x) => {
-      // todo: de-dupe
+      // TODO: de-duplicate setting of dueForAService
       const forklifts = x.map((forklift: Forklift) => ({
         ...forklift,
         dueForAService: this.forkLiftRequiresAService(forklift),
@@ -42,3 +43,5 @@ export class ForkliftDataService {
     });
   }
 }
+
+// TODO: add a class to implement HttpInterceptor to intercept requests and responses. Add auth token etc

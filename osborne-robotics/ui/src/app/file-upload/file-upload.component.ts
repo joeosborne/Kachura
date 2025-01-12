@@ -35,7 +35,7 @@ export class FileUploadComponent {
 
     this.forkliftService.uploadFile(this.selectedFile).subscribe({
       next: (response) => {
-        // todo: de-dupe
+        // TODO: de-duplicate setting of dueForAService
         response.forklifts = response.forklifts.map((forklift: Forklift) => ({
           ...forklift,
           dueForAService:

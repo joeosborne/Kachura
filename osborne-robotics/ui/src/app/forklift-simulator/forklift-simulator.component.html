@@ -25,7 +25,6 @@
           Move Forward by 8 metres. Turn Right by 90 degrees. Turn Left by 90
           degrees. Move Backward by 5 metres.
         </p>
-
       </div>
     }
     <div>
@@ -53,11 +52,10 @@
         *ngFor="let cell of warehouseGridCells; let i = index"
         class="warehouse-grid-cell"
         [ngClass]="{
-          cross: i === crossIndex || i === crossIndex2,
-          forklift: i === arrowIndex,
+          obstacleIndicator: i === crossIndex || i === crossIndex2,
+          forklift: i === forkliftRenderIndex,
         }"
       ></div>
-      <div class="legacy-arrow" [style.transform]="forkliftTransform"></div>
     </div>
   </div>
 

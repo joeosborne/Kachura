@@ -32,13 +32,16 @@ export class ForkliftSimulatorComponent implements OnInit {
     270: 'West',
   };
 
-  private static readonly DEFAULT_ARROW_INDEX = 90; //todo:
+  // TODO: For the 10x10 grid, although the bottom left corner is (x0, y0), that cell is the 90th
+  // cell that is rendered. For the gris to be dynamic, this must be improved.
+  private static readonly DEFAULT_FORKLIFT_RENDER_INDEX = 90;
 
   showInstructions = false;
 
   crossIndex = 42;
   crossIndex2 = 19;
-  arrowIndex = ForkliftSimulatorComponent.DEFAULT_ARROW_INDEX; //todo:remove
+  forkliftRenderIndex =
+    ForkliftSimulatorComponent.DEFAULT_FORKLIFT_RENDER_INDEX;
   warehouseGridCells: WarehouseGridCell[] = Array.from({ length: 100 });
   forkliftTransform = 'translate(0px, 0px)';
   commandInstruction = this.initCommandInstruction();
@@ -68,7 +71,7 @@ export class ForkliftSimulatorComponent implements OnInit {
 
     if (this.canProcessCommand()) {
       this.updateForkliftPosition(this.commandInstruction);
-      this.arrowIndex = this.getGridPosition(this.commandInstruction);
+      this.forkliftRenderIndex = this.getGridPosition(this.commandInstruction);
     } else {
       this.errorMsg =
         this.commandInstruction.collisionMsg ||
@@ -97,7 +100,8 @@ export class ForkliftSimulatorComponent implements OnInit {
     this.command = '';
     this.errorMsg = '';
     this.commandInstruction = this.initCommandInstruction();
-    this.arrowIndex = ForkliftSimulatorComponent.DEFAULT_ARROW_INDEX;
+    this.forkliftRenderIndex =
+      ForkliftSimulatorComponent.DEFAULT_FORKLIFT_RENDER_INDEX;
 
     this.updateForkliftPosition(this.commandInstruction);
   }

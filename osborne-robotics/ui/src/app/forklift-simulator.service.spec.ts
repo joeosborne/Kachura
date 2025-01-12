@@ -5,6 +5,9 @@ import { CommandInstruction } from './forklift-simulator/forklift-simulator.comp
 describe('ForkliftSimulatorService', () => {
   let service: ForkliftSimulatorService;
 
+  // TODO: These tests have been added a starting point. The are based on the known
+  // collision points and will need to be updated to become more stable.
+
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(ForkliftSimulatorService);

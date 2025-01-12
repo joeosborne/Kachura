@@ -6,6 +6,7 @@ import { WarehouseGridCell } from './model/warehouse-grid-cell';
   providedIn: 'root',
 })
 export class ForkliftSimulatorService {
+  // TODO: For now, the obstacles are hardcoded. Make them dynamic or configurable.
   private readonly obstacles: WarehouseGridCell[] = [
     { x: 2, y: 5 },
     { x: 9, y: 8 },
