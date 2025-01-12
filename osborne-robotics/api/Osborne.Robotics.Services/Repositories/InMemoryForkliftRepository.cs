@@ -1,5 +1,8 @@
 ﻿
-public class ForkliftRepository : IForkliftRepository
+// TODO: InMemoryForkliftRepository should not be used in Production. When no
+// longer needed for intial development, this could be moved into a test setup
+// to support unit or acceptance tests.
+public class InMemoryForkliftRepository : IForkliftRepository
 {
     private List<Forklift> _forklifts = new();
 
