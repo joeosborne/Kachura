@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadComponent } from '../file-upload/file-upload.component';
-import { ForkliftDataServiceService } from '../forklift-data-service.service';
+import { ForkliftDataServiceService } from '../data-services/forklift-data-service.service';
 import { CommonModule, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 

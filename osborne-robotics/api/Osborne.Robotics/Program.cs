@@ -8,8 +8,6 @@ using System.Text.Json;
 const string CorsPolicyName = "OsborneRoboticsUI";
 
 // todo: de-dupe
-const string ForkliftCacheKey = "forklift-fleet";
-const int ForkliftCacheExpirationMinutes = 10;
 const string ForkliftsNotFoundMsg = "No forklifts found.";
 const string ImportMsgFailedInvallidFileType = "Invalid file type. Please upload a JSON file.";
 const string ImportMsgFailedMissingFile = "No file uploaded.";
@@ -57,6 +55,7 @@ app.MapGet("/forklift-fleet", async (IForkliftFleetService forkliftFleetService)
     return Results.Ok(response);
 });
 
+// todo: ProcessForkliftJsonImport
 app.MapPost("/upload-json", async (IForkliftFleetService forkliftFleetService, HttpRequest request) =>
 {
     // todo: add guards to both methods
@@ -73,38 +72,43 @@ app.MapPost("/upload-json", async (IForkliftFleetService forkliftFleetService, H
 
     try
     {
-        using var stream = file.OpenReadStream();
-        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-
-        var forklifts = await JsonSerializer.DeserializeAsync<IList<Forklift>>(stream, options);
-
-        if(forklifts != null)
-        {
-            bool res = await forkliftFleetService.ReplaceForkliftFleet(forklifts);
-            if (res)
-            {
-                forklifts = await forkliftFleetService.GetForkliftFleet();
-
-                // todo: change to return the updated list here
-                return Results.Ok(new
-                {
-                    Message = ImportMsgSuccess,
-                    Forklifts = forklifts,
-                    TotalItems = forklifts?.Count ?? 0
-                });
-            }
-        }
-
-        return Results.Problem($"{ImportMsgFailedProcessingError}");
-
-
+        return await ProcessForkliftJsonImport(forkliftFleetService, ImportMsgSuccess, file);
     }
     catch (Exception ex)
     {
         return Results.Problem($"{ImportMsgFailedProcessingError}:{ex.Message}");
     }
 });
+
+
+static async Task<IResult> ProcessForkliftJsonImport(IForkliftFleetService forkliftFleetService, string ImportMsgSuccess, IFormFile file)
+{
+    Stream stream = file.OpenReadStream();
+    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
+    var forklifts = await JsonSerializer.DeserializeAsync<IList<Forklift>>(stream, options);
+
+    if (forklifts != null)
+    {
+        bool res = await forkliftFleetService.ReplaceForkliftFleet(forklifts);
+        if (res)
+        {
+            forklifts = await forkliftFleetService.GetForkliftFleet();
+
+            return Results.Ok(new
+            {
+                Message = ImportMsgSuccess,
+                Forklifts = forklifts,
+                TotalItems = forklifts?.Count ?? 0
+            });
+        }
+    }
+    return Results.Problem($"{ImportMsgFailedProcessingError}");
+}
+
 app.Run();
+
+
 
 
 

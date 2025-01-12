@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Osborne.Robotics.Services
@@ -42,5 +44,69 @@ namespace Osborne.Robotics.Services
         {
             return _forkliftRepository.ReplaceFleetAsync(fleet);
         }
+
+        /*
+using System.Text.Json;
+
+public class JsonUploadService
+{
+    private const string JsonContentType = "application/json";
+
+    public async Task<IResult> ProcessJsonUpload<T>(
+        HttpRequest request,
+        Func<IList<T>, Task<bool>> replaceDataCallback,
+        Func<Task<IList<T>>> getDataCallback,
+        string successMessage,
+        string failedMissingFileMessage,
+        string failedInvalidFileTypeMessage,
+        string failedProcessingErrorMessage)
+    {
+        // Check for form content and file
+        if (!request.HasFormContentType || request.Form.Files.Count == 0)
+        {
+            return Results.BadRequest(failedMissingFileMessage);
+        }
+
+        var file = request.Form.Files[0];
+        if (file.ContentType != JsonContentType)
+        {
+            return Results.BadRequest(failedInvalidFileTypeMessage);
+        }
+
+        try
+        {
+            using var stream = file.OpenReadStream();
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
+            var data = await JsonSerializer.DeserializeAsync<IList<T>>(stream, options);
+
+            if (data != null)
+            {
+                bool replaceSuccess = await replaceDataCallback(data);
+                if (replaceSuccess)
+                {
+                    var resultData = await getDataCallback();
+                    return Results.Ok(new
+                    {
+                        Message = successMessage,
+                        Data = resultData,
+                        TotalItems = resultData?.Count ?? 0
+                    });
+                }
+            }
+
+            return Results.Problem(failedProcessingErrorMessage);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem($"{failedProcessingErrorMessage}: {ex.Message}");
+        }
     }
 }
+         
+         */
+
+    }
+}
+
+

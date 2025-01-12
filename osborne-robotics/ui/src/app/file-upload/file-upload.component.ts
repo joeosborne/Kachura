@@ -3,7 +3,7 @@ import { CommonModule, NgIf } from '@angular/common';
 import {
   Forklift,
   ForkliftDataServiceService,
-} from '../forklift-data-service.service';
+} from '../data-services/forklift-data-service.service';
 
 @Component({
   selector: 'app-file-upload',

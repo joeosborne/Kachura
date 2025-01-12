@@ -4,8 +4,8 @@ import { JsonPipe, NgClass, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { AgGridAngular } from 'ag-grid-angular';
 import { FormsModule } from '@angular/forms';
 import { FileUploadComponent } from '../file-upload/file-upload.component';
-import { GridItem } from '../grid-item';
 import { ForkliftSimulatorService } from '../forklift-simulator.service';
+import { WarehouseGridCell } from '../model/warehouse-grid-cell';
 
 export interface CommandInstruction {
   x: number;
@@ -44,47 +44,32 @@ export class ForkliftSimulatorComponent implements OnInit {
   //   { x: 9, y: 8 },
   // ];
   //
+  // todo: move crossIndexes into svc - store with obstacle info
   crossIndex = 42; // Index where the cross will appear (row 3, column 5)
   crossIndex2 = 19; // Index where the cross will appear (row 3, column 5)
 
+  // todo: de-dupe
   arrowIndex = 90; // Index where the cross will appear (row 3, column 5)
 
-  squares: GridItem[] = Array.from({ length: 100 });
+  warehouseGridCells: WarehouseGridCell[] = Array.from({ length: 100 });
+
+  // todo: remove usage of forkliftTransform and describe the approach as a comment
   forkliftTransform = 'translate(0px, 0px)';
-  obstacleTransform = 'translate(0px, 0px)';
   commandInstruction = this.initCommandInstruction();
   command = '';
   errorMsg: string = '';
-  //gridPos: number;
 
   constructor(private forkliftService: ForkliftSimulatorService) {}
 
-  // private getGridPosition(x: number, y: number, gridWidth: number): number {
-  //   console.log('x: ' + x + ' y: ' + y + ' gridWidth: ' + gridWidth);
-  //
-  //   // Ensure the input is within bounds
-  //   if (x < 0 || y < 0) {
-  //     throw new Error('x and y must be non-negative.');
-  //   }
-  //
-  //   // Calculate the position in a 1D array
-  //   return y * gridWidth + x;
-  // }
-
-  getGridPosition(
-    x: number,
-    y: number,
-    gridWidth: number,
-    gridHeight: number,
-  ): number {
-    console.log('x: ' + x + ' y: ' + y + ' gridWidth: ' + gridWidth);
-    // Ensure the input is within bounds
-    if (x < 0 || y < 0 || x >= gridWidth || y >= gridHeight) {
+  getGridPosition(cmd: CommandInstruction): number {
+    // todo: 10
+    console.log('x: ' + cmd.x + ' y: ' + cmd.y + ' gridWidth: ' + 10);
+    if (cmd.x < 0 || cmd.y < 0 || cmd.x >= 10 || cmd.y >= 10) {
       throw new Error('x or y is out of bounds.');
     }
 
     // Calculate the 1-based position
-    return (gridHeight - y - 1) * gridWidth + x;
+    return (10 - cmd.y - 1) * 10 + cmd.x;
   }
   runCommand(command: string | undefined) {
     if (!!command) {
@@ -101,12 +86,7 @@ export class ForkliftSimulatorComponent implements OnInit {
     if (commandCouldBeProcessed) {
       this.updateForkliftPosition(this.commandInstruction);
 
-      this.arrowIndex = this.getGridPosition(
-        this.commandInstruction.x,
-        this.commandInstruction.y,
-        10,
-        10,
-      );
+      this.arrowIndex = this.getGridPosition(this.commandInstruction);
       console.log('arrowIndex: ' + this.arrowIndex);
     } else {
       this.errorMsg = !!this.commandInstruction.collisionMsg
@@ -143,6 +123,9 @@ export class ForkliftSimulatorComponent implements OnInit {
     this.command = '';
     this.errorMsg = '';
     this.commandInstruction = this.initCommandInstruction();
+    // todo: de-dupe
+    this.arrowIndex = 90; // Index where the cross will appear (row 3, column 5)
+
     this.updateForkliftPosition(this.commandInstruction);
   }
 
