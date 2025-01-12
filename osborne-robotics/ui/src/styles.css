@@ -1,14 +1,14 @@
-.forklift-grid {
-  display: grid;
-  grid-template-columns: repeat(10, 50px);
-  grid-template-rows: repeat(10, 50px);
-  gap: 1px;
-  max-width: 511px;
-  background-color: black;
-  position: relative;
-  margin: auto;
-  border: 1px solid #333;
-}
+/*.forklift-grid {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(10, 50px);*/
+/*  grid-template-rows: repeat(10, 50px);*/
+/*  gap: 1px;*/
+/*  max-width: 511px;*/
+/*  background-color: black;*/
+/*  position: relative;*/
+/*  margin: auto;*/
+/*  border: 1px solid #333;*/
+/*}*/
 
 .grid-square {
   display: flex;
@@ -25,6 +25,24 @@
 }
 
 .arrow {
+  margin-top: 30px;
+  margin-left: 6px;
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.5s ease;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 23px solid transparent;
+  border-bottom: 20px solid red;
+  transform: rotate(45deg);
+
+  /*bottom: 0;          !* Align to the bottom of the container *!*/
+  /*left: 0;            !* Align to the left of the container *!*/
+  /*padding: 10px;      !* Optional padding *!*/
+}
+
+.obstacle {
   margin-top: 22px;
   margin-left: 10px;
   position: absolute;
@@ -34,7 +52,7 @@
   height: 0;
   border-left: 18px solid transparent;
   border-right: 23px solid transparent;
-  border-bottom: 20px solid red;
+  border-bottom: 20px solid black;
   transform: rotate(45deg);
 }
 
@@ -51,3 +69,103 @@
 .command-input {
   width: 90%;
 }
+
+
+/* todo: needed...*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  grid-gap: 1px;
+  position: relative;
+  margin: auto;
+  border: 1px solid #333;
+
+
+}
+
+/*.forklift-grid {*/
+/*  !*gap: 1px;*!*/
+
+/*}*/
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cross {
+  position: relative;
+  /*grid-column: 5; !* Place in 5th column *!*/
+  /*grid-row: 3;    !* Place in 3rd row *!*/
+}
+
+.cross::before,
+.cross::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+}
+
+.cross::before {
+  width: 80%;
+  height: 10%;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.cross::after {
+  width: 10%;
+  height: 80%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*
+*/
+.arrow2 {
+  position: relative;
+  /*grid-column: 5; !* Place in 5th column *!*/
+  /*grid-row: 3;    !* Place in 3rd row *!*/
+}
+
+.arrow2::before,
+.arrow2::after {
+  content: '';
+  position: absolute;
+  background-color: hotpink;
+}
+
+.arrow2::before {
+  width: 80%;
+  height: 10%;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.arrow2::after {
+  width: 10%;
+  height: 80%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/*margin-top: 30px;*/
+/*margin-left: 6px;*/
+/*position: absolute;*/
+/*transform-origin: center;*/
+/*transition: transform 0.5s ease;*/
+/*width: 0;*/
+/*height: 0;*/
+/*border-left: 18px solid transparent;*/
+/*border-right: 23px solid transparent;*/
+/*border-bottom: 20px solid red;*/
+/*transform: rotate(45deg);*/

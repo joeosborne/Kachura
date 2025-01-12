@@ -33,14 +33,59 @@ export interface CommandInstruction {
   standalone: true,
 })
 export class ForkliftSimulatorComponent implements OnInit {
+  // TODO:
+
+  // TODO:
+  //F5R90F2 = {x: 2, y: 5}
+  //R90F9L90F9B1 = {x: 9, y: 8}
+
+  // this.obstacles = [
+  //   { x: 2, y: 5 },
+  //   { x: 9, y: 8 },
+  // ];
+  //
+  crossIndex = 42; // Index where the cross will appear (row 3, column 5)
+  crossIndex2 = 19; // Index where the cross will appear (row 3, column 5)
+
+  arrowIndex = 90; // Index where the cross will appear (row 3, column 5)
+
   squares: GridItem[] = Array.from({ length: 100 });
   forkliftTransform = 'translate(0px, 0px)';
+  obstacleTransform = 'translate(0px, 0px)';
   commandInstruction = this.initCommandInstruction();
   command = '';
   errorMsg: string = '';
+  //gridPos: number;
 
   constructor(private forkliftService: ForkliftSimulatorService) {}
 
+  // private getGridPosition(x: number, y: number, gridWidth: number): number {
+  //   console.log('x: ' + x + ' y: ' + y + ' gridWidth: ' + gridWidth);
+  //
+  //   // Ensure the input is within bounds
+  //   if (x < 0 || y < 0) {
+  //     throw new Error('x and y must be non-negative.');
+  //   }
+  //
+  //   // Calculate the position in a 1D array
+  //   return y * gridWidth + x;
+  // }
+
+  getGridPosition(
+    x: number,
+    y: number,
+    gridWidth: number,
+    gridHeight: number,
+  ): number {
+    console.log('x: ' + x + ' y: ' + y + ' gridWidth: ' + gridWidth);
+    // Ensure the input is within bounds
+    if (x < 0 || y < 0 || x >= gridWidth || y >= gridHeight) {
+      throw new Error('x or y is out of bounds.');
+    }
+
+    // Calculate the 1-based position
+    return (gridHeight - y - 1) * gridWidth + x;
+  }
   runCommand(command: string | undefined) {
     if (!!command) {
       this.errorMsg = '';
@@ -55,6 +100,14 @@ export class ForkliftSimulatorComponent implements OnInit {
 
     if (commandCouldBeProcessed) {
       this.updateForkliftPosition(this.commandInstruction);
+
+      this.arrowIndex = this.getGridPosition(
+        this.commandInstruction.x,
+        this.commandInstruction.y,
+        10,
+        10,
+      );
+      console.log('arrowIndex: ' + this.arrowIndex);
     } else {
       this.errorMsg = !!this.commandInstruction.collisionMsg
         ? this.commandInstruction.collisionMsg

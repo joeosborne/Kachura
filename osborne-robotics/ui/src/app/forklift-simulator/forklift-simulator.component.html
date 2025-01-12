@@ -41,13 +41,34 @@
     </div>
   </div>
   <div class="column">
-    <div class="forklift-grid">
-      <div *ngFor="let square of squares" class="grid-square">
-        <div>{{ square?.x }}</div>
+    <div>arrowIndex: {{arrowIndex}}</div>
+    <div>crossIndex: {{crossIndex}}</div>
+    <div>crossIndex2: {{crossIndex2}}</div>
+    <div class="grid">
+
+
+      <div
+        *ngFor="let cell of squares; let i = index"
+        class="cell"
+        [ngClass]="{'cross': i === crossIndex || i === crossIndex2, 'arrow2': i === arrowIndex }"
+      >
+
+
       </div>
-<!--      todo: maybe do something to the arrow for an obstacle -  an x or something-->
       <div class="arrow" [style.transform]="forkliftTransform"></div>
+
     </div>
+
+    <!--    <div class="forklift-grid">-->
+<!--      <div *ngFor="let square of squares" class="grid-square">-->
+<!--        <div>{{ square?.x }}</div>-->
+<!--      </div>-->
+<!--&lt;!&ndash;      todo: maybe do something to the arrow for an obstacle -  an x or something&ndash;&gt;-->
+<!--      <div class="arrow" [style.transform]="forkliftTransform"></div>-->
+
+
+<!--      <div class="obstacle"></div>-->
+<!--    </div>-->
   </div>
 
   <div class="column">
