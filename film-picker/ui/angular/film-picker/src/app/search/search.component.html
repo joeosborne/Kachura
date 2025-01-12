@@ -1,8 +1,0 @@
-<!-- search.component.html -->
-<div>
-  <h1>Asynchronous Search</h1>
-  <input type="text" (input)="onSearch($event)" placeholder="Search...">
-  <div *ngIf="results.length > 0">
-    <div *ngFor="let result of results" class="result-item">{{ result }}</div>
-  </div>
-</div>
